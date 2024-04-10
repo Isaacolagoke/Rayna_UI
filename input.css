@@ -1,0 +1,622 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Display Large */
+
+  .Display-large-regular {
+    /* Display/Large/Regular */
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    /* or 56px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-large-medium {
+    /* Display/Large/Medium */
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 100%;
+    /* or 56px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-large-semibold {
+    /* Display/Large/SemiBold */
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+    /* or 56px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-large-bold {
+    /* Display/Large/Bold */
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 100%;
+    /* or 56px */
+    letter-spacing: -0.04em;
+  }
+
+  /* Display Small */
+
+  .Display-small-regular {
+    /* Display/small/Regular */
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-small-medium {
+    /* Display/small/Medium */
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-small-semibold {
+    /* Display/small/SemiBold */
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  .Display-small-bold {
+    /* Display/small/Bold */
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* Heading */
+
+  /* H1-regular */
+  .h1-regular {
+    /* Heading/H1/Regular */
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H1-medium */
+  .h1-medium {
+    /* Heading/H1/Medium */
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H1-semibold */
+  .h1-semibold {
+    /* Heading/H1/Semibold */
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H1-bold */
+  .h1-bold {
+    /* Heading/H1/Bold */
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* Heading 2 */
+
+  /* H2-regular */
+  .h2-regular {
+    /* Heading/H2/Regular */
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H2-medium */
+  .h2-medium {
+    /* Heading/H2/Medium */
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H2-semibold */
+  .h2-semibold {
+    /* Heading/H2/Semibold */
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* H2-bold */
+  .h2-bold {
+    /* Heading/H2/Bold */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.04em;
+  }
+
+  /* Heading 3 */
+
+  /* H3-regular */
+  .h3-regular {
+    /* Heading/H3/Regular */
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H3-medium */
+  .h3-medium {
+    /* Heading/H3/Medium */
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H3-semibold */
+  .h3-semibold {
+    /* Heading/H3/Semibold */
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H3-bold */
+  .h3-bold {
+    /* Heading/H3/Bold */
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* Heading 4 */
+
+  /* H4-regular */
+  .h4-regular {
+    /* Heading/H4/Regular */
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H4-medium */
+  .h4-medium {
+    /* Heading/H4/Medium */
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H4-semibold */
+  .h4-semibold {
+    /* Heading/H4/Semibold */
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H4-bold */
+  .h4-bold {
+    /* Heading/H4/Bold */
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* Heading 5 */
+
+  /* H5-regular */
+  .h5-regular {
+    /* Heading/H5/Regular */
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H5-medium */
+  .h5-medium {
+    /* Heading/H5/Medium */
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H5-semibold */
+  .h5-semibold {
+    /* Heading/H5/Semibold */
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H5-bold */
+  .h5-bold {
+    /* Heading/H5/Bold */
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* Heading 6 */
+
+  /* H6-regular */
+  .h6-regular {
+    /* Heading/H6/Regular */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H6-medium */
+  .h6-medium {
+    /* Heading/H6/Medium */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H6-semibold */
+  .h6-semibold {
+    /* Heading/H6/Semibold */
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* H6-bold */
+  .h6-bold {
+    /* Heading/H6/Bold */
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 48px */
+    letter-spacing: -0.02em;
+  }
+
+  /* Paragraph */
+
+  /* paragraph-large-regular */
+  .paragraph-large-regular {
+    /* Paragraph/Large/Regular */
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-large-medium */
+  .paragraph-large-medium {
+    /* Paragraph/large/medium */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-large-semibold */
+  .paragraph-large-semibold {
+    /* Paragraph/large/semibold */
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-large-bold */
+  .paragraph-large-bold {
+    /* Paragraph/large/bold */
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* Paragraph Medium */
+
+  /* paragraph-medium-regular */
+  .paragraph-medium-regular {
+    /* Paragraph/medium/Regular */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-medium-medium */
+  .paragraph-medium-medium {
+    /* Paragraph/medium/medium */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-medium-semibold */
+  .paragraph-medium-semibold {
+    /* Paragraph/medium/semibold */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-medium-bold */
+  .paragraph-medium-bold {
+    /* Paragraph/medium/bold */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* Paragraph Small */
+
+  /* paragraph-small-regular */
+  .paragraph-small-regular {
+    /* Paragraph/small/Regular */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-small-medium */
+  .paragraph-small-medium {
+    /* Paragraph/small/medium */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-small-semibold */
+  .paragraph-small-semibold {
+    /* Paragraph/small/semibold */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-small-bold */
+  .paragraph-small-bold {
+    /* Paragraph/small/bold */
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* Paragraph XSmall */
+
+  /* paragraph-Xsmall-regular */
+  .paragraph-Xsmall-regular {
+    /* Paragraph/Xsmall/Regular */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-Xsmall-medium */
+  .paragraph-Xsmall-medium {
+    /* Paragraph/Xsmall/medium */
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-Xsmall-semibold */
+  .paragraph-Xsmall-semibold {
+    /* Paragraph/Xsmall/semibold */
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* paragraph-Xsmall-bold */
+  .paragraph-Xsmall-bold {
+    /* Paragraph/Xsmall/bold */
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 145%;
+    /* or 26px */
+  }
+
+  /* Caption large */
+
+  .paragraph-caption-large {
+    /* Paragraph/Caption/Large */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    letter-spacing: 0.12em;
+  }
+
+  .paragraph-caption-small {
+    /* Paragraph/Caption/small */
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    letter-spacing: 0.12em;
+  }
+
+  .paragraph-caption-Xsmall {
+    /* Paragraph/Caption/Xsmall */
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
+    letter-spacing: 0.12em;
+  }
+}
+
+@layer utilities {
+  /* Shadows */
+
+  /* soft shadows */
+
+  .shadow-soft-xxsmall {
+    /* Shadow/Soft/xxsmall */
+    box-shadow: 0px 1.5px 4px -1px rgba(16, 25, 40, 0.07);
+  }
+
+  .shadow-soft-xsmall {
+    box-shadow: 0px 5px 13px -5px rgba(16, 25, 40, 0.05),
+      0px 2px 4px -1px rgba(16, 25, 40, 0.02);
+  }
+
+  .shadow-soft-small {
+    /* Shadow/Soft/small */
+    box-shadow: 0px 10px 18px -2px rgba(16, 25, 40, 0.07);
+  }
+
+  .shadow-soft-medium {
+    /* Shadow/Soft/medium */
+    box-shadow: 0px 14px 22px -9px rgba(16, 25, 40, 0.14),
+      0px 0px 3px -1px rgba(16, 25, 40, 0.04);
+  }
+
+  .shadow-soft-large {
+    /* Shadow/Soft/large */
+    box-shadow: 0px 16px 24px -4px rgba(16, 25, 40, 0.08),
+      0px 4px 6px -2px rgba(16, 25, 40, 0.03);
+  }
+
+  .shadow-soft-xlarge {
+    /* Shadow/Soft/xlarge */
+    box-shadow: 0px 24px 32px -4px rgba(16, 25, 40, 0.08),
+      0px 8px 8px -4px rgba(16, 25, 40, 0.03);
+  }
+
+  .shadow-soft-xxlarge {
+    /* Shadow/Soft/xxlarge */
+    box-shadow: 0px 32px 54px -12px rgba(16, 25, 40, 0.18);
+  }
+
+  .shadow-soft-xxxlarge {
+    /* Shadow/Soft/xxxlarge */
+    box-shadow: 0px 40px 72px -12px rgba(16, 25, 40, 0.14);
+  }
+
+  /* hard shadow */
+
+  .shadow-hard-xxsmall {
+    /* Shadow/Hard/xxsmall */
+    box-shadow: 0px 2px 5px -2px rgba(16, 25, 40, 0.06),
+      0px 2px 7px rgba(16, 25, 40, 0.05), 0px 0px 0px 1px rgba(16, 25, 40, 0.05);
+  }
+
+  .shadow-hard-xsmall {
+    /* Shadow/Hard/xsmall */
+    box-shadow: 0px 2px 12px -1px rgba(16, 25, 40, 0.1),
+      0px 2px 2px -1px rgba(16, 25, 40, 0.04),
+      0px 0px 0px 1px rgba(16, 25, 40, 0.05);
+  }
+
+  .shadow-hard-small {
+    /* Shadow/Hard/small */
+    box-shadow: 0px 6px 16px rgba(16, 25, 40, 0.08),
+      0px 0px 0px 1px rgba(16, 25, 40, 0.05);
+  }
+
+  .shadow-hard-medium {
+    /* Shadow/Hard/medium */
+    box-shadow: 0px 16px 24px -6px rgba(16, 25, 40, 0.08),
+      0px 0px 3px -1px rgba(16, 25, 40, 0.04),
+      0px 0px 0px 1px rgba(16, 25, 40, 0.05);
+  }
+
+  /* Blur */
+  .blur-xsmall {
+    backdrop-filter: blur(1px);
+    /* Note: backdrop-filter has minimal browser support */
+  }
+
+  .blur-small {
+    backdrop-filter: blur(4px);
+  }
+
+  .blur-medium {
+    backdrop-filter: blur(6px);
+    /* Note: backdrop-filter has minimal browser support */
+  }
+
+  .blur-large {
+    backdrop-filter: blur(16px);
+  }
+
+  .blur-Xlarge {
+    backdrop-filter: blur(20px);
+  }
+}
