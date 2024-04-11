@@ -375,161 +375,242 @@
             <div class="">
                 <p class="paragraph-large-medium text-Neutral-800">Calender & Date Selectors</p>
                 <P class="paragraph-medium-regular text-Neutral-500 mt-2">
-                    A calendar in a design system is a visual representation of dates and time. It is a common UI element that is used to display events, appointments, deadlines, and other time-sensitive information.
+                    A calendar in a design system is a visual representation of dates and time. It is a common UI element that is used to display events, appointments, deadlines, and other time-sensitive information. <br> The calendar date cells can be generated with code.
                 </P>
             </div>
             
            
-            <section class="h-fit flex flex-col gap-6 mt-4 bg-white p-4 rounded-lg  overflow-auto w-full">
-                <p class="paragraph-large-medium text-Neutral-800">Base Components</p>
-                <!-- Tabs Line -->
-                <div class="flex flex-wrap gap-4 justify-center w-full">
+            <section class="h-fit flex gap-9 mt-4 bg-white p-4 rounded-lg  overflow-auto w-full">
 
-                    <!-- disabled -->
-                    <button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                        4
-                    </button>
-                    <!-- default -->
-                    <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                        4
-                    </button>
-                    <!-- selected -->
-                    <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                        4
-                    </button>
-                    <!-- multi selected -->
-                    <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                        4
-                    </button>
-                    <!-- defualt last day -->
-                    <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                       Last Day
-                    </button>
-                    <!-- defualt selected -->
-                    <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                        Last Day
-                    </button>
+                <!-- Components -->
+                <div class="flex flex-col gap-6 p-4">
+
+                    <p class="paragraph-large-medium text-Neutral-800">Base Components</p>
+
+                    <!-- Tabs Line -->
+                    <div class="flex flex-wrap gap-4 ">
+    
+                        <!-- disabled -->
+                        <button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
+                            4
+                        </button>
+                        <!-- default -->
+                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
+                            4
+                        </button>
+                        <!-- selected -->
+                        <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
+                            4
+                        </button>
+                        <!-- multi selected -->
+                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
+                            4
+                        </button>
+                        <!-- defualt last day -->
+                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                           Last Day
+                        </button>
+                        <!-- defualt selected -->
+                        <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                            Last Day
+                        </button>
+    
+                    </div>
+
+                    <!-- Month and week header -->
+                    <div class="flex flex-col gap-4">
+                        <!-- month selector -->
+                        <div class="flex justify-between gap-2 w-[300px] items-center">
+    
+                            <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
+                                <span id="dropDown">
+                                    <svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
+                                        </svg>
+                                </span>
+                            </button>
+                            
+                            <div class="flex gap-2">
+                                <!-- before button -->
+                                <button id="scrollLeft" class="text-Primary-400 flex gap-2">
+                                    <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/>
+                                    </svg>
+                                </button>
+                                <!-- next button -->
+                                <button id="scrollRight" class="text-Primary-400 flex gap-2">
+                                    <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                        </div>
+    
+                        <!-- week header -->
+                        <div class=" flex gap-2 w-[300px]">
+                            <!-- default -->
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Mo
+                            </button>
+    
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Tu
+                            </button>
+    
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                We
+                            </button>
+    
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Th
+                            </button>
+    
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Fr
+                            </button>
+    
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Sa
+                            </button>
+    
+                            <button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                                Su
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Month selected -->
+                    <div class="flex flex-col gap-4 overflow-x-auto">
+                        <!-- month selector -->
+                        <div class="w-[300px] items-center">
+    
+                            <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
+                                <span id="dropDown">
+                                    <svg class="rotate-180 h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
+                                        </svg>
+                                </span>
+                            </button>
+                            
+                        </div>
+                        <!-- month selector -->
+                        <div class="flex justify-between gap-2 w-[300px] items-center">
+    
+                            <p class="text-Neutral-500 paragraph-small-semibold">Year</p>
+                            
+                            <div class="flex gap-2">
+                                <!-- before button -->
+                                <button id="scrollLeft" class="text-Primary-400 flex gap-2">
+                                    <svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.78 8.91a1.33 1.33 0 0 1 0-1.82l4.9-5.21a.67.67 0 0 1 .97.91L6.75 8l4.9 5.21a.67.67 0 0 1-.97.91l-4.9-5.2Z" fill="#F56630"/>
+                                        </svg>
+                                </button>
+                                <!-- next button -->
+                                <button id="scrollRight" class="text-Primary-400 flex gap-2">
+                                    <svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.22 8.91c.49-.51.49-1.31 0-1.82l-4.9-5.21a.67.67 0 1 0-.97.91L10.25 8l-4.9 5.21a.67.67 0 0 0 .97.91l4.9-5.2Z" fill="#F56630"/>
+                                        </svg>
+                                </button>
+                            </div>
+                            
+                        </div>
+                        <!-- month scroll -->
+                        <div id="months" class="overflow-auto scrollbar-hidden w-[300px] justify-between flex gap-2 overflow-x-auto">
+                            <!-- defualt last day -->
+                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2017
+                            </button>
+                            <!-- defualt selected -->
+                            <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2018
+                            </button>
+                            <!-- defualt last day -->
+                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2019
+                            </button>
+                            <!-- defualt last day -->
+                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2020
+                            </button>
+                            <!-- defualt last day -->
+                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2021
+                            </button>
+                            <!-- defualt last day -->
+                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
+                                2022
+                            </button>
+                        </div>
+                    </div>
 
                 </div>
 
-                <!-- Month & Year -->
-                <div class="w-[300px] overflow-x-auto">
+                <!-- Calendar and date components -->
+                <div class="flex flex-col gap-2 p-4 w-fit">
 
-                    <!-- month selector -->
-                    <div class="flex justify-between gap-2 w-full">
+                    <p class="paragraph-large-medium mb-4 text-Neutral-800">Calender & Date Selectors</p>
 
+                    <!--  -->
+                    
+                    <!-- Month selector -->
+                    <div class="flex justify-between gap-2 w-full items-center">
                         <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
                             <span id="dropDown">
                                 <svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
                                     <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
-                                  </svg>
+                                </svg>
                             </span>
                         </button>
                         
                         <div class="flex gap-2">
-                            <!-- before button -->
+                            <!-- Before button -->
                             <button id="scrollLeft" class="text-Primary-400 flex gap-2">
                                 <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/>
+                                    <path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/>
                                 </svg>
                             </button>
-                            <!-- next button -->
+                            <!-- Next button -->
                             <button id="scrollRight" class="text-Primary-400 flex gap-2">
                                 <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
-                    <!-- month scroll -->
-                    <div id="months" class="w-full flex gap-2 mt-4">
-                        <!-- defualt last day -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                            January
-                        </button>
-                        <!-- defualt selected -->
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                            February
-                        </button>
-                        <!-- defualt last day -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                            March
-                        </button>
-                        <!-- defualt last day -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                            April
-                        </button>
-                        <!-- defualt last day -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                           May
-                        </button>
-                    </div>
-                    <!-- week header -->
-                    <div class="mt-4 flex gap-2">
-                        <!-- default -->
+
+                    <!-- Calendar header -->
+                    <div class="grid grid-cols-7 gap-x-2 gap-y-2">
+                        <!-- Header cells -->
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Mo
                         </button>
-
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Tu
                         </button>
-
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             We
                         </button>
-
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Th
                         </button>
-
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Fr
                         </button>
-
                         <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Sa
                         </button>
-
-                        <button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
+                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
                             Su
                         </button>
                     </div>
-                    <!-- week header -->
-                    <div class="mt-1 flex gap-2">
-                        <!-- default -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
 
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
+                    <!-- Calendar date -->
+                    <div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"></div>
 
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-                    </div>
+                    <!--  -->
 
                 </div>
-
 
             </section>
            
@@ -663,48 +744,233 @@
                 </div>
             
 <!-- Code snippet -->
-<div class="bg-Neutral-100 p-6"><pre><code>&lt;!-- Tabs Line --&gt;
-&lt;div class="flex flex-wrap gap-1 justify-center w-full"&gt;
+<div class="bg-Neutral-100 p-6"><pre><code>&lt;!-- Components --&gt;
+&lt;div class="flex flex-col gap-6 p-4"&gt;
 
-&lt;!-- default --&gt;
-&lt;button class="group p-4 border-y flex gap-2 border-Neutral-200 h-fit items-center"&gt;
-&lt;svg class="h-5 w-5 group-hover:text-Primary-300 text-Neutral-500 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 2.28c.53.27.96.58 1.28.85.32-.27.75-.58 1.28-.85 1.21-.62 2.95-1 4.91 0 1.25.63 2.1 1.59 2.56 2.75.45 1.15.51 2.45.3 3.76-.38 2.25-1.91 4.25-3.49 5.8a27.2 27.2 0 0 1-4.33 3.38c-.76.48-1.7.48-2.46 0a27.2 27.2 0 0 1-4.33-3.38c-1.58-1.55-3.11-3.55-3.48-5.8a7.07 7.07 0 0 1 .3-3.76A5.18 5.18 0 0 1 3.8 2.28c1.96-1 3.7-.62 4.9 0Zm.65 2.54a.83.83 0 0 0 1.27 0v-.01a2.8 2.8 0 0 1 .35-.34c.25-.21.6-.48 1.05-.7.87-.45 2.03-.7 3.4 0 .89.44 1.45 1.1 1.76 1.87.31.8.38 1.78.2 2.88-.28 1.72-1.5 3.4-3 4.88a25.54 25.54 0 0 1-4.06 3.17.61.61 0 0 1-.68 0c-.93-.6-2.58-1.72-4.05-3.17-1.5-1.47-2.73-3.16-3.01-4.88a5.42 5.42 0 0 1 .2-2.88c.31-.78.87-1.43 1.76-1.88a3.58 3.58 0 0 1 3.4 0 5.15 5.15 0 0 1 1.4 1.05v.01Z"/&gt;
-    &lt;/svg&gt;
-&lt;p class="paragraph-small-medium text-neutral-500 group-hover:text-Primary-300"&gt;Label&lt;/p&gt;
-&lt;p class="paragraph-small-medium text-neutral-400 hidden"&gt;/&lt;/p&gt;
-&lt;!-- slanting seprator here --&gt;
-&lt;/button&gt;
+&lt;p class="paragraph-large-medium text-Neutral-800"&gt;Base Components&lt;/p&gt;
 
-&lt;!-- hover --&gt;
-&lt;button class="p-4 border-y flex gap-2 border-Neutral-200 h-fit items-center"&gt;
-&lt;svg class="h-5 w-5 text-Primary-300 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 2.28c.53.27.96.58 1.28.85.32-.27.75-.58 1.28-.85 1.21-.62 2.95-1 4.91 0 1.25.63 2.1 1.59 2.56 2.75.45 1.15.51 2.45.3 3.76-.38 2.25-1.91 4.25-3.49 5.8a27.2 27.2 0 0 1-4.33 3.38c-.76.48-1.7.48-2.46 0a27.2 27.2 0 0 1-4.33-3.38c-1.58-1.55-3.11-3.55-3.48-5.8a7.07 7.07 0 0 1 .3-3.76A5.18 5.18 0 0 1 3.8 2.28c1.96-1 3.7-.62 4.9 0Zm.65 2.54a.83.83 0 0 0 1.27 0v-.01a2.8 2.8 0 0 1 .35-.34c.25-.21.6-.48 1.05-.7.87-.45 2.03-.7 3.4 0 .89.44 1.45 1.1 1.76 1.87.31.8.38 1.78.2 2.88-.28 1.72-1.5 3.4-3 4.88a25.54 25.54 0 0 1-4.06 3.17.61.61 0 0 1-.68 0c-.93-.6-2.58-1.72-4.05-3.17-1.5-1.47-2.73-3.16-3.01-4.88a5.42 5.42 0 0 1 .2-2.88c.31-.78.87-1.43 1.76-1.88a3.58 3.58 0 0 1 3.4 0 5.15 5.15 0 0 1 1.4 1.05v.01Z"/&gt;
-    &lt;/svg&gt;
-&lt;p class="paragraph-small-medium text-Primary-300"&gt;Label&lt;/p&gt;
-&lt;p class="paragraph-small-medium text-neutral-400"&gt;/&lt;/p&gt;
-&lt;!-- slanting seprator here --&gt;
-&lt;/button&gt;
-
-&lt;!-- active --&gt;
-&lt;button class="p-4 border-y flex gap-2 border-Neutral-200 h-fit items-center"&gt;
-&lt;svg class="h-5 w-5 text-Primary-500 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 2.28c.53.27.96.58 1.28.85.32-.27.75-.58 1.28-.85 1.21-.62 2.95-1 4.91 0 1.25.63 2.1 1.59 2.56 2.75.45 1.15.51 2.45.3 3.76-.38 2.25-1.91 4.25-3.49 5.8a27.2 27.2 0 0 1-4.33 3.38c-.76.48-1.7.48-2.46 0a27.2 27.2 0 0 1-4.33-3.38c-1.58-1.55-3.11-3.55-3.48-5.8a7.07 7.07 0 0 1 .3-3.76A5.18 5.18 0 0 1 3.8 2.28c1.96-1 3.7-.62 4.9 0Zm.65 2.54a.83.83 0 0 0 1.27 0v-.01a2.8 2.8 0 0 1 .35-.34c.25-.21.6-.48 1.05-.7.87-.45 2.03-.7 3.4 0 .89.44 1.45 1.1 1.76 1.87.31.8.38 1.78.2 2.88-.28 1.72-1.5 3.4-3 4.88a25.54 25.54 0 0 1-4.06 3.17.61.61 0 0 1-.68 0c-.93-.6-2.58-1.72-4.05-3.17-1.5-1.47-2.73-3.16-3.01-4.88a5.42 5.42 0 0 1 .2-2.88c.31-.78.87-1.43 1.76-1.88a3.58 3.58 0 0 1 3.4 0 5.15 5.15 0 0 1 1.4 1.05v.01Z"/&gt;
-    &lt;/svg&gt;
-&lt;p class="paragraph-small-medium text-Primary-500"&gt;Label&lt;/p&gt;
-&lt;p class="paragraph-small-medium text-neutral-400"&gt;/&lt;/p&gt;
-&lt;!-- slanting seprator here --&gt;
-&lt;/button&gt;
+&lt;!-- Tabs Line --&gt;
+&lt;div class="flex flex-wrap gap-4 "&gt;
 
 &lt;!-- disabled --&gt;
-&lt;button disabled class="pointer-events-none p-4 border-y flex gap-2 border-Neutral-200 h-fit items-center"&gt;
-&lt;svg class="h-5 w-5 text-Neutral-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 2.28c.53.27.96.58 1.28.85.32-.27.75-.58 1.28-.85 1.21-.62 2.95-1 4.91 0 1.25.63 2.1 1.59 2.56 2.75.45 1.15.51 2.45.3 3.76-.38 2.25-1.91 4.25-3.49 5.8a27.2 27.2 0 0 1-4.33 3.38c-.76.48-1.7.48-2.46 0a27.2 27.2 0 0 1-4.33-3.38c-1.58-1.55-3.11-3.55-3.48-5.8a7.07 7.07 0 0 1 .3-3.76A5.18 5.18 0 0 1 3.8 2.28c1.96-1 3.7-.62 4.9 0Zm.65 2.54a.83.83 0 0 0 1.27 0v-.01a2.8 2.8 0 0 1 .35-.34c.25-.21.6-.48 1.05-.7.87-.45 2.03-.7 3.4 0 .89.44 1.45 1.1 1.76 1.87.31.8.38 1.78.2 2.88-.28 1.72-1.5 3.4-3 4.88a25.54 25.54 0 0 1-4.06 3.17.61.61 0 0 1-.68 0c-.93-.6-2.58-1.72-4.05-3.17-1.5-1.47-2.73-3.16-3.01-4.88a5.42 5.42 0 0 1 .2-2.88c.31-.78.87-1.43 1.76-1.88a3.58 3.58 0 0 1 3.4 0 5.15 5.15 0 0 1 1.4 1.05v.01Z"/&gt;
-    &lt;/svg&gt;
-&lt;p class="paragraph-small-medium text-Neutral-400"&gt;Label&lt;/p&gt;
-&lt;p class="paragraph-small-medium text-neutral-400"&gt;/&lt;/p&gt;
-&lt;!-- slanting seprator here --&gt;
+&lt;button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
+    4
 &lt;/button&gt;
+&lt;!-- default --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
+    4
+&lt;/button&gt;
+&lt;!-- selected --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
+    4
+&lt;/button&gt;
+&lt;!-- multi selected --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
+    4
+&lt;/button&gt;
+&lt;!-- defualt last day --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+    Last Day
+&lt;/button&gt;
+&lt;!-- defualt selected --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+    Last Day
+&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Month and week header --&gt;
+&lt;div class="flex flex-col gap-4"&gt;
+&lt;!-- month selector --&gt;
+&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
+
+    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
+        &lt;span id="dropDown"&gt;
+            &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
+                &lt;/svg&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    
+    &lt;div class="flex gap-2"&gt;
+        &lt;!-- before button --&gt;
+        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
+            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;!-- next button --&gt;
+        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
+            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;!-- week header --&gt;
+&lt;div class=" flex gap-2 w-[300px]"&gt;
+    &lt;!-- default --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Mo
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Tu
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        We
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Th
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Fr
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Sa
+    &lt;/button&gt;
+
+    &lt;button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+        Su
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Month selected --&gt;
+&lt;div class="flex flex-col gap-4 overflow-x-auto"&gt;
+&lt;!-- month selector --&gt;
+&lt;div class="w-[300px] items-center"&gt;
+
+    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
+        &lt;span id="dropDown"&gt;
+            &lt;svg class="rotate-180 h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
+                &lt;/svg&gt;
+        &lt;/span&gt;
+    &lt;/button&gt;
+    
+&lt;/div&gt;
+&lt;!-- month selector --&gt;
+&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
+
+    &lt;p class="text-Neutral-500 paragraph-small-semibold"&gt;Year&lt;/p&gt;
+    
+    &lt;div class="flex gap-2"&gt;
+        &lt;!-- before button --&gt;
+        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
+            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.78 8.91a1.33 1.33 0 0 1 0-1.82l4.9-5.21a.67.67 0 0 1 .97.91L6.75 8l4.9 5.21a.67.67 0 0 1-.97.91l-4.9-5.2Z" fill="#F56630"/&gt;
+                &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;!-- next button --&gt;
+        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
+            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M11.22 8.91c.49-.51.49-1.31 0-1.82l-4.9-5.21a.67.67 0 1 0-.97.91L10.25 8l-4.9 5.21a.67.67 0 0 0 .97.91l4.9-5.2Z" fill="#F56630"/&gt;
+                &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;!-- month scroll --&gt;
+&lt;div id="months" class="overflow-auto scrollbar-hidden w-[300px] justify-between flex gap-2 overflow-x-auto"&gt;
+    &lt;!-- defualt last day --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2017
+    &lt;/button&gt;
+    &lt;!-- defualt selected --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2018
+    &lt;/button&gt;
+    &lt;!-- defualt last day --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2019
+    &lt;/button&gt;
+    &lt;!-- defualt last day --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2020
+    &lt;/button&gt;
+    &lt;!-- defualt last day --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2021
+    &lt;/button&gt;
+    &lt;!-- defualt last day --&gt;
+    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
+        2022
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Calendar and date components --&gt;
+&lt;div class="flex flex-col gap-2 p-4 w-fit"&gt;
+
+&lt;p class="paragraph-large-medium mb-4 text-Neutral-800"&gt;Calender & Date Selectors&lt;/p&gt;
+
+&lt;!--  --&gt;
+
+&lt;!-- Month selector --&gt;
+&lt;div class="flex justify-between gap-2 w-full items-center"&gt;
+&lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
+    &lt;span id="dropDown"&gt;
+        &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;div class="flex gap-2"&gt;
+    &lt;!-- Before button --&gt;
+    &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
+        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;!-- Next button --&gt;
+    &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
+        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Calendar header --&gt;
+&lt;div class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;
+&lt;!-- Header cells --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Mo
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Tu
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    We
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Th
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Fr
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Sa
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+    Su
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Calendar date --&gt;
+&lt;div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;&lt;/div&gt;
+
+&lt;!--  --&gt;
 
 &lt;/div&gt;
 </code></pre>
@@ -724,9 +990,6 @@
 
             </section>
 
-            
-            
-            
             
             
 
@@ -753,8 +1016,6 @@
   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
   defer
 ></script>
-
-
 
 
 

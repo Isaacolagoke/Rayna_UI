@@ -620,3 +620,11 @@
     backdrop-filter: blur(20px);
   }
 }
+
+/* Hide the scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+}

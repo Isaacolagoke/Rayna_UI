@@ -170,6 +170,27 @@ function copyCode(containerId) {
 }
 
 
+// <!-- Date cells -->
+// <!-- Generate buttons for days 1 to 31 dynamically -->
+    // Get the container for the date cells
+// JavaScript for dynamically generating calendar dates
+// Get the container for the date cells
+const calendarContainer = document.getElementById('calendarDate');
+
+// Generate buttons for days 1 to 31
+for (let day = 1; day <= 31; day++) {
+    // Create a button element
+    const button = document.createElement('button');
+    // Set the button's class and styles
+    button.className = "p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]";
+    // Set the button's text content to the day number
+    button.textContent = day;
+    // Append the button to the calendar container
+    calendarContainer.appendChild(button);
+}
+
+
+
 
 
 
