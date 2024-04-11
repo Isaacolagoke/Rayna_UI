@@ -1,229 +1,101 @@
-&lt;!-- Components --&gt;
-&lt;div class="flex flex-col gap-6 p-4"&gt;
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Rayna Colors</title>
+	</head>
+<body class="p-8">
 
-&lt;p class="paragraph-large-medium text-Neutral-800"&gt;Base Components&lt;/p&gt;
+<!-- code-container -->
+<div class="relative"> 
+    <div id="codeSnippetContainer" class="bg-white border mt-6 border-Neutral-200 rounded-t-lg h-[592px]  
+    scrollbar-hidden overflow-auto relative flex">
+        <!-- Line numbers -->
+        <div class=" sticky flex flex-col h-[740px] p-6 bg-Primary-900 text-white">
+            <span class="">1</span>
+            <span class="">2</span>
+            <span class="">3</span>
+            <!-- Add more line numbers as needed -->
+        </div>
+        <!-- Code snippet -->
+        <div id="codeSnippet" class="overflow-auto bg-white p-6">
+            <pre><code>&lt;!-- Components --&gt;
+            &lt;div class="flex flex-col gap-6 p-4"&gt;
+            &lt;p class="paragraph-large-medium text-Neutral-800"&gt;Base Components&lt;/p&gt;
+            &lt;!-- Tabs Line --&gt;
+            &lt;div class="flex flex-wrap gap-4 "&gt;
+            &lt;!-- Calendar header --&gt;
+            &lt;div class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;
+            &lt;!-- Header cells --&gt;
+            &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+            &lt;/button&gt;
+            &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+            &lt;!-- Calendar date --&gt;
+            &lt;div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;&lt;/div&gt;
+            &lt;!--  --&gt;
+            &lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+    <!-- Copy button -->
+    <button onclick="copyCode('codeSnippetContainer')" class="absolute top-6 right-0 flex justify-center gap-[8px] copyButton shadow-soft-xsmall text-Neutral-700 w-[100px] mt-4 mr-6 py-3 px-2 paragraph-small-medium bg-white border rounded-lg  focus:outline-none">
+        <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>
+        </svg>
+        <span class="buttonText">Copy</span>
+    </button>
+    <!-- footer -->
+    <div class="px-4 py-3 border border-t-0 rounded-b-lg bg-white flex justify-between items-center">
+        <button class="paragraph-small-regular flex text-Neutral-600 items-center gap-2">
+            Tailwind Js
+            <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                <path d="m1.88 5.82 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97L8 9.75l-5.21-4.9a.67.67 0 0 0-.91.97Z"/>
+            </svg>
+        </button>
+        <div class="flex gap-4">
+            <p class="paragraph-Xsmall-regular text-Neutral-400">356 chars</p>
+            <p class="paragraph-Xsmall-regular text-Neutral-400">24 lines</p>
+        </div>
+    </div>
+</div>
 
-&lt;!-- Tabs Line --&gt;
-&lt;div class="flex flex-wrap gap-4 "&gt;
+<script>
 
-&lt;!-- disabled --&gt;
-&lt;button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- default --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- multi selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- defualt last day --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-    Last Day
-&lt;/button&gt;
-&lt;!-- defualt selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-    Last Day
-&lt;/button&gt;
+function copyCode(containerId) {
+  const codeContainer = document.getElementById(codeSnippetContainer);
+  const codeElement = codeContainer.querySelector('code');
+  const copyIcon = codeContainer.querySelector('.copyIcon');
+  const buttonText = codeContainer.querySelector('.buttonText');
 
-&lt;/div&gt;
+  const code = codeElement.textContent.trim();
 
-&lt;!-- Month and week header --&gt;
-&lt;div class="flex flex-col gap-4"&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
+  navigator.clipboard.writeText(code)
+      .then(() => {
+          // Update copy icon for success
+          copyIcon.innerHTML = `<path fill-rule="evenodd" clip-rule="evenodd" d="M17.3535 6.14375C17.755 5.76453 17.773 5.13162 17.3938 4.73011C17.0146 4.3286 16.3817 4.31053 15.9802 4.68975L6.96132 13.2079L4.02014 10.43C3.61863 10.0508 2.98572 10.0688 2.6065 10.4704C2.22728 10.8719 2.24535 11.5048 2.64686 11.884L6.27468 15.3104C6.66008 15.6744 7.26256 15.6744 7.64796 15.3104L17.3535 6.14375Z" fill="#344054"/>`;
 
-    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-        &lt;span id="dropDown"&gt;
-            &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-                &lt;/svg&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    
-    &lt;div class="flex gap-2"&gt;
-        &lt;!-- before button --&gt;
-        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
-            &lt;/svg&gt;
-        &lt;/button&gt;
-        &lt;!-- next button --&gt;
-        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
-            &lt;/svg&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
+          // Update button text for success
+          buttonText.textContent = 'Copied';
 
-&lt;!-- week header --&gt;
-&lt;div class=" flex gap-2 w-[300px]"&gt;
-    &lt;!-- default --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Mo
-    &lt;/button&gt;
+          // Reset copy icon and button text after 3 seconds
+          setTimeout(() => {
+              copyIcon.innerHTML = `<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>`;
+              buttonText.textContent = 'Copy';
+          }, 3000);
+      })
+      .catch(err => {
+          console.error('Failed to copy content: ', err);
+      });
+}
 
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Tu
-    &lt;/button&gt;
+</script>
 
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        We
-    &lt;/button&gt;
 
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Th
-    &lt;/button&gt;
 
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Fr
-    &lt;/button&gt;
 
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Sa
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Su
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Month selected --&gt;
-&lt;div class="flex flex-col gap-4 overflow-x-auto"&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="w-[300px] items-center"&gt;
-
-    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-        &lt;span id="dropDown"&gt;
-            &lt;svg class="rotate-180 h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-                &lt;/svg&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    
-&lt;/div&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
-
-    &lt;p class="text-Neutral-500 paragraph-small-semibold"&gt;Year&lt;/p&gt;
-    
-    &lt;div class="flex gap-2"&gt;
-        &lt;!-- before button --&gt;
-        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M5.78 8.91a1.33 1.33 0 0 1 0-1.82l4.9-5.21a.67.67 0 0 1 .97.91L6.75 8l4.9 5.21a.67.67 0 0 1-.97.91l-4.9-5.2Z" fill="#F56630"/&gt;
-                &lt;/svg&gt;
-        &lt;/button&gt;
-        &lt;!-- next button --&gt;
-        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M11.22 8.91c.49-.51.49-1.31 0-1.82l-4.9-5.21a.67.67 0 1 0-.97.91L10.25 8l-4.9 5.21a.67.67 0 0 0 .97.91l4.9-5.2Z" fill="#F56630"/&gt;
-                &lt;/svg&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
-&lt;!-- month scroll --&gt;
-&lt;div id="months" class="overflow-auto scrollbar-hidden w-[300px] justify-between flex gap-2 overflow-x-auto"&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2017
-    &lt;/button&gt;
-    &lt;!-- defualt selected --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2018
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2019
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2020
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2021
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2022
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;!-- Calendar and date components --&gt;
-&lt;div class="flex flex-col gap-2 p-4 w-fit"&gt;
-
-&lt;p class="paragraph-large-medium mb-4 text-Neutral-800"&gt;Calender & Date Selectors&lt;/p&gt;
-
-&lt;!--  --&gt;
-
-&lt;!-- Month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-full items-center"&gt;
-&lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-    &lt;span id="dropDown"&gt;
-        &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/span&gt;
-&lt;/button&gt;
-
-&lt;div class="flex gap-2"&gt;
-    &lt;!-- Before button --&gt;
-    &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/button&gt;
-    &lt;!-- Next button --&gt;
-    &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Calendar header --&gt;
-&lt;div class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;
-&lt;!-- Header cells --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Mo
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Tu
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    We
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Th
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Fr
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Sa
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Su
-&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;!-- Calendar date --&gt;
-&lt;div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;&lt;/div&gt;
-
-&lt;!--  --&gt;
-
-&lt;/div&gt;
+</body>
+</html>

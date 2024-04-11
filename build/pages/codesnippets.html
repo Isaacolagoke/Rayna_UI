@@ -373,244 +373,349 @@
 
             <!-- Sub section header -->
             <div class="">
-                <p class="paragraph-large-medium text-Neutral-800">Calender & Date Selectors</p>
+                <p class="paragraph-large-medium text-Neutral-800">Code Snippet</p>
                 <P class="paragraph-medium-regular text-Neutral-500 mt-2">
-                    A calendar in a design system is a visual representation of dates and time. It is a common UI element that is used to display events, appointments, deadlines, and other time-sensitive information. <br> The calendar date cells can be generated with code.
+                    Code snippets are useful to create prototypes of editors or when sharing code examples with others.
                 </P>
             </div>
             
            
-            <section class="h-fit flex gap-9 mt-4 bg-white p-4 rounded-lg  overflow-auto w-full">
+            <section class="h-fit grid items-start content-start grid-cols-1 lg:grid-cols-2 gap-4 mt-4 rounded-lg w-full">
 
-                <!-- Components -->
-                <div class="flex flex-col gap-6 p-4">
-
-                    <p class="paragraph-large-medium text-Neutral-800">Base Components</p>
-
-                    <!-- Tabs Line -->
-                    <div class="flex flex-wrap gap-4 ">
-    
-                        <!-- disabled -->
-                        <button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-                        <!-- default -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-                        <!-- selected -->
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-                        <!-- multi selected -->
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]">
-                            4
-                        </button>
-                        <!-- defualt last day -->
-                        <button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                           Last Day
-                        </button>
-                        <!-- defualt selected -->
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                            Last Day
-                        </button>
-    
+        
+            <!-- code-container -->
+            <div class="relative"> 
+                <div id="codeSnippetContainer" class="bg-white border border-Neutral-200 rounded-t-lg h-[592px]  
+                scrollbar-hidden overflow-auto relative flex">
+                    <!-- Line numbers -->
+                    <div class=" sticky flex flex-col h-full p-6 bg-Primary-900 text-white">
+                        <span class="">1</span>
+                        <span class="">2</span>
+                        <span class="">3</span>
+                        <span class="">4</span>
+                        <span class="">5</span>
+                        <span class="">6</span>
+                        <span class="">7</span>
+                        <span class="">8</span>
+                        <span class="">9</span>
+                        <span class="">10</span>
+                        <span class="">11</span>
+                        <span class="">12</span>
+                        <span class="">13</span>
+                        <span class="">14</span>
+                        <span class="">15</span>
+                        <span class="">16</span>
+                        <span class="">17</span>
+                        <span class="">18</span>
+                        <span class="">19</span>
+                        <span class="">20</span>
+                        <span class="">21</span>
+                        <span class="">22</span>
+                        <span class="">23</span>
+                        <span class="">24</span>
+                        <!-- Add more line numbers as needed -->
                     </div>
-
-                    <!-- Month and week header -->
-                    <div class="flex flex-col gap-4">
-                        <!-- month selector -->
-                        <div class="flex justify-between gap-2 w-[300px] items-center">
-    
-                            <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
-                                <span id="dropDown">
-                                    <svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
-                                        </svg>
-                                </span>
-                            </button>
-                            
-                            <div class="flex gap-2">
-                                <!-- before button -->
-                                <button id="scrollLeft" class="text-Primary-400 flex gap-2">
-                                    <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/>
-                                    </svg>
-                                </button>
-                                <!-- next button -->
-                                <button id="scrollRight" class="text-Primary-400 flex gap-2">
-                                    <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            
-                        </div>
-    
-                        <!-- week header -->
-                        <div class=" flex gap-2 w-[300px]">
-                            <!-- default -->
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Mo
-                            </button>
-    
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Tu
-                            </button>
-    
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                We
-                            </button>
-    
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Th
-                            </button>
-    
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Fr
-                            </button>
-    
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Sa
-                            </button>
-    
-                            <button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                                Su
-                            </button>
-                        </div>
+                    <!-- Code snippet -->
+<div id="codeSnippet" class="w-full overflow-auto bg-white p-6">
+<pre><code>&lt;!-- Components --&gt;
+&lt;div class="flex flex-col gap-6 p-4"&gt;
+&lt;p class="paragraph-large-medium text-Neutral-800"&gt;Base Components&lt;/p&gt;
+&lt;!-- Tabs Line --&gt;
+&lt;div class="flex flex-wrap gap-4 "&gt;
+&lt;!-- Calendar header --&gt;
+&lt;div class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;
+&lt;!-- Header cells --&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+&lt;/button&gt;
+&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
+&lt;!-- Calendar date --&gt;
+&lt;div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;&lt;/div&gt;
+&lt;!--  --&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+                </div>
+                <!-- Copy button -->
+                <button onclick="copyCode('codeSnippetContainer')" class="absolute top-6 right-0 flex justify-center gap-[8px] copyButton shadow-soft-xsmall text-Neutral-700 w-[100px] mt-4 mr-6 py-3 px-2 paragraph-small-medium bg-white border rounded-lg  focus:outline-none">
+                    <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>
+                    </svg>
+                    <span class="buttonText">Copy</span>
+                </button>
+                <!-- footer -->
+                <div class="px-4 py-3 border border-t-0 rounded-b-lg bg-white flex justify-between items-center">
+                    <button class="paragraph-small-regular flex text-Neutral-600 items-center gap-2">
+                        Tailwind Js
+                        <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m1.88 5.82 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97L8 9.75l-5.21-4.9a.67.67 0 0 0-.91.97Z"/>
+                        </svg>
+                    </button>
+                    <div class="flex gap-4">
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">356 chars</p>
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">24 lines</p>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Month selected -->
-                    <div class="flex flex-col gap-4 overflow-x-auto">
-                        <!-- month selector -->
-                        <div class="w-[300px] items-center">
-    
-                            <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
-                                <span id="dropDown">
-                                    <svg class="rotate-180 h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
-                                        </svg>
-                                </span>
-                            </button>
-                            
+            <!-- Variant 2 -->
+            <div class="">
+                <div class="rounded-t-lg border border-Neutral-200 bg-white h-[592px] overflow-auto scrollbar-hidden">
+                    <!-- header -->
+                    <div class="bg-white sticky top-0 z-50 w-full border-b border-Neutral-100 flex justify-between px-4 py-3">
+                        <div class="items-center flex gap-3">
+                            <svg class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x=".5" y=".5" width="31" height="31" rx="7.5" fill="#fff"/>
+                                <rect x=".5" y=".5" width="31" height="31" rx="7.5" stroke="#E4E7EC"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 9.33c-.32 0-.63.07-.92.2l-4.22 2a2.67 2.67 0 0 0-1.53 2.4v4.74c0 .66.39 1.27.99 1.55l4.76 2.24a2.16 2.16 0 0 0 1.84 0l4.76-2.24c.6-.28.99-.89.99-1.55v-4.73c0-1.04-.6-1.98-1.53-2.42l-4.22-1.98c-.29-.14-.6-.2-.92-.2Zm5.33 8.26-4.66-2.34V10.9l3.9 1.84c.47.22.76.69.76 1.2v3.66ZM16 16.4 21.16 19a.4.4 0 0 1-.05.02l-4.76 2.24a.82.82 0 0 1-.7 0l-4.76-2.24a.38.38 0 0 1-.05-.02L16 16.41Zm-.67-1.16-4.66 2.34v-3.65c0-.52.3-1 .76-1.21l3.9-1.84v4.36Z" fill="#000"/>
+                            </svg>
+                            <p class="paragraph-medium-semibold text-Neutral-900">raynalogic.js</p>
                         </div>
-                        <!-- month selector -->
-                        <div class="flex justify-between gap-2 w-[300px] items-center">
     
-                            <p class="text-Neutral-500 paragraph-small-semibold">Year</p>
-                            
-                            <div class="flex gap-2">
-                                <!-- before button -->
-                                <button id="scrollLeft" class="text-Primary-400 flex gap-2">
-                                    <svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.78 8.91a1.33 1.33 0 0 1 0-1.82l4.9-5.21a.67.67 0 0 1 .97.91L6.75 8l4.9 5.21a.67.67 0 0 1-.97.91l-4.9-5.2Z" fill="#F56630"/>
-                                        </svg>
-                                </button>
-                                <!-- next button -->
-                                <button id="scrollRight" class="text-Primary-400 flex gap-2">
-                                    <svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.22 8.91c.49-.51.49-1.31 0-1.82l-4.9-5.21a.67.67 0 1 0-.97.91L10.25 8l-4.9 5.21a.67.67 0 0 0 .97.91l4.9-5.2Z" fill="#F56630"/>
-                                        </svg>
-                                </button>
+                        <button class=" flex justify-center gap-[8px] shadow-soft-xsmall text-Neutral-700 w-fit py-2 px-2 paragraph-small-medium bg-white border rounded-lg  focus:outline-none">
+                            <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>
+                            </svg>
+                            <span class="buttonText">Copy</span>
+                        </button>
+                    </div>
+                    <!-- code snippet -->
+                    <div class="flex">
+
+                        <!-- Line numbers -->
+                        <div class="overflow-hidden flex flex-col h-full p-6 bg-white text-Neutral-400">
+                            <span class="">1</span>
+                            <span class="">2</span>
+                            <span class="">3</span>
+                            <span class="">4</span>
+                            <span class="">5</span>
+                            <span class="">6</span>
+                            <span class="">7</span>
+                            <span class="">8</span>
+                            <span class="">9</span>
+                            <span class="">10</span>
+                            <span class="">11</span>
+                            <span class="">12</span>
+                            <span class="">13</span>
+                            <span class="">14</span>
+                            <span class="">15</span>
+                            <span class="">16</span>
+                            <span class="">17</span>
+                            <span class="">18</span>
+                            <span class="">19</span>
+                            <span class="">20</span>
+                            <span class="">21</span>
+                            <span class="">22</span>
+                            <span class="">23</span>
+                            <span class="">24</span>
+                            <!-- Add more line numbers as needed -->
+                        </div>
+                        <div class="p-6 bg-Neutral-100 w-full">
+                            <pre>
+                                <code>var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+$('.text').append ('<span style="display:block;"
+
+id="'+index+'"></span>');
+
+var lineID = index;
+var self = $(this);
+setTimeout(function () {
+$.each(self, function(index, chunk){
+
+setTimeout(function () {
+$('#'+lineID).append("<span>"+chunk+"
+</span>");
+
+$('body,
+html').scrollTop($(document).height());
+}, index*5);
+});
+
+}, index*100);
+});
+                                </code>
+                            </pre>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="px-4 py-3 border border-t-0 rounded-b-lg bg-white flex justify-between items-center">
+                    <button class="paragraph-small-regular flex text-Neutral-600 items-center gap-2">
+                        Tailwind Js
+                        <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m1.88 5.82 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97L8 9.75l-5.21-4.9a.67.67 0 0 0-.91.97Z"/>
+                        </svg>
+                    </button>
+                    <div class="flex gap-4">
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">356 chars</p>
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">24 lines</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant 3 -->
+            <div class="">
+                <div class="rounded-t-lg border border-Neutral-200 bg-white h-[592px] overflow-auto scrollbar-hidden">
+                    <!-- header -->
+                    <div class="bg-white sticky top-0 z-50 w-full border-b border-Neutral-100 flex items-center justify-between px-4 py-3">
+                        <div class="">
+                            <p class="paragraph-medium-semibold text-Primary-400">raynalogic.js</p>
+                        </div>
+
+                        <div class="items-center flex gap-3">
+                            <button class=" flex justify-center  text-Neutral-700 w-fit py-2 px-2 paragraph-small-medium bg-white border rounded-lg  focus:outline-none">
+                                <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>
+                                </svg>
+                            </button>
+
+                            <button class=" flex justify-center  text-Neutral-700 w-fit py-2 px-2 paragraph-small-medium bg-white border rounded-lg  focus:outline-none">
+                                <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 5.17A.83.83 0 1 1 5.16 4L7.9 6.71V5.18a.83.83 0 1 1 1.66 0v3.54c0 .46-.37.83-.83.83H5.18a.83.83 0 1 1 0-1.66h1.53L3.99 5.17ZM11.28 10.45h3.54a.83.83 0 1 1 0 1.66h-1.53l2.72 2.72A.83.83 0 1 1 14.83 16l-2.72-2.72v1.53a.83.83 0 1 1-1.66 0v-3.54c0-.46.37-.83.83-.83Z"/>
+                                  </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- code snippet -->
+                    <div class="flex">
+
+                        <!-- Line numbers -->
+                        <div class="overflow-hidden flex flex-col h-full p-6 bg-white text-Neutral-400">
+                            <span class="">1</span>
+                            <span class="">2</span>
+                            <span class="">3</span>
+                            <span class="">4</span>
+                            <span class="">5</span>
+                            <span class="">6</span>
+                            <span class="">7</span>
+                            <span class="">8</span>
+                            <span class="">9</span>
+                            <span class="">10</span>
+                            <span class="">11</span>
+                            <span class="">12</span>
+                            <span class="">13</span>
+                            <span class="">14</span>
+                            <span class="">15</span>
+                            <span class="">16</span>
+                            <span class="">17</span>
+                            <span class="">18</span>
+                            <span class="">19</span>
+                            <span class="">20</span>
+                            <span class="">21</span>
+                            <span class="">22</span>
+                            <span class="">23</span>
+                            <span class="">24</span>
+                            <!-- Add more line numbers as needed -->
+                        </div>
+                        <div class="p-6 bg-Neutral-100 w-full">
+                            <pre>
+                                <code>var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+$('.text').append ('<span style="display:block;"
+
+id="'+index+'"></span>');
+
+var lineID = index;
+var self = $(this);
+setTimeout(function () {
+$.each(self, function(index, chunk){
+
+setTimeout(function () {
+$('#'+lineID).append("<span>"+chunk+"
+</span>");
+
+$('body,
+html').scrollTop($(document).height());
+}, index*5);
+});
+
+}, index*100);
+});
+                                </code>
+                            </pre>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="px-4 py-3 border border-t-0 rounded-b-lg bg-white flex justify-between items-center">
+                    <button class="paragraph-small-regular flex text-Neutral-600 items-center gap-2">
+                        Tailwind Js
+                        <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m1.88 5.82 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97L8 9.75l-5.21-4.9a.67.67 0 0 0-.91.97Z"/>
+                        </svg>
+                    </button>
+                    <div class="flex gap-4">
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">356 chars</p>
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">24 lines</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variant 4 -->
+            <div class="">
+                <div class="flex flex-col p-3 rounded-t-lg border border-Neutral-200 bg-white h-[592px] overflow-auto scrollbar-hidden">
+                    <!-- header -->
+                    <button class=" w-full border border-Neutral-200 rounded-lg px-3 py-2 justify-center flex gap-[10px]">
+                        <svg class="copyIcon fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>
+                        </svg>
+                        <p class="paragraph-small-semibold text-Neutral-700">Click to copy the code</p>
+                    </button>
+
+                    <div class="pt-3 h-full">
+
+                        <div class="flex border border-Neutral-200 rounded-lg px-3 w-full h-full">
+                            <!-- Line numbers -->
+                            <div class="overflow-hidden border-r border-Neutral-200 flex flex-col h-full p-6 bg-white text-Neutral-400">
+                                <span class="">1</span>
+                                <span class="">2</span>
+                                <span class="">3</span>
+                                <span class="">4</span>
+                                <span class="">5</span>
+                                <span class="">6</span>
+                                <span class="">7</span>
+                                <span class="">8</span>
+                                <span class="">9</span>
+                                <span class="">10</span>
+                                <span class="">11</span>
+                                <span class="">12</span>
+                                <span class="">13</span>
+                                <span class="">14</span>
+                                <span class="">15</span>
+                                <span class="">16</span>
+                                <span class="">17</span>
+                                <span class="">18</span>
+                                <span class="">19</span>
+                                <!-- Add more line numbers as needed -->
                             </div>
-                            
                         </div>
-                        <!-- month scroll -->
-                        <div id="months" class="overflow-auto scrollbar-hidden w-[300px] justify-between flex gap-2 overflow-x-auto">
-                            <!-- defualt last day -->
-                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2017
-                            </button>
-                            <!-- defualt selected -->
-                            <button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2018
-                            </button>
-                            <!-- defualt last day -->
-                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2019
-                            </button>
-                            <!-- defualt last day -->
-                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2020
-                            </button>
-                            <!-- defualt last day -->
-                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2021
-                            </button>
-                            <!-- defualt last day -->
-                            <button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]">
-                                2022
-                            </button>
-                        </div>
+                
+
                     </div>
 
                 </div>
-
-                <!-- Calendar and date components -->
-                <div class="flex flex-col gap-2 p-4 w-fit">
-
-                    <p class="paragraph-large-medium mb-4 text-Neutral-800">Calender & Date Selectors</p>
-
-                    <!--  -->
-                    
-                    <!-- Month selector -->
-                    <div class="flex justify-between gap-2 w-full items-center">
-                        <button class="paragraph-medium-semibold flex items-center gap-2 text-black">July 2023
-                            <span id="dropDown">
-                                <svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/>
-                                </svg>
-                            </span>
-                        </button>
-                        
-                        <div class="flex gap-2">
-                            <!-- Before button -->
-                            <button id="scrollLeft" class="text-Primary-400 flex gap-2">
-                                <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/>
-                                </svg>
-                            </button>
-                            <!-- Next button -->
-                            <button id="scrollRight" class="text-Primary-400 flex gap-2">
-                                <svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/>
-                                </svg>
-                            </button>
-                        </div>
+                <!-- footer -->
+                <div class="px-4 py-3 border border-t-0 rounded-b-lg bg-white flex justify-between items-center">
+                    <button class="paragraph-small-regular flex text-Neutral-600 items-center gap-2">
+                        Tailwind Js
+                        <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m1.88 5.82 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97L8 9.75l-5.21-4.9a.67.67 0 0 0-.91.97Z"/>
+                        </svg>
+                    </button>
+                    <div class="flex gap-4">
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">356 chars</p>
+                        <p class="paragraph-Xsmall-regular text-Neutral-400">24 lines</p>
                     </div>
-
-                    <!-- Calendar header -->
-                    <div class="grid grid-cols-7 gap-x-2 gap-y-2">
-                        <!-- Header cells -->
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Mo
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Tu
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            We
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Th
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Fr
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Sa
-                        </button>
-                        <button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]">
-                            Su
-                        </button>
-                    </div>
-
-                    <!-- Calendar date -->
-                    <div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"></div>
-
-                    <!--  -->
-
                 </div>
+            </div>
+
 
             </section>
            
@@ -619,377 +724,6 @@
             
          
           
-            <!-- code section -->
-            <section class="grid grid-cols-1 lg:grid-cols-1 gap-6">
-
-
-            <!-- code-container -->
-            <div id="codeContainer1" class="bg-Neutral-100 border mt-6 border-Neutral-200 rounded-lg h-64 overflow-auto relative flex">
-                <!-- code type -->
-                <div class="absolute w-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
-                    CSS
-                </div>
-            
-                 <!-- Line numbers -->
-                 <div class="flex flex-col p-6 bg-white h-fit">
-                    <span class="text-Neutral-400">1</span>
-                    <span class="text-Neutral-400">2</span>
-                    <span class="text-Neutral-400">3</span>
-                    <span class="text-Neutral-400">4</span>
-                    <span class="text-Neutral-400">5</span>
-                    <span class="text-Neutral-400">6</span>
-                    <span class="text-Neutral-400">7</span>
-                    <span class="text-Neutral-400">8</span>
-                    <span class="text-Neutral-400">9</span>
-                    <span class="text-Neutral-400">10</span>
-                    <span class="text-Neutral-400">11</span>
-                    <span class="text-Neutral-400">12</span>
-                    <span class="text-Neutral-400">13</span>
-                    <span class="text-Neutral-400">14</span>
-                    <span class="text-Neutral-400">15</span>
-                    <span class="text-Neutral-400">16</span>
-                    <span class="text-Neutral-400">17</span>
-                    <span class="text-Neutral-400">18</span>
-                    <span class="text-Neutral-400">19</span>
-                    <span class="text-Neutral-400">20</span>
-                    <span class="text-Neutral-400">21</span>
-                    <span class="text-Neutral-400">22</span>
-                    <span class="text-Neutral-400">23</span>
-                    <span class="text-Neutral-400">24</span>
-                    <span class="text-Neutral-400">25</span>
-                    <span class="text-Neutral-400">26</span>
-                    <span class="text-Neutral-400">27</span>
-                    <span class="text-Neutral-400">28</span>
-                    <span class="text-Neutral-400">29</span>
-                    <span class="text-Neutral-400">30</span>
-                    <span class="text-Neutral-400">31</span>
-                    <span class="text-Neutral-400">32</span>
-                    <span class="text-Neutral-400">33</span>
-                    <span class="text-Neutral-400">34</span>
-                    <span class="text-Neutral-400">35</span>
-                    <span class="text-Neutral-400">36</span>
-                    <span class="text-Neutral-400">37</span>
-                    <span class="text-Neutral-400">38</span>
-                    <span class="text-Neutral-400">39</span>
-                    <span class="text-Neutral-400">40</span>
-                    <span class="text-Neutral-400">41</span>
-                    <span class="text-Neutral-400">42</span>
-                    <span class="text-Neutral-400">43</span>
-                    <span class="text-Neutral-400">44</span>
-                    <span class="text-Neutral-400">45</span>
-                    <span class="text-Neutral-400">46</span>
-                    <span class="text-Neutral-400">47</span>
-                    <span class="text-Neutral-400">48</span>
-                    <span class="text-Neutral-400">49</span>
-                    <span class="text-Neutral-400">50</span>
-                    <span class="text-Neutral-400">51</span>
-                    <span class="text-Neutral-400">52</span>
-                    <span class="text-Neutral-400">53</span>
-                    <span class="text-Neutral-400">54</span>
-                    <span class="text-Neutral-400">55</span>
-                    <span class="text-Neutral-400">56</span>
-                    <span class="text-Neutral-400">57</span>
-                    <span class="text-Neutral-400">58</span>
-                    <span class="text-Neutral-400">59</span>
-                    <span class="text-Neutral-400">60</span>
-                    <span class="text-Neutral-400">61</span>
-                    <span class="text-Neutral-400">62</span>
-                    <span class="text-Neutral-400">63</span>
-                    <span class="text-Neutral-400">64</span>
-                    <span class="text-Neutral-400">65</span>
-                    <span class="text-Neutral-400">66</span>
-                    <span class="text-Neutral-400">67</span>
-                    <span class="text-Neutral-400">68</span>
-                    <span class="text-Neutral-400">69</span>
-                    <span class="text-Neutral-400">70</span>
-                    <span class="text-Neutral-400">71</span>
-                    <span class="text-Neutral-400">72</span>
-                    <span class="text-Neutral-400">73</span>
-                    <span class="text-Neutral-400">74</span>
-                    <span class="text-Neutral-400">75</span>
-                    <span class="text-Neutral-400">76</span>
-                    <span class="text-Neutral-400">77</span>
-                    <span class="text-Neutral-400">78</span>
-                    <span class="text-Neutral-400">79</span>
-                    <span class="text-Neutral-400">80</span>
-                    <span class="text-Neutral-400">81</span>
-                    <span class="text-Neutral-400">82</span>
-                    <span class="text-Neutral-400">83</span>
-                    <span class="text-Neutral-400">84</span>
-                    <span class="text-Neutral-400">85</span>
-                    <span class="text-Neutral-400">86</span>
-                    <span class="text-Neutral-400">87</span>
-                    <span class="text-Neutral-400">89</span>
-                    <span class="text-Neutral-400">90</span>
-                    <span class="text-Neutral-400">91</span>
-                    <span class="text-Neutral-400">92</span>
-                    <span class="text-Neutral-400">93</span>
-                    <span class="text-Neutral-400">94</span>
-                    <span class="text-Neutral-400">95</span>
-                    <span class="text-Neutral-400">96</span>
-                    <span class="text-Neutral-400">97</span>
-                    <span class="text-Neutral-400">98</span>
-                    <span class="text-Neutral-400">99</span>
-                    <span class="text-Neutral-400">100</span>
-                    <span class="text-Neutral-400">101</span>
-                    <span class="text-Neutral-400">102</span>
-                    <span class="text-Neutral-400">103</span>
-                    <span class="text-Neutral-400">104</span>
-                    <span class="text-Neutral-400">105</span>
-                    <span class="text-Neutral-400">106</span>
-                    <span class="text-Neutral-400">107</span>
-                    <span class="text-Neutral-400">108</span>
-                    <span class="text-Neutral-400">109</span>
-                    <!-- Add more line numbers as needed -->
-                </div>
-            
-<!-- Code snippet -->
-<div class="bg-Neutral-100 p-6"><pre><code>&lt;!-- Components --&gt;
-&lt;div class="flex flex-col gap-6 p-4"&gt;
-
-&lt;p class="paragraph-large-medium text-Neutral-800"&gt;Base Components&lt;/p&gt;
-
-&lt;!-- Tabs Line --&gt;
-&lt;div class="flex flex-wrap gap-4 "&gt;
-
-&lt;!-- disabled --&gt;
-&lt;button disabled class="pointer-events-none p-[9.52px] paragraph-Xsmall-regular text-Neutral-300 bg-Neutral-75 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- default --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- multi selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-[38.07px] h-[38.07px]"&gt;
-    4
-&lt;/button&gt;
-&lt;!-- defualt last day --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-regular border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-    Last Day
-&lt;/button&gt;
-&lt;!-- defualt selected --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-    Last Day
-&lt;/button&gt;
-
-&lt;/div&gt;
-
-&lt;!-- Month and week header --&gt;
-&lt;div class="flex flex-col gap-4"&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
-
-    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-        &lt;span id="dropDown"&gt;
-            &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-                &lt;/svg&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    
-    &lt;div class="flex gap-2"&gt;
-        &lt;!-- before button --&gt;
-        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
-            &lt;/svg&gt;
-        &lt;/button&gt;
-        &lt;!-- next button --&gt;
-        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
-            &lt;/svg&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
-
-&lt;!-- week header --&gt;
-&lt;div class=" flex gap-2 w-[300px]"&gt;
-    &lt;!-- default --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Mo
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Tu
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        We
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Th
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Fr
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Sa
-    &lt;/button&gt;
-
-    &lt;button class="p-[9.52px] bg-slate-100 paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-        Su
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Month selected --&gt;
-&lt;div class="flex flex-col gap-4 overflow-x-auto"&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="w-[300px] items-center"&gt;
-
-    &lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-        &lt;span id="dropDown"&gt;
-            &lt;svg class="rotate-180 h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-                &lt;/svg&gt;
-        &lt;/span&gt;
-    &lt;/button&gt;
-    
-&lt;/div&gt;
-&lt;!-- month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-[300px] items-center"&gt;
-
-    &lt;p class="text-Neutral-500 paragraph-small-semibold"&gt;Year&lt;/p&gt;
-    
-    &lt;div class="flex gap-2"&gt;
-        &lt;!-- before button --&gt;
-        &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M5.78 8.91a1.33 1.33 0 0 1 0-1.82l4.9-5.21a.67.67 0 0 1 .97.91L6.75 8l4.9 5.21a.67.67 0 0 1-.97.91l-4.9-5.2Z" fill="#F56630"/&gt;
-                &lt;/svg&gt;
-        &lt;/button&gt;
-        &lt;!-- next button --&gt;
-        &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-            &lt;svg class="h-[16px] w-[17px] fill-current" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
-                &lt;path d="M11.22 8.91c.49-.51.49-1.31 0-1.82l-4.9-5.21a.67.67 0 1 0-.97.91L10.25 8l-4.9 5.21a.67.67 0 0 0 .97.91l4.9-5.2Z" fill="#F56630"/&gt;
-                &lt;/svg&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
-&lt;!-- month scroll --&gt;
-&lt;div id="months" class="overflow-auto scrollbar-hidden w-[300px] justify-between flex gap-2 overflow-x-auto"&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2017
-    &lt;/button&gt;
-    &lt;!-- defualt selected --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-semibold border border-Primary-400 text-black bg-Primary-50 flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2018
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2019
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2020
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2021
-    &lt;/button&gt;
-    &lt;!-- defualt last day --&gt;
-    &lt;button class="p-[9.52px] paragraph-Xsmall-medium border border-Neutral-100 text-black bg-white flex justify-center items-center rounded-[10px] w-fit h-[38.07px]"&gt;
-        2022
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;!-- Calendar and date components --&gt;
-&lt;div class="flex flex-col gap-2 p-4 w-fit"&gt;
-
-&lt;p class="paragraph-large-medium mb-4 text-Neutral-800"&gt;Calender & Date Selectors&lt;/p&gt;
-
-&lt;!--  --&gt;
-
-&lt;!-- Month selector --&gt;
-&lt;div class="flex justify-between gap-2 w-full items-center"&gt;
-&lt;button class="paragraph-medium-semibold flex items-center gap-2 text-black"&gt;July 2023
-    &lt;span id="dropDown"&gt;
-        &lt;svg class="h-[17px] w-[17px] text-Primary-400 fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="m2.38 6.32 5.2 4.9c.52.49 1.32.49 1.83 0l5.21-4.9a.67.67 0 0 0-.91-.97l-5.21 4.9-5.21-4.9a.67.67 0 1 0-.91.97Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/span&gt;
-&lt;/button&gt;
-
-&lt;div class="flex gap-2"&gt;
-    &lt;!-- Before button --&gt;
-    &lt;button id="scrollLeft" class="text-Primary-400 flex gap-2"&gt;
-        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="M7.1 11.64c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 1 1 1.21 1.14L8.31 10.5l6.13 6.51a.83.83 0 1 1-1.21 1.14l-6.13-6.5Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/button&gt;
-    &lt;!-- Next button --&gt;
-    &lt;button id="scrollRight" class="text-Primary-400 flex gap-2"&gt;
-        &lt;svg class="h-[21px] w-[21px] fill-current" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="M13.9 11.64c.6-.64.6-1.64 0-2.28L7.77 2.85a.83.83 0 0 0-1.21 1.14l6.13 6.51-6.13 6.51a.83.83 0 1 0 1.21 1.14l6.13-6.5Z"/&gt;
-        &lt;/svg&gt;
-    &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Calendar header --&gt;
-&lt;div class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;
-&lt;!-- Header cells --&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Mo
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Tu
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    We
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Th
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Fr
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Sa
-&lt;/button&gt;
-&lt;button class="p-[9.52px] paragraph-Xsmall-semibold text-black bg-white flex justify-center items-center rounded-[10px] w-[40px] h-[40px]"&gt;
-    Su
-&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;!-- Calendar date --&gt;
-&lt;div id="calendarDate" class="grid grid-cols-7 gap-x-2 gap-y-2"&gt;&lt;/div&gt;
-
-&lt;!--  --&gt;
-
-&lt;/div&gt;
-</code></pre>
-
-</div>
-            
-                <!-- Copy button -->
-                <button onclick="copyCode('codeContainer1')" class="absolute right-0 flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none">
-                    <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
-                    </svg>
-                    <span class="buttonText">Copy</span>
-                </button>
-            </div>
-            
-            
-
-            </section>
-
             
             
 
@@ -1017,7 +751,37 @@
   defer
 ></script>
 
-
+<script>
+    function copyCode(containerId) {
+        // Get the code snippet element
+        var codeSnippet = document.getElementById(containerId).querySelector('pre code');
+        // Create a textarea element to copy the code
+        var tempTextarea = document.createElement('textarea');
+        // Set the value of the textarea to the code snippet
+        tempTextarea.value = codeSnippet.textContent;
+        // Append the textarea to the document
+        document.body.appendChild(tempTextarea);
+        // Select the text in the textarea
+        tempTextarea.select();
+        // Copy the selected text
+        document.execCommand('copy');
+        // Remove the textarea from the document
+        document.body.removeChild(tempTextarea);
+        // Get the copy button
+        var copyButton = document.querySelector('#' + containerId + ' .copyButton');
+        // Change the text of the button to "Copied"
+        copyButton.querySelector('.buttonText').textContent = 'Copied';
+        // Change the icon of the button
+        copyButton.querySelector('svg').innerHTML = '<path fill-rule="evenodd" clip-rule="evenodd" d="M17.35 6.14a1 1 0 0 0-1.37-1.45l-9.02 8.52-2.94-2.78a1 1 0 1 0-1.37 1.45l3.62 3.43a1 1 0 0 0 1.38 0l9.7-9.17Z" fill="#344054"/>';
+        // Set a timeout to revert the button state after 3 seconds
+        setTimeout(function() {
+            // Change the text of the button back to "Copy"
+            copyButton.querySelector('.buttonText').textContent = 'Copy';
+            // Change the icon of the button back to the original copy icon
+            copyButton.querySelector('svg').innerHTML = '<path fill-rule="evenodd" clip-rule="evenodd" d="M11.67 1.67A3.33 3.33 0 0 0 8.33 5v1.67H5A3.33 3.33 0 0 0 1.67 10v5c0 1.84 1.49 3.33 3.33 3.33h3.33c1.84 0 3.34-1.49 3.34-3.33v-1.67H15c1.84 0 3.33-1.49 3.33-3.33V5c0-1.84-1.49-3.33-3.33-3.33h-3.33Zm0 10H15c.92 0 1.67-.75 1.67-1.67V5c0-.92-.75-1.67-1.67-1.67h-3.33C10.75 3.33 10 4.08 10 5v2.11c1 .58 1.67 1.66 1.67 2.89v1.67ZM3.33 10c0-.92.75-1.67 1.67-1.67h3.33c.92 0 1.67.75 1.67 1.67v5c0 .92-.75 1.67-1.67 1.67H5c-.92 0-1.67-.75-1.67-1.67v-5Z"/>';
+        }, 3000);
+    }
+</script>
 
 </body>
 </html>
