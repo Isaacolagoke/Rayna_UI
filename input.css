@@ -628,3 +628,10 @@
 .scrollbar-hidden {
   scrollbar-width: none; /* Firefox */
 }
+
+.checkbox:checked {
+  border: none;
+}
+.checkbox:checked + .check-icon {
+  display: flex;
+}
