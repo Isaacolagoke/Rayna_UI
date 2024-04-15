@@ -383,8 +383,7 @@
                 <p class="text-Neutral-800 mb-4 paragraph-regular-regular">Header One</p>                 
 
                 <!-- header-1 -->
-                <header class="flex flex-col w-full overflow-hidden">
-
+                <header class="w-full">
                     <!-- annoucements -->
                     <div class="bg-[#290B00] px-4 py-4 text-center">
                         <p class="text-white paragraph-Xsmall-regular">Rayna UI is now features on Product Hunt!
@@ -395,53 +394,91 @@
                                 </span>
                         </p>
                     </div>
-
-                    <!-- menu -->
-                    <nav class="container">
-                        <div class="px-[72px] py-6 flex justify-between">
-                            <!-- logo -->
-                            <img src="../assets/rayna.png" alt="logo_img" class="h-6">
-
-                            <!-- links -->
-                            <ul class="flex list-none gap-6">
-                                <li>
-                                    <a href="#" class="w-full h-full flex gap-[10px] items-center paragraph-small-semibold"> Solutions
-                                        <span>
-                                            <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
-                                          </svg>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="w-full h-full flex gap-[10px] items-center paragraph-small-semibold"> How it works
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="w-full h-full flex gap-[10px] items-center paragraph-small-semibold"> About
-                                        <span>
-                                            <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
-                                          </svg>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="w-full h-full flex gap-[10px] items-center paragraph-small-semibold"> Resources
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <!-- Button -->
-                            <button class="bg-Primary-500 px-4 py-2 text-white paragraph-small-semibold rounded-lg hover:bg-Primary-600">
-                                Get Started
-                            </button>
-                        </div>
+                
+                    <nav class="transition-all ease-linear duration-100 max-w-screen-xl flex justify-between px-4 lg:px-[72px] py-6 items-center mx-auto relative">
+                        <img src="../assets/rayna.png" alt="logo_img" class="h-6">
+                
+                        <!-- large screen menu list -->
+                        <ul class="list-none lg:flex gap-4 hidden">
+                            <li><a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900 flex gap-[10px] items-center">Solutions
+                                <span>
+                                    <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
+                                    </svg>
+                                </span></a>
+                            </li>
+                            <li><a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900">How it works</a></li>
+                            <li><a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900 flex gap-[10px] items-center">About
+                                <span>
+                                    <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
+                                    </svg>
+                                </span></a>
+                            </li>
+                            <li><a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900">Resources</a></li>
+                        </ul>
+                
+                        <!-- button -->
+                        <button class="hover:bg-Primary-600 bg-Primary-500 px-4 py-2 rounded-lg text-white paragraph-small-semibold hidden lg:inline-block">Get Started</button>
+                
+                        <!--
+                            Icon when menu is open.
+                
+                            Menu open: "block", Menu closed: "hidden"
+                          -->
+                        <button id="CloseMenu" class="absolute right-0 top-0 mt-6 mr-6 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1">
+                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.88 4.7A.83.83 0 1 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 0 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#101928"/>
+                              </svg>
+                        </button>
+                
+                        <!--
+                            Icon when menu is closed.
+                
+                            Menu open: "hidden", Menu closed: "block"
+                        -->
+                        <button id="OpenMenu" class="absolute right-0 top-0 mt-6 mr-6 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1">
+                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#a)">
+                                  <path d="M3.33 15h13.34c.45 0 .83-.38.83-.83a.84.84 0 0 0-.83-.84H3.33a.84.84 0 0 0-.83.84c0 .46.38.83.83.83Zm0-4.17h13.34c.45 0 .83-.37.83-.83a.84.84 0 0 0-.83-.83H3.33a.84.84 0 0 0-.83.83c0 .46.38.83.83.83Zm-.83-5c0 .46.38.84.83.84h13.34a.84.84 0 0 0 0-1.67H3.33a.84.84 0 0 0-.83.83Z" fill="#323232"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="a">
+                                    <path fill="#fff" d="M0 0h20v20H0z"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                        </button>
+                
                     </nav>
-
+                
+                    <!-- mobile-menu -->
+                    <div id="mobileMenu" class="mt-0 w-full p-[6px] hidden lg:hidden transition-all ease-linear duration-100">
+                        <ul class="list-none flex-col gap-6 border rounded-lg border-Neutral-300 bg-slate-100 p-2">
+                            <li class="p-2 hover:bg-Neutral-75 rounded-sm"><a href="" class="w-full h-full flex justify-between items-center">Solutions
+                                <span>
+                                    <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
+                                    </svg>
+                                </span>
+                            </a></li>
+                            <li class="p-2 hover:bg-Neutral-75 rounded-sm"><a href="" class="w-full h-full">How it works</a></li>
+                            <li class="p-2 hover:bg-Neutral-75 rounded-sm"><a href="" class="w-full h-full flex justify-between items-center">About
+                                <span>
+                                    <svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/>
+                                    </svg>
+                                </span>
+                            </a></li>
+                            <li class="p-2 hover:bg-Neutral-75 rounded-sm"><a href="" class="w-full h-full">Resources</a></li>
+                            <li>
+                                <!-- button -->
+                                <button class="bg-Primary-500 px-4 py-2 rounded-lg text-white paragraph-small-semibold ">Get Started</button>
+                            </li>
+                        </ul>
+                    </div>
+                
+                
                 </header>
 
 
@@ -452,7 +489,7 @@
                     <div class=" top-0 sticky flex justify-between w-full">
                         <!-- code type -->
                         <div class=" w-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
-                            HTML
+                            HTML & JS
                         </div>
 
                         <!-- Copy button -->
@@ -468,107 +505,142 @@
                     <div class=" h-full p-4">
                         <pre>
 <code>
-&lt;!-- Form control elements --&gt;
-&lt;div class="flex gap-4"&gt;
-
-&lt;!-- radio --&gt;
-&lt;div role="radiogroup" class="gap-4 flex"&gt;
-    &lt;!-- Code block starts --&gt;
-    &lt;div class="flex items-center"&gt;
-        &lt;div class="bg-transparent p-1 border-[1.5px] border-Primary-400 rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center relative"&gt;
-            &lt;input aria-labelledby="label1" checked type="radio" name="radio" class="checkbox appearance-none border rounded-full border-Primary-400 absolute cursor-pointer w-full h-full checked:border-none" /&gt;
-            &lt;div class="check-icon hidden border-4 border-Primary-400 bg-Primary-400 rounded-full w-full h-full z-1"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;label id="label1" class="ml-2 paragraph-small-regular text-Neutral-800"&gt;Option 1&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;!-- Code block ends --&gt;
-    &lt;!-- Code block starts --&gt;
-    &lt;div class="flex items-center"&gt;
-        &lt;div class="bg-transparent p-1 border-[1.5px] border-Primary-400 rounded-full w-6 h-6 flex flex-shrink-0 justify-center items-center relative"&gt;
-            &lt;input aria-labelledby="label1" checked type="radio" name="radio" class="checkbox appearance-none border rounded-full border-Primary-400 absolute cursor-pointer w-full h-full checked:border-none" /&gt;
-            &lt;div class="check-icon hidden border-4 border-Primary-400 bg-Primary-400 rounded-full w-full h-full z-1"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;label id="label1" class="ml-2 paragraph-small-regular text-Neutral-800"&gt;Option 2&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;!-- Code block ends --&gt;
+&lt;header class="w-full"&gt;
+&lt;!-- annoucements --&gt;
+&lt;div class="bg-[#290B00] px-4 py-4 text-center"&gt;
+    &lt;p class="text-white paragraph-Xsmall-regular"&gt;Rayna UI is now features on Product Hunt!
+        &lt;span class="text-Warning-400 paragraph-Xsmall-semibold"&gt;
+            &lt;a href=""&gt;
+                Support Us
+            &lt;/a&gt;
+            &lt;/span&gt;
+    &lt;/p&gt;
 &lt;/div&gt;
-&lt;!--  --&gt;
 
-&lt;!-- checkbox --&gt;
-&lt;div role="checkgroup" class="flex gap-4"&gt;
+&lt;nav class="transition-all ease-linear duration-100 max-w-screen-xl flex justify-between px-4 lg:px-[72px] py-6 items-center mx-auto relative"&gt;
+    &lt;img src="../assets/rayna.png" alt="logo_img" class="h-6"&gt;
 
-&lt;!--  --&gt;
-&lt;label for="checkbox_1" class="select-none grid grid-flow-col gap-2 items-center text-Neutral-800 paragraph-small-regular "&gt;
-    &lt;div class="grid items-center justify-center"&gt;
-        &lt;input type="checkbox" id="checkbox_1" checked="" class="peer row-start-1 col-start-1 appearance-none w-6 h-6 border ring-transparent border-slate-300 rounded checked:bg-Primary-400 checked:border-Primary-400 "&gt;
-        &lt;svg viewBox="0 0 14 14" fill="none" class="invisible peer-checked:visible row-start-1 col-start-1 stroke-white text-Primary-400"&gt;
-        &lt;path d="M3 8L6 11L11 3.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    Checkbox
-&lt;/label&gt;
-&lt;!--  --&gt;
+    &lt;!-- large screen menu list --&gt;
+    &lt;ul class="list-none lg:flex gap-4 hidden"&gt;
+        &lt;li&gt;&lt;a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900 flex gap-[10px] items-center"&gt;Solutions
+            &lt;span&gt;
+                &lt;svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/&gt;
+                &lt;/svg&gt;
+            &lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900"&gt;How it works&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900 flex gap-[10px] items-center"&gt;About
+            &lt;span&gt;
+                &lt;svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/&gt;
+                &lt;/svg&gt;
+            &lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="" class="w-full h-full paragraph-small-semibold text-Neutral-900"&gt;Resources&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
 
-&lt;!--  --&gt;
-&lt;label for="checkbox_2" class="select-none grid grid-flow-col gap-2 items-center text-Neutral-800 paragraph-small-regular "&gt;
-    &lt;div class="grid items-center justify-center"&gt;
-    &lt;input type="checkbox" id="checkbox_2" class="peer row-start-1 col-start-1 appearance-none w-6 h-6 border ring-transparent border-slate-300 rounded checked:bg-Primary-400 checked:border-Primary-400 "&gt;
-    &lt;svg viewBox="0 0 14 14" fill="none" class="invisible peer-checked:visible row-start-1 col-start-1 stroke-white text-Primary-400"&gt;
-        &lt;path d="M3 8L6 11L11 3.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
-    &lt;/svg&gt;
-    &lt;/div&gt;
-    Checkbox
-&lt;/label&gt;
-&lt;!--  --&gt;
+    &lt;!-- button --&gt;
+    &lt;button class="bg-Primary-500 px-4 py-2 rounded-lg text-white paragraph-small-semibold hidden lg:inline-block"&gt;Get Started&lt;/button&gt;
 
-&lt;/div&gt;
-&lt;!-- checkbox ends --&gt;
+    &lt;!--
+        Icon when menu is open.
 
-&lt;!-- checkcircle --&gt;
-&lt;div role="checkgroup" class="flex gap-4"&gt;
-    &lt;!--  --&gt;
-    &lt;label for="checkbox_3" class="select-none grid grid-flow-col gap-2 items-center text-Neutral-800 paragraph-small-regular "&gt;
-        &lt;div class="grid items-center justify-center"&gt;
-            &lt;input type="checkbox" id="checkbox_3" checked="" class="peer row-start-1 col-start-1 appearance-none w-6 h-6 border ring-transparent border-slate-300 rounded-full checked:bg-Primary-400 checked:border-Primary-400 "&gt;
-            &lt;svg viewBox="0 0 14 14" fill="none" class="invisible peer-checked:visible row-start-1 col-start-1 stroke-white text-Primary-400"&gt;
-            &lt;path d="M3 8L6 11L11 3.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+        Menu open: "block", Menu closed: "hidden"
+        --&gt;
+    &lt;button id="CloseMenu" class="absolute right-0 top-0 mt-6 mr-6 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1"&gt;
+        &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M5.88 4.7A.83.83 0 1 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 0 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#101928"/&gt;
             &lt;/svg&gt;
-        &lt;/div&gt;
-        Checkcircle
-    &lt;/label&gt;
-    &lt;!--  --&gt;
+    &lt;/button&gt;
 
-    &lt;!--  --&gt;
-    &lt;label for="checkbox_4" class="select-none grid grid-flow-col gap-2 items-center text-Neutral-800 paragraph-small-regular "&gt;
-        &lt;div class="grid items-center justify-center"&gt;
-        &lt;input type="checkbox" id="checkbox_4" class="peer row-start-1 col-start-1 appearance-none w-6 h-6 border ring-transparent border-slate-300 rounded-full checked:bg-Primary-400 checked:border-Primary-400 "&gt;
-        &lt;svg viewBox="0 0 14 14" fill="none" class="invisible peer-checked:visible row-start-1 col-start-1 stroke-white text-Primary-400"&gt;
-            &lt;path d="M3 8L6 11L11 3.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
-        &lt;/svg&gt;
-        &lt;/div&gt;
-        Checkcircle
-    &lt;/label&gt;
-    &lt;!--  --&gt;
+    &lt;!--
+        Icon when menu is closed.
+
+        Menu open: "hidden", Menu closed: "block"
+    --&gt;
+    &lt;button id="OpenMenu" class="absolute right-0 top-0 mt-6 mr-6 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1"&gt;
+        &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;g clip-path="url(#a)"&gt;
+                &lt;path d="M3.33 15h13.34c.45 0 .83-.38.83-.83a.84.84 0 0 0-.83-.84H3.33a.84.84 0 0 0-.83.84c0 .46.38.83.83.83Zm0-4.17h13.34c.45 0 .83-.37.83-.83a.84.84 0 0 0-.83-.83H3.33a.84.84 0 0 0-.83.83c0 .46.38.83.83.83Zm-.83-5c0 .46.38.84.83.84h13.34a.84.84 0 0 0 0-1.67H3.33a.84.84 0 0 0-.83.83Z" fill="#323232"/&gt;
+            &lt;/g&gt;
+            &lt;defs&gt;
+                &lt;clipPath id="a"&gt;
+                &lt;path fill="#fff" d="M0 0h20v20H0z"/&gt;
+                &lt;/clipPath&gt;
+            &lt;/defs&gt;
+            &lt;/svg&gt;
+    &lt;/button&gt;
+
+&lt;/nav&gt;
+
+&lt;!-- mobile-menu --&gt;
+&lt;div id="mobileMenu" class="mt-0 w-full p-[6px] hidden lg:hidden transition-all ease-linear duration-100"&gt;
+    &lt;ul class="list-none flex-col gap-6 border rounded-lg border-Neutral-300 bg-slate-100 p-2"&gt;
+        &lt;li class="p-2 hover:bg-Neutral-75 rounded-sm"&gt;&lt;a href="" class="w-full h-full flex justify-between items-center"&gt;Solutions
+            &lt;span&gt;
+                &lt;svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/&gt;
+                &lt;/svg&gt;
+            &lt;/span&gt;
+        &lt;/a&gt;&lt;/li&gt;
+        &lt;li class="p-2 hover:bg-Neutral-75 rounded-sm"&gt;&lt;a href="" class="w-full h-full"&gt;How it works&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="p-2 hover:bg-Neutral-75 rounded-sm"&gt;&lt;a href="" class="w-full h-full flex justify-between items-center"&gt;About
+            &lt;span&gt;
+                &lt;svg class="fill-current text-Neutral-500 w-5 h-5" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;path d="m2.9 7.27 6.51 6.13c.65.6 1.65.6 2.29 0l6.51-6.13a.83.83 0 0 0-1.14-1.21l-6.51 6.13-6.52-6.13A.83.83 0 0 0 2.9 7.27Z"/&gt;
+                &lt;/svg&gt;
+            &lt;/span&gt;
+        &lt;/a&gt;&lt;/li&gt;
+        &lt;li class="p-2 hover:bg-Neutral-75 rounded-sm"&gt;&lt;a href="" class="w-full h-full"&gt;Resources&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;!-- button --&gt;
+            &lt;button class="bg-Primary-500 px-4 py-2 rounded-lg text-white paragraph-small-semibold "&gt;Get Started&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
 &lt;/div&gt;
-&lt;!-- checkcircle ends --&gt;
 
-&lt;!-- Toggle  button --&gt;
-&lt;label class="relative inline-flex cursor-pointer items-center"&gt;
-        &lt;input id="switch" type="checkbox" class="peer sr-only" /&gt;
-        &lt;label for="switch" class="hidden"&gt;&lt;/label&gt;
-        &lt;div class="peer h-6 w-11 rounded-full border bg-Neutral-200 after:absolute after:left-[2px] after:top-0.5 after:h-5 after:w-5 after:rounded-full after:border after:border-Neutral-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-Primary-400 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:ring-Primary-300"&gt;&lt;/div&gt;
-&lt;/label&gt;
-&lt;!-- Toggle button ends --&gt;
 
-add to css classes:
-.checkbox:checked {
-    border: none;
-  }
-  .checkbox:checked + .check-icon {
-    display: flex;
-  }
-
+&lt;/header&gt;
 &lt;/div&gt;
+
+<!-- Javascript: -->
+// resize header
+const openMenuButton = document.getElementById("OpenMenu");
+const closeMenuButton = document.getElementById("CloseMenu");
+const mobileMenu = document.getElementById("mobileMenu");
+
+// Function to toggle the mobile menu
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle("hidden");
+}
+
+// Function to toggle the visibility of the open and close menu buttons
+function toggleMenuButtons() {
+    openMenuButton.classList.toggle("hidden");
+    closeMenuButton.classList.toggle("hidden");
+}
+
+// Function to open the mobile menu
+function openMobileMenu() {
+    mobileMenu.classList.remove("hidden");
+    openMenuButton.classList.add("hidden");
+    closeMenuButton.classList.remove("hidden");
+}
+
+// Function to close the mobile menu
+function closeMobileMenu() {
+    mobileMenu.classList.add("hidden");
+    openMenuButton.classList.remove("hidden");
+    closeMenuButton.classList.add("hidden");
+}
+
+// Event listener for the open menu button
+openMenuButton.addEventListener("click", openMobileMenu);
+
+// Event listener for the close menu button
+closeMenuButton.addEventListener("click", closeMobileMenu);
+
 </code>
                         </pre>
                     </div>
@@ -593,7 +665,43 @@ add to css classes:
 </div>
 
 
+<script>
+    // resize header
+const openMenuButton = document.getElementById("OpenMenu");
+const closeMenuButton = document.getElementById("CloseMenu");
+const mobileMenu = document.getElementById("mobileMenu");
 
+// Function to toggle the mobile menu
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle("hidden");
+}
+
+// Function to toggle the visibility of the open and close menu buttons
+function toggleMenuButtons() {
+    openMenuButton.classList.toggle("hidden");
+    closeMenuButton.classList.toggle("hidden");
+}
+
+// Function to open the mobile menu
+function openMobileMenu() {
+    mobileMenu.classList.remove("hidden");
+    openMenuButton.classList.add("hidden");
+    closeMenuButton.classList.remove("hidden");
+}
+
+// Function to close the mobile menu
+function closeMobileMenu() {
+    mobileMenu.classList.add("hidden");
+    openMenuButton.classList.remove("hidden");
+    closeMenuButton.classList.add("hidden");
+}
+
+// Event listener for the open menu button
+openMenuButton.addEventListener("click", openMobileMenu);
+
+// Event listener for the close menu button
+closeMenuButton.addEventListener("click", closeMobileMenu);
+</script>
 
 <script src="../assets/Js/main.js"></script>
 

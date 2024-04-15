@@ -173,8 +173,6 @@ function copyCode(containerId) {
 // <!-- Date cells -->
 // <!-- Generate buttons for days 1 to 31 dynamically -->
     // Get the container for the date cells
-// JavaScript for dynamically generating calendar dates
-// Get the container for the date cells
 const calendarContainer = document.getElementById('calendarDate');
 
 // Generate buttons for days 1 to 31
@@ -188,6 +186,7 @@ for (let day = 1; day <= 31; day++) {
     // Append the button to the calendar container
     calendarContainer.appendChild(button);
 }
+
 
 
 
