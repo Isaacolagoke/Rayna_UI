@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Rayna Colors</title>
+	</head>
+
+	<body x-data="sidebar()" class="bg-Neutral-50 text-gray-700" @resize.window="handleResize()">
+
+<div class="xl:flex">
+
+  <!-- sidebar-content -->
+
+  <!-- sidebar overlay -->
+  <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-white bg-opacity-75 h-screen z-50">
+  
+    <!-- sidebar -->
+    <div
+        @click.away="handleAway()"
+        class="w-[272px] h-screen overflow-y-auto bg-white border-Neutral-200 border-r-[1px]"
+      >
+
+        <!-- sidebar header -->
+        <div class="grid grid-cols-2 h-16 justify-between">
+          <!-- logo -->
+          <div class="p-6">
+            <svg width="134" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38.4 5.22v-.13h.12V2.75l-.08-.03a4 4 0 0 0-1.43-.22c-2.06 0-3.67.95-4.49 2.62V2.74H29.75V18.4H32.52v-8.01c0-1.79.43-3.1 1.2-3.96.77-.86 1.9-1.3 3.35-1.3.41 0 .8.03 1.2.08v.02h.12ZM54.44 18.39h.13V2.87h-.13v-.13H51.8V5.17c-1.02-1.76-3.1-2.85-5.49-2.85-4.25 0-7.35 3.44-7.35 8.24 0 4.8 3.1 8.25 7.35 8.25 2.38 0 4.47-1.1 5.49-2.84v2.42h2.64ZM50.51 6.5a5.84 5.84 0 0 1 1.4 4.05c0 1.65-.47 3.02-1.4 4.05a4.6 4.6 0 0 1-3.63 1.57c-1.5 0-2.71-.53-3.65-1.57a5.97 5.97 0 0 1-1.38-4.05c0-1.64.48-3 1.38-4.05a4.71 4.71 0 0 1 3.65-1.56c1.5 0 2.72.53 3.63 1.56ZM71 2.87v-.13h-2.77V11.6c0 1.24-.48 2.28-1.3 3a4.9 4.9 0 0 1-3.31 1.16c-1.17 0-2-.32-2.53-.96-.55-.65-.82-1.66-.82-3.11V2.74h-2.78v9.56c0 1.95.5 3.47 1.46 4.51a5.3 5.3 0 0 0 4.07 1.58c2.31 0 4.22-.94 5.2-2.64v1.02c0 1.85-.44 3.22-1.25 4.13-.82.9-2.01 1.36-3.56 1.36a6.98 6.98 0 0 1-4.69-1.73l-.1-.09-.08.1-1.47 1.83-.07.1.08.07c1.44 1.5 3.81 2.35 6.39 2.35 2.36 0 4.25-.7 5.55-2.09 1.3-1.38 1.99-3.41 1.99-6.03V2.87ZM87.28 18.39h.13V8.4c0-1.92-.5-3.44-1.44-4.49a5.28 5.28 0 0 0-4.1-1.6c-2.3 0-4.18.94-5.14 2.63V2.74h-2.78V18.4h2.78V9.1c0-1.26.47-2.3 1.27-3.02a4.81 4.81 0 0 1 3.28-1.14c1.18 0 2 .3 2.54.95.54.65.81 1.67.81 3.11v9.38h2.65ZM105.34 18.39h.13V2.87h-.13v-.13h-2.65V5.17c-1.02-1.76-3.1-2.85-5.48-2.85-4.26 0-7.36 3.44-7.36 8.24 0 4.8 3.1 8.25 7.36 8.25 2.37 0 4.46-1.1 5.48-2.84v2.42h2.65ZM101.4 6.5a5.84 5.84 0 0 1 1.4 4.05c0 1.65-.46 3.02-1.4 4.05a4.6 4.6 0 0 1-3.62 1.57c-1.5 0-2.72-.53-3.66-1.57a5.97 5.97 0 0 1-1.37-4.05c0-1.64.47-3 1.37-4.05a4.71 4.71 0 0 1 3.66-1.56c1.5 0 2.72.53 3.62 1.56ZM116.9 2.87v-.13h-2.78V12.51c0 1.86.67 3.44 1.84 4.55a6.87 6.87 0 0 0 4.83 1.75c2 0 3.66-.64 4.83-1.75a6.12 6.12 0 0 0 1.84-4.55V2.74h-2.78V12.36c0 1.25-.36 2.2-1.01 2.84-.66.64-1.63.98-2.88.98a3.98 3.98 0 0 1-2.87-.98c-.66-.64-1.02-1.59-1.02-2.84V2.87ZM130.7 2.74h-.12V18.4h2.78V2.74h-2.65Z" fill="#101928" stroke="#101928" stroke-width=".26"/>
+                <path d="m18.6 13.27-1.35-1.35a.07.07 0 0 1 .02-.11 6.18 6.18 0 0 0 2.78-2.38 6.18 6.18 0 0 0 .94-3.25v-.03a6.13 6.13 0 0 0-.83-3.09A6.18 6.18 0 0 0 17.6.66 8.27 8.27 0 0 0 14.41 0h.43H1.83C.83 0 0 .82 0 1.83v13.08a6.12 6.12 0 0 0 .96 3.3 6.17 6.17 0 0 0 2.78 2.36l.04.02a6.12 6.12 0 0 0 6.2-.87c.01 0 .02 0 .03-.02a6.18 6.18 0 0 0 2.3-4.65V12.57c0-.1.1-.14.18-.08l5.57 5.58 1.3 1.3c.6.6 1.63.18 1.63-.67v-2.36c0-.43-.17-.85-.48-1.16l-1.91-1.91Zm-3.77-4.71H8.96a.42.42 0 0 0-.41.41v5.99a2.39 2.39 0 0 1-4.77.04V4.14c0-.2.16-.36.36-.36h10.7a2.4 2.4 0 0 1 0 4.78Z" fill="#E8562E"/>
+              </svg>
+              
+          </div>
+
+          <!-- toggle - close/open btn -->
+          <a
+            @click.prevent="handleClose()"
+            class="p-6 flex justify-self-end" 
+            href="#"
+          >
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </a>
+        </div>
+
+
+    <!-- links-->
+
+    <ul id="sidebarList" class="font-normal p-6">
+
+    <!-- Search Field -->
+    <div class=" mb-4 sticky top-0">
+        <input type="text" id="searchInput" class="w-full px-3 py-2 border border-Neutral-300 rounded-md focus:outline-none focus:ring-1 focus:ring-Primary-100" placeholder="Search...">
+    </div>
+
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="../index.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Home
+      </a>
+    </li>
+
+  
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./colors.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Colors
+      </a>
+    </li>
+
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./Typography.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Typography
+      </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./buttons.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Buttons
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./buttons-groups.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Button Groups and Chips
+        </a>
+        </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./badges.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Badges
+        </a>
+      </li>
+
+          <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./shadows.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Shadows
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./avatars.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Avatars
+        </a>
+        </li>
+
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./emptystates.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Empty States
+      </a>
+      </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./inputs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Inputs
+        </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./loading.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Loading and Progress Indicators
+        </a>
+        </li>   
+    
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./tabs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Tabs
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./activity.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Activity Feed
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./alerts.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Alerts and Notification
+      </a>
+      </li>
+
+        <!-- links -->
+        <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./breadcrumbs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Breadcrumbs
+        </a>
+        </li>
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./calendar.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Calendar & Date Selectors
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./codesnippets.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Code Snippets
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./dividers.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Dividers
+        </a>
+        </li>
+
+            <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./dropdowns.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Dropdowns
+    </a>
+    </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./fileupload.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        File Upload
+      </a>
+      </li>
+
+        <!-- links -->
+        <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./footers.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Footers
+        </a>
+        </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./formControl.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Form Controls
+        </a>
+        </li>
+
+<!-- links -->
+<li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./header.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Headers
+    </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./metrics.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Metrics
+    </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-400 border-l-2  paragraph-small-medium">
+        <a href="#" class="flex items-center px-4 py-3 text-Neutral-900 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Navigations
+        </a>
+    </li>
+
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./paginations.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Paginations
+      </a>
+      </li>
+
+          <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./sidebars.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Sidebars
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./tables.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Tables
+      </a>
+      </li>
+
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./tooltip.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Tooltip
+      </a>
+      </li>
+
+          <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./card.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Cards and Component
+      </a>
+      </li>
+
+
+
+
+    </ul>
+
+
+      
+    </div>
+    <!--  -->
+
+  </div>
+
+  <!-- Dashboard Content starts here -->
+  <div class="w-full overflow-y-auto h-screen">
+    <nav class="text-gray-700 bg-white flex h-16 sticky top-0 z-30">
+      <div x-show="!isOpen()" class="flex">
+        <!-- collapse btn -->
+        <a
+          x-show="!isOpen()"
+          @click.prevent="handleOpen()"
+          class="p-6 hover:bg-Neutral-100 text-Neutral-900"
+          href="#"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </a>
+        
+          <!-- search button goes -->
+
+      </div>
+      <div class="flex items-center ml-auto px-9">
+        <a
+          class="p-3 hover:bg-Neutral-100 text-Neutral-900"
+          href="#"
+        >
+          Rayna on Figma
+        </a>
+      </div>
+    </nav>
+
+    <!-- content starts -->
+
+    <main class="p-9 ">
+
+        <!-- Default buttons -->
+        <section class="w-full">
+
+            <!-- Sub section header -->
+            <div class="">
+                <p class="paragraph-large-medium text-Neutral-800">Navigation</p>
+                <P class="paragraph-medium-regular text-Neutral-500 mt-2">
+                    Header navigations are streamlined menus that aid users in navigating an application. They are particularly suitable for simpler applications with fewer menu options. 
+                </P>
+            </div>
+            
+            <!-- Navigation 1 -->
+            <section class="h-fit p-4 rounded-lg border bg-white border-Neutral-100 mt-6 w-full">
+                <p class="text-Neutral-800 mb-4 paragraph-regular-regular overflow-auto">Variation 1</p>                 
+
+                <!-- -->
+                <div class="flex justify-center overflow-auto p-3 bg-Neutral-100">
+
+                    <!-- Variation 1 -->
+                    <div class="flex flex-col w-[600px] h-fit">
+                        <!-- top -->
+                        <div class="flex flex-col px-10 py-8 gap-6 rounded-t-[20px] justify-start bg-Neutral-50">
+                            <!-- icon -->
+                            <div class="bg-Primary-50 rounded-full w-[52px] h-[52px] flex p-[10px] items-center justify-center">
+                                <svg width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.29 8.56a1.33 1.33 0 1 0-.23 2.65l2.65.23a1.33 1.33 0 0 0 .23-2.65L7.3 8.56ZM21.84 11.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45ZM7.29 20a1.33 1.33 0 1 0-.23 2.66l2.65.23a1.33 1.33 0 1 0 .23-2.65L7.3 20ZM21.84 23.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm1.33 4a1.33 1.33 0 1 0-2.66 0 1.33 1.33 0 0 0 2.66 0Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 4.32a5.22 5.22 0 0 0-5.67 5.24V20.2c0 2.84 2.21 5.16 5 5.4 1.14.1 2.55.22 4.2.38.3.03.96.17 1.92.39a558.92 558.92 0 0 0 3.15.75c1.12.27 2.26.54 3.25.74.94.2 1.86.35 2.48.35 1.52.01 3.01-.02 4.29-.06a5.23 5.23 0 0 0 5.05-5.25V12.26c0-3.09-2.6-5.5-5.63-5.41-1.13.03-2.4.05-3.7.04-.3 0-.98-.1-1.96-.3a102.5 102.5 0 0 1-4.2-.97l-2.13-.5c-.9-.22-1.75-.4-2.25-.45l-3.8-.35Zm-3 5.24c0-1.53 1.28-2.7 2.76-2.58 1.06.09 2.32.2 3.78.35.3.03.95.16 1.91.38l2.08.5 1.07.26c1.12.26 2.26.53 3.25.73.94.2 1.86.36 2.48.36 1.33 0 2.63-.02 3.79-.05a2.79 2.79 0 0 1 2.88 2.75V22.9c0 1.41-1.1 2.55-2.46 2.59-1.26.04-2.72.06-4.2.06-.3 0-.98-.1-1.96-.3-.94-.2-2.04-.45-3.16-.72l-1.05-.25c-.75-.19-1.48-.36-2.12-.5-.9-.22-1.75-.4-2.25-.45-1.67-.16-3.09-.3-4.25-.39a2.78 2.78 0 0 1-2.55-2.74V9.56Z" fill="#F56630"/>
+                                </svg>
+                            </div>
+                            <!-- content -->
+                            <div class="flex flex-col gap-[10px] text-left">
+                                <p class="paragraph-medium-semibold text-Neutral-900">Partnerships</p>
+                                <p class="paragraph-medium-regular text-Neutral-700">Dive into the overarching philosophy and principles that underpin our approach to partnerships. Learn how we create synergies and mutually beneficial relationships with other organizations.</p>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <ul class="list-none rounded-b-[20px] flex flex-col gap-[20px] px-10 pt-10 pb-14 bg-white text-Neutral-900 paragraph-medium-semibold">
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">About out partnerships</a></li>
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">Current Partners</a></li>
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">Become a Partner</a></li>
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">Resources and Support</a></li>
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">Success Stories</a></li>
+                            <li class="cursor-pointer"><a href="" class="w-fill h-fill hover:text-Neutral-600">Contact Us</a></li>
+                        </ul>
+                    </div>
+                
+                </div>
+
+
+
+                <!-- code container -->
+                <div id="codeContainer1" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                    <!-- HEADER -->
+                    <div class=" top-0 sticky flex justify-between w-full">
+                        <!-- code type -->
+                        <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                            HTML
+                        </div>
+
+                        <!-- Copy button -->
+                        <button onclick="copyCode('codeContainer1')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                            <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                            </svg>
+                            <span class="buttonText">Copy</span>
+                        </button>
+                    </div>
+                    
+                    <!-- CODE -->
+                    <div class=" h-full p-4">
+                        <pre>
+<code>
+&lt;!-- Variation 1 --&gt;
+&lt;div class="flex flex-col w-[600px] h-fit"&gt;
+&lt;!-- top --&gt;
+&lt;div class="flex flex-col px-10 py-8 gap-6 rounded-t-[20px] justify-start bg-Neutral-50"&gt;
+    &lt;!-- icon --&gt;
+    &lt;div class="bg-Primary-50 rounded-full w-[52px] h-[52px] flex p-[10px] items-center justify-center"&gt;
+        &lt;svg width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.29 8.56a1.33 1.33 0 1 0-.23 2.65l2.65.23a1.33 1.33 0 0 0 .23-2.65L7.3 8.56ZM21.84 11.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45ZM7.29 20a1.33 1.33 0 1 0-.23 2.66l2.65.23a1.33 1.33 0 1 0 .23-2.65L7.3 20ZM21.84 23.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45Z" fill="#F56630"/&gt;
+            &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm1.33 4a1.33 1.33 0 1 0-2.66 0 1.33 1.33 0 0 0 2.66 0Z" fill="#F56630"/&gt;
+            &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 4.32a5.22 5.22 0 0 0-5.67 5.24V20.2c0 2.84 2.21 5.16 5 5.4 1.14.1 2.55.22 4.2.38.3.03.96.17 1.92.39a558.92 558.92 0 0 0 3.15.75c1.12.27 2.26.54 3.25.74.94.2 1.86.35 2.48.35 1.52.01 3.01-.02 4.29-.06a5.23 5.23 0 0 0 5.05-5.25V12.26c0-3.09-2.6-5.5-5.63-5.41-1.13.03-2.4.05-3.7.04-.3 0-.98-.1-1.96-.3a102.5 102.5 0 0 1-4.2-.97l-2.13-.5c-.9-.22-1.75-.4-2.25-.45l-3.8-.35Zm-3 5.24c0-1.53 1.28-2.7 2.76-2.58 1.06.09 2.32.2 3.78.35.3.03.95.16 1.91.38l2.08.5 1.07.26c1.12.26 2.26.53 3.25.73.94.2 1.86.36 2.48.36 1.33 0 2.63-.02 3.79-.05a2.79 2.79 0 0 1 2.88 2.75V22.9c0 1.41-1.1 2.55-2.46 2.59-1.26.04-2.72.06-4.2.06-.3 0-.98-.1-1.96-.3-.94-.2-2.04-.45-3.16-.72l-1.05-.25c-.75-.19-1.48-.36-2.12-.5-.9-.22-1.75-.4-2.25-.45-1.67-.16-3.09-.3-4.25-.39a2.78 2.78 0 0 1-2.55-2.74V9.56Z" fill="#F56630"/&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;!-- content --&gt;
+    &lt;div class="flex flex-col gap-[10px] text-left"&gt;
+        &lt;p class="paragraph-medium-semibold text-Neutral-900"&gt;Partnerships&lt;/p&gt;
+        &lt;p class="paragraph-medium-regular text-Neutral-700"&gt;Dive into the overarching philosophy and principles that underpin our approach to partnerships. Learn how we create synergies and mutually beneficial relationships with other organizations.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- bottom --&gt;
+&lt;ul class="list-none rounded-b-[20px] flex flex-col gap-[20px] px-10 pt-10 pb-14 bg-white text-Neutral-900 paragraph-medium-semibold"&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;About out partnerships&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Current Partners&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Become a Partner&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Resources and Support&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Success Stories&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+</code>
+                        </pre>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Navigation 2 -->
+            <section class="h-fit p-4 rounded-lg border bg-white border-Neutral-100 mt-6 w-full">
+                <p class="text-Neutral-800 mb-4 paragraph-regular-regular overflow-auto">Variation 2</p>                 
+
+                <!-- -->
+                <div class="flex justify-center overflow-auto p-3 bg-Neutral-100">
+
+                    <!-- Variation 2 -->
+                    <div class="grid grid-cols-4 gap-8 rounded-[10px] p-6 w-[1257px] h-fit bg-white">
+                        <!-- sections -->
+                        <a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start">
+                            <!-- icon -->
+                            <div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center">
+                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/>
+                                  </svg>
+                            </div>
+                            <!-- content -->
+                            <div class="flex flex-col gap-1">
+                                <p class="paragraph-small-semibold group-hover:text-white text-Neutral-900">Ways to earn</p>
+                                <p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700">Forget the old rules. 
+                                    You got the best people.</p>
+                            </div>
+                        </a>
+                        <!-- sections -->
+                        <a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start">
+                            <!-- icon -->
+                            <div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center">
+                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/>
+                                  </svg>
+                            </div>
+                            <!-- content -->
+                            <div class="flex flex-col gap-1">
+                                <p class="paragraph-small-semibold group-hover:text-white text-Neutral-900">Use Cases</p>
+                                <p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700">Move money in multiple directions, no extra cost.</p>
+                            </div>
+                        </a>
+                        <!-- sections -->
+                        <a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start">
+                            <!-- icon -->
+                            <div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center">
+                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/>
+                                  </svg>
+                            </div>
+                            <!-- content -->
+                            <div class="flex flex-col gap-1">
+                                <p class="paragraph-small-semibold group-hover:text-white text-Neutral-900">Calculate ROI</p>
+                                <p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700">Make cost savings, boost revenue with our product</p>
+                            </div>
+                        </a>
+                        <!-- sections -->
+                        <a class="cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-[#4D1400] gap-4 items-start">
+                            <!-- icon -->
+                            <div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center">
+                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/>
+                                  </svg>
+                            </div>
+                            <!-- content -->
+                            <div class="flex flex-col gap-1">
+                                <p class="paragraph-small-semibold text-white">Ways to earn</p>
+                                <p class="paragraph-Xsmall-regular text-Neutral-100">Forget the old rules. 
+                                    You got the best people.</p>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+
+
+
+                <!-- code container -->
+                <div id="codeContainer2" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                    <!-- HEADER -->
+                    <div class=" top-0 sticky flex justify-between w-full">
+                        <!-- code type -->
+                        <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                            HTML
+                        </div>
+
+                        <!-- Copy button -->
+                        <button onclick="copyCode('codeContainer2')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                            <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                            </svg>
+                            <span class="buttonText">Copy</span>
+                        </button>
+                    </div>
+                    
+                    <!-- CODE -->
+                    <div class=" h-full p-4">
+                        <pre>
+<code>
+&lt;!-- Variation 2 --&gt;
+&lt;div class="grid grid-cols-4 gap-8 rounded-[10px] p-6 w-[1257px] h-fit bg-white"&gt;
+&lt;!-- sections --&gt;
+&lt;a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start"&gt;
+&lt;!-- icon --&gt;
+&lt;div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center"&gt;
+    &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/&gt;
+        &lt;/svg&gt;
+&lt;/div&gt;
+&lt;!-- content --&gt;
+&lt;div class="flex flex-col gap-1"&gt;
+    &lt;p class="paragraph-small-semibold group-hover:text-white text-Neutral-900"&gt;Ways to earn&lt;/p&gt;
+    &lt;p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700"&gt;Forget the old rules. 
+        You got the best people.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;!-- sections --&gt;
+&lt;a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start"&gt;
+&lt;!-- icon --&gt;
+&lt;div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center"&gt;
+    &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/&gt;
+        &lt;/svg&gt;
+&lt;/div&gt;
+&lt;!-- content --&gt;
+&lt;div class="flex flex-col gap-1"&gt;
+    &lt;p class="paragraph-small-semibold group-hover:text-white text-Neutral-900"&gt;Use Cases&lt;/p&gt;
+    &lt;p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700"&gt;Move money in multiple directions, no extra cost.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;!-- sections --&gt;
+&lt;a class="group hover:bg-[#4D1400] transition-all ease-linear duration-100 cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-Neutral-50 gap-4 items-start"&gt;
+&lt;!-- icon --&gt;
+&lt;div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center"&gt;
+    &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/&gt;
+        &lt;/svg&gt;
+&lt;/div&gt;
+&lt;!-- content --&gt;
+&lt;div class="flex flex-col gap-1"&gt;
+    &lt;p class="paragraph-small-semibold group-hover:text-white text-Neutral-900"&gt;Calculate ROI&lt;/p&gt;
+    &lt;p class="paragraph-Xsmall-regular group-hover:text-Neutral-100 text-Neutral-700"&gt;Make cost savings, boost revenue with our product&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;!-- sections --&gt;
+&lt;a class="cursor-pointer w-fill h-fit flex rounded-[10px] p-5 bg-[#4D1400] gap-4 items-start"&gt;
+&lt;!-- icon --&gt;
+&lt;div class="bg-Primary-50 rounded-full w-[32px] h-[32px] flex p-2 items-center justify-center"&gt;
+    &lt;svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M3.4 4.28a.67.67 0 1 0-.12 1.33l1.33.11a.67.67 0 1 0 .11-1.33L3.4 4.28ZM10.67 5.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 1 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72ZM3.4 10a.67.67 0 0 0-.12 1.33l1.33.12a.67.67 0 1 0 .11-1.33L3.4 10ZM10.67 11.55a.67.67 0 0 1 .72-.6l1.33.11a.67.67 0 0 1-.11 1.33l-1.33-.12a.67.67 0 0 1-.6-.72Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M8 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm.67 2a.67.67 0 1 0-1.34 0 .67.67 0 0 0 1.34 0Z" fill="#F56630"/&gt;
+        &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2.16A2.61 2.61 0 0 0 .67 4.78v5.33c0 1.41 1.1 2.58 2.5 2.7.57.04 1.27.1 2.1.19.15.01.48.08.96.19l1.03.25.54.13 1.62.36c.48.1.94.18 1.24.18.77 0 1.51 0 2.15-.03a2.61 2.61 0 0 0 2.52-2.63V6.13c0-1.54-1.3-2.75-2.8-2.7l-1.86.02c-.15 0-.49-.05-.98-.16l-1.58-.35-.52-.13c-.38-.1-.74-.18-1.06-.25-.46-.1-.88-.2-1.13-.22-.73-.08-1.37-.13-1.9-.18ZM2 4.78c0-.77.64-1.35 1.38-1.29l1.89.17c.15.02.48.09.96.2l1.03.24.54.13c.56.14 1.13.27 1.62.37.48.1.94.18 1.24.18.67 0 1.32 0 1.9-.02.79-.03 1.44.6 1.44 1.37v5.32c0 .71-.55 1.28-1.23 1.3-.63.02-1.36.03-2.1.03-.15 0-.49-.05-.98-.15l-1.58-.36-.52-.13-1.06-.25c-.46-.1-.88-.2-1.13-.22l-2.12-.2A1.39 1.39 0 0 1 2 10.12V4.78Z" fill="#F56630"/&gt;
+        &lt;/svg&gt;
+&lt;/div&gt;
+&lt;!-- content --&gt;
+&lt;div class="flex flex-col gap-1"&gt;
+    &lt;p class="paragraph-small-semibold text-white"&gt;Ways to earn&lt;/p&gt;
+    &lt;p class="paragraph-Xsmall-regular text-Neutral-100"&gt;Forget the old rules. 
+        You got the best people.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+</code>
+                        </pre>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Navigation 3 -->
+            <section class="h-fit p-4 rounded-lg border bg-white border-Neutral-100 mt-6 w-full">
+                <p class="text-Neutral-800 mb-4 paragraph-regular-regular overflow-auto">Variation 3</p>                 
+
+                <!-- -->
+                <div class="flex justify-center overflow-auto p-3 bg-Neutral-100">
+
+                    <!-- Variation 3 -->
+                    <div class="flex gap-[80px] justify-around px-[121px] py-[40px] w-[1440px] h-fit bg-white">
+                        <!-- navigations -->
+                        <div class="flex gap-6">
+                            <!-- 1 -->
+                            <div class="flex gap-4 flex-col">
+                                <p class="paragraph-large-semibold text-Neutral-900">Resources</p>
+
+                                <div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden">
+                                    <img src="../assets/img-1.png" class="w-full h-full object-cover" alt="">
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-4 flex-col">
+                                <p class="paragraph-large-semibold text-Neutral-900">Rayna Figma V1.0</p>
+
+                                <div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden">
+                                    <img src="../assets/img-2.png" class="w-full h-full object-cover" alt="">
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-4 flex-col">
+                                <p class="paragraph-large-semibold text-Neutral-900">Help Center</p>
+
+                                <div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden">
+                                    <img src="../assets/img-3.png" class="w-full h-full object-cover" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- links -->
+                        <div class="flex gap-5 flex-col">
+                            <p class="paragraph-large-semibold text-Neutral-900">Learn</p>
+
+                            <ul class="list-none flex flex-col gap-[10px]">
+                                <li class="">
+                                    <a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600">What is Rayna</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600">Rayna Tutorials</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600">Domains</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600">iFrame & Embes</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="paragraph-medium-regular hover:text-Primary-600 text-Primary-400">View all</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                
+                </div>
+
+
+
+                <!-- code container -->
+                <div id="codeContainer3" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                    <!-- HEADER -->
+                    <div class=" top-0 sticky flex justify-between w-full">
+                        <!-- code type -->
+                        <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                            HTML
+                        </div>
+
+                        <!-- Copy button -->
+                        <button onclick="copyCode('codeContainer3')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                            <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                            </svg>
+                            <span class="buttonText">Copy</span>
+                        </button>
+                    </div>
+                    
+                    <!-- CODE -->
+                    <div class=" h-full p-4">
+                        <pre>
+<code>
+&lt;!-- Variation 3 --&gt;
+&lt;div class="flex gap-[80px] justify-around px-[121px] py-[40px] w-[1440px] h-fit bg-white"&gt;
+&lt;!-- navigations --&gt;
+&lt;div class="flex gap-6"&gt;
+    &lt;!-- 1 --&gt;
+    &lt;div class="flex gap-4 flex-col"&gt;
+        &lt;p class="paragraph-large-semibold text-Neutral-900"&gt;Resources&lt;/p&gt;
+
+        &lt;div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden"&gt;
+            &lt;img src="../assets/img-1.png" class="w-full h-full object-cover" alt=""&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 2 --&gt;
+    &lt;div class="flex gap-4 flex-col"&gt;
+        &lt;p class="paragraph-large-semibold text-Neutral-900"&gt;Rayna Figma V1.0&lt;/p&gt;
+
+        &lt;div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden"&gt;
+            &lt;img src="../assets/img-2.png" class="w-full h-full object-cover" alt=""&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 3 --&gt;
+    &lt;div class="flex gap-4 flex-col"&gt;
+        &lt;p class="paragraph-large-semibold text-Neutral-900"&gt;Help Center&lt;/p&gt;
+
+        &lt;div class="w-[293.67px] h-[199px] rounded-[10px] overflow-hidden"&gt;
+            &lt;img src="../assets/img-3.png" class="w-full h-full object-cover" alt=""&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- links --&gt;
+&lt;div class="flex gap-5 flex-col"&gt;
+    &lt;p class="paragraph-large-semibold text-Neutral-900"&gt;Learn&lt;/p&gt;
+
+    &lt;ul class="list-none flex flex-col gap-[10px]"&gt;
+        &lt;li class=""&gt;
+            &lt;a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600"&gt;What is Rayna&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=""&gt;
+            &lt;a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600"&gt;Rayna Tutorials&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=""&gt;
+            &lt;a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600"&gt;Domains&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=""&gt;
+            &lt;a href="" class="paragraph-medium-regular hover:text-Neutral-500 text-Neutral-600"&gt;iFrame & Embes&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=""&gt;
+            &lt;a href="" class="paragraph-medium-regular hover:text-Primary-600 text-Primary-400"&gt;View all&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+                        </pre>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </section>
+
+
+      
+   
+
+    </main>
+
+
+
+  </div>
+  
+</div>
+
+
+
+<script src="../assets/Js/main.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+  defer
+></script>
+
+
+
+
+
+</body>
+</html>
