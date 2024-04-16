@@ -378,7 +378,7 @@
                 </P>
             </div>
             
-            <!-- Navigation 1 -->
+            <!-- Pagination Base Components -->
             <section class="h-fit p-4 rounded-lg border bg-white border-Neutral-100 mt-6 w-full">
                 <p class="text-Neutral-800 mb-4 paragraph-regular-regular overflow-auto">Pagination  Base Components</p>                 
 
@@ -386,10 +386,12 @@
                 <div class="flex justify-center overflow-auto p-3 bg-white gap-6">
 
                     <!-- Page indicator -->
-                    <p class="paragraph-small-semibold text-black">Page <span>1</span> of <span>30</span></p>
+                    <div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg">
+                        <p class="paragraph-small-semibold text-black ">Page <span>1</span> of <span>30</span></p>
+                    </div>
 
                     <!-- Page number -->
-                    <div class="p-4 flex gap-4 w-60 border border-Neutral-100 flex-wrap rounded-lg">
+                    <div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg">
                         <!-- inactive, small, square -->
                         <a href="#" class="w-6 h-6 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
                             <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
@@ -458,8 +460,8 @@
                     </div>
 
                     <!-- navigation controls -->
-                    <div class="p-4 flex gap-4 w-60 border border-Neutral-100 flex-wrap rounded-lg">
-                        
+                    <div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg">
+
                         <button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700">
                             <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
@@ -481,9 +483,223 @@
                             </button>
                         </div>
 
+                        <!-- button, outlined, left -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+
+                            <p class="paragraph-small-semibold">Previous</p>
+                        </button>
+
+                        <!-- button, outlined, right -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <p class="paragraph-small-semibold">Next</p>
+
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+                        </button>
+
+                        <!-- single buttons, outlined, right -->
+                        <div class="flex gap-4">
+                            <button class="group w-fit h-fit p-2 rounded-lg bg-Primary-400 text-Neutral-900">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" />
+                                </svg>
+                            </button>
+
+                            <button class="group w-fit h-fit p-2 rounded-lg bg-Primary-400 text-Neutral-900">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- single buttons, rounded, right -->
+                        <div class="flex gap-4">
+                            <button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" />
+                                </svg>
+                            </button>
+
+                            <button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- selector -->
+                        <div class="flex gap-[14px] items-center">
+
+                            <p class="text-Neutral-400 paragraph-small-regular">Go to page</p>
+                            <div class="grid">
+                                <svg class="pointer-events-none z-10 right-1 relative col-start-1 row-start-1 h-5 w-5 self-center justify-self-end forced-colors:hidden text-Neutral-400" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+                                </svg>
+                                <select class="w-20 appearance-none forced-colors:appearance-auto border row-start-1 col-start-1 rounded-md bg-white hover:border-Neutral-500  hover:bg-white  border-Neutral-300 text-Neutral-400  px-2 py-2">
+                                  <option>00</option>
+                                  <option>100</option>
+                                  <option>200</option>
+                                </select>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    
+                    <!-- pagination -->
+
+                    <div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg">
+                        <!-- 1 -->
+                        <div class="flex gap-1 items-center">
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">2</span>
+                            </a>
+
+                            <!-- activeV2, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 ">
+                                <span class="text-Neutral-700 paragraph-small-regular">3</span>
+                            </a>
+
+                            <!-- truncated pages -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">...</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">12</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">13</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">14</span>
+                            </a>
+
+                       
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="flex gap-1 items-center">
+
+                            <button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                                </svg>
+                            </button>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">2</span>
+                            </a>
+
+                            <!-- activeV2, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 ">
+                                <span class="text-Neutral-700 paragraph-small-regular">3</span>
+                            </a>
+
+                            <!-- truncated pages -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">...</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">12</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">13</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">14</span>
+                            </a>
+
+                            <button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                                </svg>
+                            </button>
+                       
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="flex gap-1 items-center">
+
+                            <!-- single buttons, rounded, right -->
+                            <button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" />
+                                </svg>
+                            </button>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">2</span>
+                            </a>
+
+                            <!-- activeV2, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 ">
+                                <span class="text-Neutral-700 paragraph-small-regular">3</span>
+                            </a>
+
+                            <!-- truncated pages -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">...</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">12</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">13</span>
+                            </a>
+
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">14</span>
+                            </a>
+
+                            <button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white">
+                                <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" />
+                                </svg>
+                            </button>
+                       
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -511,33 +727,632 @@
                     <div class=" h-full p-4">
                         <pre>
 <code>
-&lt;!-- Variation 1 --&gt;
-&lt;div class="flex flex-col w-[600px] h-fit"&gt;
-&lt;!-- top --&gt;
-&lt;div class="flex flex-col px-10 py-8 gap-6 rounded-t-[20px] justify-start bg-Neutral-50"&gt;
-    &lt;!-- icon --&gt;
-    &lt;div class="bg-Primary-50 rounded-full w-[52px] h-[52px] flex p-[10px] items-center justify-center"&gt;
-        &lt;svg width="33" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
-            &lt;path d="M7.29 8.56a1.33 1.33 0 1 0-.23 2.65l2.65.23a1.33 1.33 0 0 0 .23-2.65L7.3 8.56ZM21.84 11.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45ZM7.29 20a1.33 1.33 0 1 0-.23 2.66l2.65.23a1.33 1.33 0 1 0 .23-2.65L7.3 20ZM21.84 23.1c.07-.73.71-1.28 1.45-1.21l2.65.23a1.33 1.33 0 1 1-.23 2.66l-2.65-.23a1.33 1.33 0 0 1-1.22-1.45Z" fill="#F56630"/&gt;
-            &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 12a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm1.33 4a1.33 1.33 0 1 0-2.66 0 1.33 1.33 0 0 0 2.66 0Z" fill="#F56630"/&gt;
-            &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 4.32a5.22 5.22 0 0 0-5.67 5.24V20.2c0 2.84 2.21 5.16 5 5.4 1.14.1 2.55.22 4.2.38.3.03.96.17 1.92.39a558.92 558.92 0 0 0 3.15.75c1.12.27 2.26.54 3.25.74.94.2 1.86.35 2.48.35 1.52.01 3.01-.02 4.29-.06a5.23 5.23 0 0 0 5.05-5.25V12.26c0-3.09-2.6-5.5-5.63-5.41-1.13.03-2.4.05-3.7.04-.3 0-.98-.1-1.96-.3a102.5 102.5 0 0 1-4.2-.97l-2.13-.5c-.9-.22-1.75-.4-2.25-.45l-3.8-.35Zm-3 5.24c0-1.53 1.28-2.7 2.76-2.58 1.06.09 2.32.2 3.78.35.3.03.95.16 1.91.38l2.08.5 1.07.26c1.12.26 2.26.53 3.25.73.94.2 1.86.36 2.48.36 1.33 0 2.63-.02 3.79-.05a2.79 2.79 0 0 1 2.88 2.75V22.9c0 1.41-1.1 2.55-2.46 2.59-1.26.04-2.72.06-4.2.06-.3 0-.98-.1-1.96-.3-.94-.2-2.04-.45-3.16-.72l-1.05-.25c-.75-.19-1.48-.36-2.12-.5-.9-.22-1.75-.4-2.25-.45-1.67-.16-3.09-.3-4.25-.39a2.78 2.78 0 0 1-2.55-2.74V9.56Z" fill="#F56630"/&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;!-- content --&gt;
-    &lt;div class="flex flex-col gap-[10px] text-left"&gt;
-        &lt;p class="paragraph-medium-semibold text-Neutral-900"&gt;Partnerships&lt;/p&gt;
-        &lt;p class="paragraph-medium-regular text-Neutral-700"&gt;Dive into the overarching philosophy and principles that underpin our approach to partnerships. Learn how we create synergies and mutually beneficial relationships with other organizations.&lt;/p&gt;
-    &lt;/div&gt;
+&lt;!-- Page indicator --&gt;
+&lt;div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg"&gt;
+&lt;p class="paragraph-small-semibold text-black "&gt;Page &lt;span&gt;1&lt;/span&gt; of &lt;span&gt;30&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- bottom --&gt;
-&lt;ul class="list-none rounded-b-[20px] flex flex-col gap-[20px] px-10 pt-10 pb-14 bg-white text-Neutral-900 paragraph-medium-semibold"&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;About out partnerships&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Current Partners&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Become a Partner&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Resources and Support&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Success Stories&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="cursor-pointer"&gt;&lt;a href="" class="w-fill h-fill hover:text-Neutral-600"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+
+&lt;!-- Page number --&gt;
+&lt;div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg"&gt;
+&lt;!-- inactive, small, square --&gt;
+&lt;a href="#" class="w-6 h-6 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, round --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-full bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- active, small, square --&gt;
+&lt;a href="#" class="w-6 h-6 p-2 flex justify-center items-center rounded-md bg-Primary-50 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- active, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-Primary-50 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- active, large, round --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-full bg-Primary-50 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- activeV2, small, square --&gt;
+&lt;a href="#" class="w-6 h-6 p-2 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- activeV2, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- activeV2, large, round --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-full bg-white border border-Primary-400 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- truncated pages --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- truncated pages --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-full bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- truncated pages --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-Neutral-100"&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- truncated pages --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-full bg-Neutral-100"&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;!-- navigation controls --&gt;
+&lt;div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg"&gt;
+
+&lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;!-- gouped buttons, outlined, right --&gt;
+&lt;div class="flex"&gt;
+    &lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-r-0 border-Neutral-300 rounded-l-lg bg-white text-Neutral-700"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+    &lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-l-0 border-Neutral-300 rounded-r-lg bg-white text-Neutral-700"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- button, outlined, left --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+
+    &lt;p class="paragraph-small-semibold"&gt;Previous&lt;/p&gt;
+&lt;/button&gt;
+
+&lt;!-- button, outlined, right --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;p class="paragraph-small-semibold"&gt;Next&lt;/p&gt;
+
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;!-- single buttons, outlined, right --&gt;
+&lt;div class="flex gap-4"&gt;
+    &lt;button class="group w-fit h-fit p-2 rounded-lg bg-Primary-400 text-Neutral-900"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+    &lt;button class="group w-fit h-fit p-2 rounded-lg bg-Primary-400 text-Neutral-900"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- single buttons, rounded, right --&gt;
+&lt;div class="flex gap-4"&gt;
+    &lt;button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+    &lt;button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- selector --&gt;
+&lt;div class="flex gap-[14px] items-center"&gt;
+
+    &lt;p class="text-Neutral-400 paragraph-small-regular"&gt;Go to page&lt;/p&gt;
+    &lt;div class="grid"&gt;
+        &lt;svg class="pointer-events-none z-10 right-1 relative col-start-1 row-start-1 h-5 w-5 self-center justify-self-end forced-colors:hidden text-Neutral-400" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"&gt;
+            &lt;path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"&gt;&lt;/path&gt;
+        &lt;/svg&gt;
+        &lt;select class="w-20 appearance-none forced-colors:appearance-auto border row-start-1 col-start-1 rounded-md bg-white hover:border-Neutral-500  hover:bg-white  border-Neutral-300 text-Neutral-400  px-2 py-2"&gt;
+            &lt;option&gt;00&lt;/option&gt;
+            &lt;option&gt;100&lt;/option&gt;
+            &lt;option&gt;200&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!-- pagination --&gt;
+
+&lt;div class="p-4 flex gap-4 w-fit border border-Neutral-100 flex-wrap rounded-lg"&gt;
+&lt;!-- 1 --&gt;
+&lt;div class="flex gap-1 items-center"&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;2&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- activeV2, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+        &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;3&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- truncated pages --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;12&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;13&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;14&lt;/span&gt;
+    &lt;/a&gt;
+
+
+&lt;/div&gt;
+
+&lt;!-- 2 --&gt;
+&lt;div class="flex gap-1 items-center"&gt;
+
+    &lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;2&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- activeV2, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+        &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;3&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- truncated pages --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;12&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;13&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;14&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!-- 3 --&gt;
+&lt;div class="flex gap-1 items-center"&gt;
+
+    &lt;!-- single buttons, rounded, right --&gt;
+    &lt;button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M7.1 11.14c-.6-.64-.6-1.64 0-2.28l6.13-6.51a.83.83 0 0 1 1.21 1.14L8.31 10l6.13 6.51a.83.83 0 0 1-1.21 1.14l-6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;2&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- activeV2, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+        &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;3&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- truncated pages --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;12&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;13&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;14&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;button class="group w-fit h-fit p-2 rounded-full bg-Neutral-500 text-white"&gt;
+        &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+            &lt;path d="M13.9 11.14c.6-.64.6-1.64 0-2.28L7.77 2.35a.83.83 0 0 0-1.21 1.14L12.69 10l-6.13 6.51a.83.83 0 0 0 1.21 1.14l6.13-6.5Z" /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+</code>
+                        </pre>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="h-fit p-4 rounded-lg border bg-white border-Neutral-100 mt-6 w-full">
+                <p class="text-Neutral-800 mb-4 paragraph-regular-regular overflow-auto">Pagination</p>                 
+
+                <!-- -->
+                <div class="flex flex-col justify-center overflow-auto p-3 bg-white gap-6">
+
+                    <!-- Variation 1 -->
+                    <div class="flex justify-between border-t border-Neutral-100 py-4 items-center">
+                         <!-- button, outlined, left -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+
+                            <p class="paragraph-small-semibold">Previous</p>
+                        </button>
+                        <!--  -->
+
+                        <!-- Page indicator -->
+                        <p class="paragraph-small-semibold text-black ">Page <span>1</span> of <span>30</span></p>
+                        
+                        <!-- button, outlined, left -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <p class="paragraph-small-semibold">Next</p>
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Variation 2 -->
+                    <div class="flex gap-1 justify-center border-t border-Neutral-100 py-4 items-center">
+
+                        <button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700">
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+                        </button>
+
+                        <!-- inactive, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
+                        </a>
+
+                        <!-- inactive, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">2</span>
+                        </a>
+
+                        <!-- activeV2, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 ">
+                            <span class="text-Neutral-700 paragraph-small-regular">3</span>
+                        </a>
+
+                        <!-- truncated pages -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">...</span>
+                        </a>
+
+                        <!-- inactive, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">12</span>
+                        </a>
+
+                        <!-- inactive, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">13</span>
+                        </a>
+
+                        <!-- inactive, large, square -->
+                        <a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                            <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">14</span>
+                        </a>
+
+                        <button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700">
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+                        </button>
+                    
+                    </div>
+
+                    <!-- Variation 3 -->
+                    <div class="flex gap-1 justify-between border-t border-Neutral-100 py-4 items-center">
+
+                        <!-- button, outlined, left -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+
+                            <p class="paragraph-small-semibold">Previous</p>
+                        </button>
+
+                        <!-- pagination -->
+                        <div class="flex gap-2">
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">1</span>
+                            </a>
+    
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">2</span>
+                            </a>
+    
+                            <!-- activeV2, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white border border-Primary-400 ">
+                                <span class="text-Neutral-700 paragraph-small-regular">3</span>
+                            </a>
+    
+                            <!-- truncated pages -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">...</span>
+                            </a>
+    
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">12</span>
+                            </a>
+    
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">13</span>
+                            </a>
+    
+                            <!-- inactive, large, square -->
+                            <a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group">
+                                <span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular">14</span>
+                            </a>
+                        </div>
+
+                        <!-- button, outlined, left -->
+                        <button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center">
+                            <p class="paragraph-small-semibold">Next</p>
+                            <svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" />
+                            </svg>
+                        </button>
+                    
+                    </div>
+
+                </div>
+
+
+
+                <!-- code container -->
+                <div id="codeContainer3" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                    <!-- HEADER -->
+                    <div class=" top-0 sticky flex justify-between w-full">
+                        <!-- code type -->
+                        <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                            HTML
+                        </div>
+
+                        <!-- Copy button -->
+                        <button onclick="copyCode('codeContainer3')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                            <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                            </svg>
+                            <span class="buttonText">Copy</span>
+                        </button>
+                    </div>
+                    
+                    <!-- CODE -->
+                    <div class=" h-full p-4">
+                        <pre>
+<code>
+&lt;!-- Variation 1 --&gt;
+&lt;div class="flex justify-between border-t border-Neutral-100 py-4 items-center"&gt;
+&lt;!-- button, outlined, left --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+
+    &lt;p class="paragraph-small-semibold"&gt;Previous&lt;/p&gt;
+&lt;/button&gt;
+&lt;!--  --&gt;
+
+&lt;!-- Page indicator --&gt;
+&lt;p class="paragraph-small-semibold text-black "&gt;Page &lt;span&gt;1&lt;/span&gt; of &lt;span&gt;30&lt;/span&gt;&lt;/p&gt;
+
+&lt;!-- button, outlined, left --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;p class="paragraph-small-semibold"&gt;Next&lt;/p&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Variation 2 --&gt;
+&lt;div class="flex gap-1 justify-center border-t border-Neutral-100 py-4 items-center"&gt;
+
+&lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;2&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- activeV2, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+    &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;3&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- truncated pages --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;12&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;13&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- inactive, large, square --&gt;
+&lt;a href="#" class="w-9 h-9 p-3 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+    &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;14&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;button class="group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Variation 3 --&gt;
+&lt;div class="flex gap-1 justify-between border-t border-Neutral-100 py-4 items-center"&gt;
+
+&lt;!-- button, outlined, left --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+
+    &lt;p class="paragraph-small-semibold"&gt;Previous&lt;/p&gt;
+&lt;/button&gt;
+
+&lt;!-- pagination --&gt;
+&lt;div class="flex gap-2"&gt;
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;1&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;2&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- activeV2, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white border border-Primary-400 "&gt;
+        &lt;span class="text-Neutral-700 paragraph-small-regular"&gt;3&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- truncated pages --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;...&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;12&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;13&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;!-- inactive, large, square --&gt;
+    &lt;a href="#" class="w-9 h-9 p-2 flex justify-center items-center rounded-md bg-white hover:bg-Neutral-100 group"&gt;
+        &lt;span class="text-Neutral-400 group-hover:text-Neutral-700 paragraph-small-regular"&gt;14&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- button, outlined, left --&gt;
+&lt;button class="flex gap-2 group hover:bg-Neutral-50 w-fit h-fit p-2 border border-Neutral-300 rounded-lg bg-white text-Neutral-700 items-center"&gt;
+    &lt;p class="paragraph-small-semibold"&gt;Next&lt;/p&gt;
+    &lt;svg class="fill-current" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M11.33 3.33a.83.83 0 0 0-1.66 0v5.84H3.83a.83.83 0 0 0 0 1.66h5.84v5.84a.83.83 0 0 0 1.66 0v-5.84h5.84a.83.83 0 0 0 0-1.66h-5.84V3.33Z" /&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+
 &lt;/div&gt;
 
 </code>
