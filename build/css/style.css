@@ -2063,6 +2063,10 @@ html {
   width: 50%;
 }
 
+.w-80{
+  width: 20rem;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -2238,6 +2242,14 @@ html {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+.resize-y{
+  resize: vertical;
+}
+
+.resize-x{
+  resize: horizontal;
 }
 
 .resize{
@@ -4463,6 +4475,12 @@ html {
   .dark\:text-slate-200{
     --tw-text-opacity: 1;
     color: rgb(226 232 240 / var(--tw-text-opacity));
+  }
+
+  .dark\:ring-0{
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   }
 
   .dark\:ring-black\/10{

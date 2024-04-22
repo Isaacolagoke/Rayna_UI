@@ -918,7 +918,7 @@ autoScroll();
 
                     <!-- chat-component -->
 
-                    <div class="flex flex-col gap-4 rounded-xl p-4 border border-Neutral-200">
+                    <div class="h-[400px] overflow-y-auto flex flex-col gap-4 rounded-xl p-4 border border-Neutral-200">
                         <!-- incoming-single text -->
                         <div class="flex gap-2">
                             <!-- avatars -->
@@ -1154,6 +1154,75 @@ autoScroll();
                     </div>
                 </section>
                 <!-- Chat ends -->
+
+                <!-- text-area -->
+                <section class="h-auto p-4 rounded-lg border bg-white border-Neutral-100 container">
+                    <p class="text-Neutral-800 mb-1 paragraph-medium-semibold overflow-auto">Text Area</p> 
+                    <p class="text-Neutral-500 mb-4 paragraph-small-regular">Use Textarea to receive multiline inputs </p>                
+
+                    <!--  text area container -->
+                    <!-- Resize in all directions -->
+                    <div class="relative">
+                        <p class="paragraph-small-regular mb-1">Resize in all directions</p>
+                        <textarea class="resize text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"></textarea>
+                    </div>
+                    <!-- Resize vertically -->
+                    <div class="relative">
+                        <p class="paragraph-small-regular mb-1">Resize vertically</p>
+                        <textarea class="resize-y text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"></textarea>
+                    </div>
+                    <!-- Resize horizontally -->
+                    <div class="relative">
+                        <p class="paragraph-small-regular mb-1">Resize horizontally</p>
+                        <textarea class="resize-x text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"></textarea>
+                    </div>
+
+                    <!-- text area container-ends -->
+                    
+                    
+                    
+                    <!-- code container -->
+                    <div id="codeContainer4" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                        <!-- HEADER -->
+                        <div class=" top-0 sticky flex justify-between w-full">
+                            <!-- code type -->
+                            <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                                HTML/JS
+                            </div>
+
+                            <!-- Copy button -->
+                            <button onclick="copyCode('codeContainer4')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                                <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                                </svg>
+                                <span class="buttonText">Copy</span>
+                            </button>
+                        </div>
+                        
+                        <!-- CODE -->
+                        <div class=" h-full p-4">
+<pre><code>&lt;!-- Resize in all directions --&gt;
+&lt;div class="relative"&gt;
+    &lt;p class="paragraph-small-regular mb-1"&gt;Resize in all directions&lt;/p&gt;
+    &lt;textarea class="resize text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;!-- Resize vertically --&gt;
+&lt;div class="relative"&gt;
+    &lt;p class="paragraph-small-regular mb-1"&gt;Resize vertically&lt;/p&gt;
+    &lt;textarea class="resize-y text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;!-- Resize horizontally --&gt;
+&lt;div class="relative"&gt;
+    &lt;p class="paragraph-small-regular mb-1"&gt;Resize horizontally&lt;/p&gt;
+    &lt;textarea class="resize-x text-sm p-2 w-80 ring-1 ring-Neutral-200  rounded-lg " rows="3" style="width: 348px; height: 111px;" spellcheck="false"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <!-- code ends -->
+                    </div>
+                </section>
+                <!-- text-area ends -->
 
 
 
