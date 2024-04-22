@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Rayna Colors</title>
+	</head>
+
+	<body x-data="sidebar()" class="bg-Neutral-50 text-gray-700" @resize.window="handleResize()">
+
+<div class="xl:flex">
+
+  <!-- sidebar-content -->
+
+  <!-- sidebar overlay -->
+  <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-white bg-opacity-75 h-screen z-50">
+  
+    <!-- sidebar -->
+    <div
+        @click.away="handleAway()"
+        class="w-[272px] h-screen overflow-y-auto bg-white border-Neutral-200 border-r-[1px]"
+      >
+
+        <!-- sidebar header -->
+        <div class="grid grid-cols-2 h-16 justify-between">
+          <!-- logo -->
+          <div class="p-6">
+            <svg width="134" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38.4 5.22v-.13h.12V2.75l-.08-.03a4 4 0 0 0-1.43-.22c-2.06 0-3.67.95-4.49 2.62V2.74H29.75V18.4H32.52v-8.01c0-1.79.43-3.1 1.2-3.96.77-.86 1.9-1.3 3.35-1.3.41 0 .8.03 1.2.08v.02h.12ZM54.44 18.39h.13V2.87h-.13v-.13H51.8V5.17c-1.02-1.76-3.1-2.85-5.49-2.85-4.25 0-7.35 3.44-7.35 8.24 0 4.8 3.1 8.25 7.35 8.25 2.38 0 4.47-1.1 5.49-2.84v2.42h2.64ZM50.51 6.5a5.84 5.84 0 0 1 1.4 4.05c0 1.65-.47 3.02-1.4 4.05a4.6 4.6 0 0 1-3.63 1.57c-1.5 0-2.71-.53-3.65-1.57a5.97 5.97 0 0 1-1.38-4.05c0-1.64.48-3 1.38-4.05a4.71 4.71 0 0 1 3.65-1.56c1.5 0 2.72.53 3.63 1.56ZM71 2.87v-.13h-2.77V11.6c0 1.24-.48 2.28-1.3 3a4.9 4.9 0 0 1-3.31 1.16c-1.17 0-2-.32-2.53-.96-.55-.65-.82-1.66-.82-3.11V2.74h-2.78v9.56c0 1.95.5 3.47 1.46 4.51a5.3 5.3 0 0 0 4.07 1.58c2.31 0 4.22-.94 5.2-2.64v1.02c0 1.85-.44 3.22-1.25 4.13-.82.9-2.01 1.36-3.56 1.36a6.98 6.98 0 0 1-4.69-1.73l-.1-.09-.08.1-1.47 1.83-.07.1.08.07c1.44 1.5 3.81 2.35 6.39 2.35 2.36 0 4.25-.7 5.55-2.09 1.3-1.38 1.99-3.41 1.99-6.03V2.87ZM87.28 18.39h.13V8.4c0-1.92-.5-3.44-1.44-4.49a5.28 5.28 0 0 0-4.1-1.6c-2.3 0-4.18.94-5.14 2.63V2.74h-2.78V18.4h2.78V9.1c0-1.26.47-2.3 1.27-3.02a4.81 4.81 0 0 1 3.28-1.14c1.18 0 2 .3 2.54.95.54.65.81 1.67.81 3.11v9.38h2.65ZM105.34 18.39h.13V2.87h-.13v-.13h-2.65V5.17c-1.02-1.76-3.1-2.85-5.48-2.85-4.26 0-7.36 3.44-7.36 8.24 0 4.8 3.1 8.25 7.36 8.25 2.37 0 4.46-1.1 5.48-2.84v2.42h2.65ZM101.4 6.5a5.84 5.84 0 0 1 1.4 4.05c0 1.65-.46 3.02-1.4 4.05a4.6 4.6 0 0 1-3.62 1.57c-1.5 0-2.72-.53-3.66-1.57a5.97 5.97 0 0 1-1.37-4.05c0-1.64.47-3 1.37-4.05a4.71 4.71 0 0 1 3.66-1.56c1.5 0 2.72.53 3.62 1.56ZM116.9 2.87v-.13h-2.78V12.51c0 1.86.67 3.44 1.84 4.55a6.87 6.87 0 0 0 4.83 1.75c2 0 3.66-.64 4.83-1.75a6.12 6.12 0 0 0 1.84-4.55V2.74h-2.78V12.36c0 1.25-.36 2.2-1.01 2.84-.66.64-1.63.98-2.88.98a3.98 3.98 0 0 1-2.87-.98c-.66-.64-1.02-1.59-1.02-2.84V2.87ZM130.7 2.74h-.12V18.4h2.78V2.74h-2.65Z" fill="#101928" stroke="#101928" stroke-width=".26"/>
+                <path d="m18.6 13.27-1.35-1.35a.07.07 0 0 1 .02-.11 6.18 6.18 0 0 0 2.78-2.38 6.18 6.18 0 0 0 .94-3.25v-.03a6.13 6.13 0 0 0-.83-3.09A6.18 6.18 0 0 0 17.6.66 8.27 8.27 0 0 0 14.41 0h.43H1.83C.83 0 0 .82 0 1.83v13.08a6.12 6.12 0 0 0 .96 3.3 6.17 6.17 0 0 0 2.78 2.36l.04.02a6.12 6.12 0 0 0 6.2-.87c.01 0 .02 0 .03-.02a6.18 6.18 0 0 0 2.3-4.65V12.57c0-.1.1-.14.18-.08l5.57 5.58 1.3 1.3c.6.6 1.63.18 1.63-.67v-2.36c0-.43-.17-.85-.48-1.16l-1.91-1.91Zm-3.77-4.71H8.96a.42.42 0 0 0-.41.41v5.99a2.39 2.39 0 0 1-4.77.04V4.14c0-.2.16-.36.36-.36h10.7a2.4 2.4 0 0 1 0 4.78Z" fill="#E8562E"/>
+              </svg>
+              
+          </div>
+
+          <!-- toggle - close/open btn -->
+          <a
+            @click.prevent="handleClose()"
+            class="p-6 flex justify-self-end" 
+            href="#"
+          >
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </a>
+        </div>
+
+
+    <!-- links-->
+
+    <ul id="sidebarList" class="font-normal p-6">
+
+    <!-- Search Field -->
+    <div class=" mb-4 sticky top-0">
+        <input type="text" id="searchInput" class="w-full px-3 py-2 border border-Neutral-300 rounded-md focus:outline-none focus:ring-1 focus:ring-Primary-100" placeholder="Search...">
+    </div>
+
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="../index.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Introdution
+      </a>
+    </li>
+
+  
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./colors.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Colors
+      </a>
+    </li>
+
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./Typography.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Typography
+      </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./buttons.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Buttons
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./buttons-groups.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Button Groups and Chips
+        </a>
+        </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./badges.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Badges
+        </a>
+      </li>
+
+          <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./shadows.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Shadows
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./avatars.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Avatars
+        </a>
+        </li>
+
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./emptystates.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Empty States
+      </a>
+      </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./inputs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Inputs
+        </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./loading.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Loading and Progress Indicators
+        </a>
+        </li>   
+    
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./tabs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Tabs
+        </a>
+        </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./activity.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Activity Feed
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./alerts.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Alerts and Notification
+      </a>
+      </li>
+
+        <!-- links -->
+        <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./breadcrumbs.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Breadcrumbs
+        </a>
+        </li>
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./calendar.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Calendar & Date Selectors
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./codesnippets.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+          Code Snippets
+      </a>
+      </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./dividers.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+          group">
+          Dividers
+        </a>
+        </li>
+
+            <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./dropdowns.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Dropdowns
+    </a>
+    </li>
+
+      <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./fileupload.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        File Upload
+      </a>
+      </li>
+
+        <!-- links -->
+        <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./footers.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Footers
+        </a>
+        </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./formControl.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Form Controls
+        </a>
+        </li>
+
+<!-- links -->
+<li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./header.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Headers
+    </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+    <a href="./metrics.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Metrics
+    </a>
+    </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./navigations.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Navigations
+        </a>
+        </li>
+
+          <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./paginations.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Paginations
+      </a>
+      </li>
+
+    <!-- links -->
+    <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+        <a href="./sidebars.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Sidebars
+        </a>
+        </li>
+
+        <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./tables.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Tables
+      </a>
+      </li>
+
+          <!-- links -->
+      <li class=" border-Primary-50 border-l-2 paragraph-small-regular">
+      <a href="./tooltip.html" class="flex items-center px-4 py-3 text-Neutral-600 rounded-r hover:bg-Primary-50 h-full w-full 
+        group">
+        Tooltip
+      </a>
+      </li>
+
+          <!-- links -->
+    <li class=" border-Primary-400 border-l-2  paragraph-small-medium">
+        <a href="#" class="flex items-center px-4 py-3 text-Neutral-900 rounded-r hover:bg-Primary-50 h-full w-full 
+            group">
+            Cards and Component
+        </a>
+    </li>
+
+
+
+    </ul>
+
+
+      
+    </div>
+    <!--  -->
+
+  </div>
+
+  <!-- Dashboard Content starts here -->
+  <div class="w-full overflow-y-auto h-screen">
+    <nav class="text-gray-700 bg-white flex h-16 sticky top-0 z-30">
+      <div x-show="!isOpen()" class="flex">
+        <!-- collapse btn -->
+        <a
+          x-show="!isOpen()"
+          @click.prevent="handleOpen()"
+          class="p-6 hover:bg-Neutral-100 text-Neutral-900"
+          href="#"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </a>
+        
+          <!-- search button goes -->
+
+      </div>
+      <div class="flex items-center ml-auto px-9">
+        <a
+          class="p-3 hover:bg-Neutral-100 text-Neutral-900"
+          href="#"
+        >
+          Rayna on Figma
+        </a>
+      </div>
+    </nav>
+
+    <!-- content starts -->
+
+    <main class="p-9 ">
+
+        <!-- Default buttons -->
+        <section class="">
+
+            <!-- Sub section header -->
+            <div class="">
+                <p class="paragraph-large-medium text-Neutral-800">Card and Components </p>
+                <P class="paragraph-medium-regular text-Neutral-500 mt-2">
+                    Use this building blocks to start your project.
+                </P>
+            </div>
+            
+            <section class="grid lg:grid-cols-2 gap-6 mt-6">
+            <!-- section starts -->
+
+                <!-- Accordion container-->
+                <section class="h-auto p-4 rounded-lg border bg-white border-Neutral-100 container">
+                    <p class="text-Neutral-800 mb-1 paragraph-medium-semibold">Accordion</p> 
+                    <p class="text-Neutral-500 mb-4 paragraph-small-regular">Use the accordion to show hidden content</p>                
+
+                    <!-- Accordion section -->
+
+                    <div class="flex flex-col overflow-x-scroll overflow-y-scroll h-[400px] relative bg-Neutral-50 ring-1 ring-Neutral-200 rounded-lg divide-y divide-Neutral-200">
+                        <!-- accordion parent 1-->
+                        <div class="flex flex-col divide-y">
+                            <!-- accordion heading -->
+                            <button class="text-left flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button">
+                                <p class="text-Neutral-700 paragraph-medium-medium">What is Rayna UI?</p>
+                                <svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/>
+                                </svg>
+                            </button>
+                            <!-- accordion collapsed content -->
+                            <div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden">
+                                Rayna is a comprehensive design system and component library built specifically for Figma (V1.0). It provides a set of pre-designed UI elements, components, and guidelines that ensure consistent and efficient design across your projects.
+                            </div>
+                        </div>
+                        <!-- accordion parent ends -->
+                    
+                        <!-- accordion parent  2-->
+                        <div class="flex flex-col divide-y">
+                            <!-- accordion heading -->
+                            <button class="text-left flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button">
+                                <p class="text-Neutral-700 paragraph-medium-medium">How do I get started with Rayna?</p>
+                                <svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/>
+                                </svg>
+                            </button>
+                            <!-- accordion collapsed content -->
+                            <div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden">
+                                Simply duplicate the library into your Figma projects to start utilizing its design assets and components.
+                            </div>
+                        </div>
+                        <!-- accordion parent ends -->
+
+                        <!-- accordion parent  3-->
+                        <div class="flex flex-col divide-y">
+                            <!-- accordion heading -->
+                            <button class="text-left flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button">
+                                <p class="text-Neutral-700 paragraph-medium-medium text-left">Can I customize the Rayna components to match my brand's style?</p>
+                                <svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/>
+                                </svg>
+                            </button>
+                            <!-- accordion collapsed content -->
+                            <div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden">
+                                Yes, absolutely! Rayna components are designed with customization in mind. You can easily adjust colors, typography, and other design attributes to align with your brand's unique identity while maintaining the consistency that Rayna offers.
+                            </div>
+                        </div>
+                        <!-- accordion parent ends -->
+
+                        <!-- accordion parent  4-->
+                        <div class="flex flex-col divide-y">
+                            <!-- accordion heading -->
+                            <button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button">
+                                <p class="text-Neutral-700 paragraph-medium-medium text-left">Will updates be made to the design system?</p>
+                                <svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/>
+                                </svg>
+                            </button>
+                            <!-- accordion collapsed content -->
+                            <div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden">
+                                Yes, updates to Rayna will be made in the near future. You'll be notified of any updates, and you can seamlessly integrate the latest versions into your ongoing projects.
+                            </div>
+                        </div>
+                        <!-- accordion parent ends -->
+
+                        <!-- accordion parent  5-->
+                        <div class="flex flex-col divide-y">
+                            <!-- accordion heading -->
+                            <button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button">
+                                <p class="text-Neutral-700 paragraph-medium-medium text-left">Can I collaborate with my team using Rayna in Figma?</p>
+                                <svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/>
+                                </svg>
+                            </button>
+                            <!-- accordion collapsed content -->
+                            <div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden">
+                                Yes, Rayna is fully compatible with Figma's collaboration features. You and your team can work together in real-time, utilizing the design system's components to streamline your design process and maintain a unified look and feel.
+                            </div>
+                        </div>
+                        <!-- accordion parent ends -->
+
+                    </div>
+                    
+                    <!-- accordion code -->
+                    <script>
+                        const accordionButtons = document.querySelectorAll('.accordion-button');
+                    
+                        accordionButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                const content = button.nextElementSibling;
+                                const icon = button.querySelector('svg');
+                                const allContents = document.querySelectorAll('.accordion-content');
+                    
+                                // Close all other accordion contents and reset their icons
+                                allContents.forEach(item => {
+                                    if (item !== content && !item.classList.contains('hidden')) {
+                                        item.classList.add('hidden');
+                                        item.previousElementSibling.classList.remove('bg-Neutral-50');
+                                        item.previousElementSibling.classList.add('bg-white');
+                                        item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                                    }
+                                });
+                    
+                                // Toggle visibility of content
+                                content.classList.toggle('hidden');
+                    
+                                // Toggle button background color
+                                button.classList.toggle('bg-Neutral-50');
+                                button.classList.toggle('bg-white');
+                    
+                                // Rotate icon
+                                icon.classList.toggle('rotate-180');
+                            });
+                        });
+                    </script>
+                    <!-- accordion code ends -->
+                    
+                    <!-- Accordion section ends-->
+
+                    
+                    <!-- code container -->
+                    <div id="codeContainer1" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-y-auto relative">
+                        <!-- HEADER -->
+                        <div class=" top-0 sticky flex justify-between w-full">
+                            <!-- code type -->
+                            <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                                HTML/JS
+                            </div>
+
+                            <!-- Copy button -->
+                            <button onclick="copyCode('codeContainer1')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                                <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                                </svg>
+                                <span class="buttonText">Copy</span>
+                            </button>
+                        </div>
+                        
+                        <!-- CODE -->
+                        <div class=" h-full p-4">
+                            <pre><code>&lt;!-- Accordion section --&gt;
+
+&lt;div class="flex flex-col overflow-y-scroll h-72 relative w-full bg-Neutral-50 ring-1 ring-Neutral-200 rounded-lg divide-y divide-Neutral-200"&gt;
+&lt;!-- accordion parent 1--&gt;
+&lt;div class="flex flex-col divide-y"&gt;
+&lt;!-- accordion heading --&gt;
+&lt;button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button"&gt;
+    &lt;p class="text-Neutral-700 paragraph-medium-medium"&gt;What is Rayna UI?&lt;/p&gt;
+    &lt;svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- accordion collapsed content --&gt;
+&lt;div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden"&gt;
+    Rayna is a comprehensive design system and component library built specifically for Figma (V1.0). It provides a set of pre-designed UI elements, components, and guidelines that ensure consistent and efficient design across your projects.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- accordion parent ends --&gt;
+
+&lt;!-- accordion parent  2--&gt;
+&lt;div class="flex flex-col divide-y"&gt;
+&lt;!-- accordion heading --&gt;
+&lt;button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button"&gt;
+    &lt;p class="text-Neutral-700 paragraph-medium-medium"&gt;How do I get started with Rayna?&lt;/p&gt;
+    &lt;svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- accordion collapsed content --&gt;
+&lt;div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden"&gt;
+    Simply duplicate the library into your Figma projects to start utilizing its design assets and components.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- accordion parent ends --&gt;
+
+&lt;!-- accordion parent  3--&gt;
+&lt;div class="flex flex-col divide-y"&gt;
+&lt;!-- accordion heading --&gt;
+&lt;button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button"&gt;
+    &lt;p class="text-Neutral-700 paragraph-medium-medium text-left"&gt;Can I customize the Rayna components to match my brand's style?&lt;/p&gt;
+    &lt;svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- accordion collapsed content --&gt;
+&lt;div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden"&gt;
+    Yes, absolutely! Rayna components are designed with customization in mind. You can easily adjust colors, typography, and other design attributes to align with your brand's unique identity while maintaining the consistency that Rayna offers.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- accordion parent ends --&gt;
+
+&lt;!-- accordion parent  4--&gt;
+&lt;div class="flex flex-col divide-y"&gt;
+&lt;!-- accordion heading --&gt;
+&lt;button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button"&gt;
+    &lt;p class="text-Neutral-700 paragraph-medium-medium text-left"&gt;Will updates be made to the design system?&lt;/p&gt;
+    &lt;svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- accordion collapsed content --&gt;
+&lt;div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden"&gt;
+    Yes, updates to Rayna will be made in the near future. You'll be notified of any updates, and you can seamlessly integrate the latest versions into your ongoing projects.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- accordion parent ends --&gt;
+
+&lt;!-- accordion parent  5--&gt;
+&lt;div class="flex flex-col divide-y"&gt;
+&lt;!-- accordion heading --&gt;
+&lt;button class="flex cursor-pointer hover:bg-Neutral-50 active:bg-Neutral-50 items-center justify-between p-4 bg-white accordion-button"&gt;
+    &lt;p class="text-Neutral-700 paragraph-medium-medium text-left"&gt;Can I collaborate with my team using Rayna in Figma?&lt;/p&gt;
+    &lt;svg class="fill-current w-5 h-5 text-Neutral-800 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"&gt;
+        &lt;path class="rotate-0" d="M2.35 7.27l6.5 6.13c.65.6 1.65.6 2.3 0l6.5-6.13a.83.83 0 0 0-1.14-1.21L10 12.19 3.49 6.06a.83.83 0 0 0-1.14 1.21Z"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- accordion collapsed content --&gt;
+&lt;div class="w-full text-Neutral-500 paragraph-small-regular px-4 py-2 accordion-content hidden"&gt;
+    Yes, Rayna is fully compatible with Figma's collaboration features. You and your team can work together in real-time, utilizing the design system's components to streamline your design process and maintain a unified look and feel.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- accordion parent ends --&gt;
+
+&lt;/div&gt;
+
+&lt;!-- accordion code --&gt;
+&lt;script&gt;
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button =&gt; {
+button.addEventListener('click', () =&gt; {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('svg');
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // Close all other accordion contents and reset their icons
+    allContents.forEach(item =&gt; {
+        if (item !== content && !item.classList.contains('hidden')) {
+            item.classList.add('hidden');
+            item.previousElementSibling.classList.remove('bg-Neutral-50');
+            item.previousElementSibling.classList.add('bg-white');
+            item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+        }
+    });
+
+    // Toggle visibility of content
+    content.classList.toggle('hidden');
+
+    // Toggle button background color
+    button.classList.toggle('bg-Neutral-50');
+    button.classList.toggle('bg-white');
+
+    // Rotate icon
+    icon.classList.toggle('rotate-180');
+});
+});
+&lt;/script&gt;
+&lt;!-- accordion code ends --&gt;
+
+&lt;!-- Accordion section ends--&gt;
+    </code>
+                            </pre>
+                        </div>
+                        <!-- code ends -->
+                    </div>
+                </section>
+                <!-- Accordion container ends -->
+
+                <!-- Carousel -->
+                <section class="h-auto p-4 rounded-lg border bg-white border-Neutral-100 container">
+                    <p class="text-Neutral-800 mb-1 paragraph-medium-semibold overflow-auto">Carousel</p> 
+                    <p class="text-Neutral-500 mb-4 paragraph-small-regular">The carousel component can be used to loop through multiple elements. </p>                
+
+                    <!--  carousel-parent -->
+
+                    <div class="relative h-[400px]">
+                        <!-- Carousel container -->
+                        <div class="overflow-hidden rounded-lg">
+                          <div class="flex transition-transform ease-in-out duration-300" id="carousel">
+                            <!-- Slide 1 -->
+                            <div class="w-full flex-shrink-0 relative">
+                              <img src="../assets/img-2.png" alt="Slide 1" class="w-full h-full object-contain">
+                              <div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white">
+                                <p class="paragraph-small-regular text-Neutral-800">Slide 1 Title</p>
+                                <p class="paragraph-Xsmall-regular text-Neutral-500">Slide 1 Content</p>
+                              </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="w-full flex-shrink-0 relative">
+                              <img src="../assets/img-1.png" alt="Slide 2" class="w-full h-full object-contain">
+                              <div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white">
+                                <p class="paragraph-small-regular text-Neutral-800">Slide 2 Title</p>
+                                <p class="paragraph-Xsmall-regular text-Neutral-500">Slide 2 Content</p>
+                              </div>
+                            </div>
+                            <!-- Slide 3 and so on... -->
+                            <div class="w-full flex-shrink-0 relative">
+                                <img src="../assets/img-3.png" alt="Slide 2" class="w-full h-full object-contain">
+                                <div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white">
+                                  <p class="paragraph-small-regular text-Neutral-800">Slide 3 Title</p>
+                                  <p class="paragraph-Xsmall-regular text-Neutral-500">Slide 3 Content</p>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <!-- Left button -->
+                        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 flex items-center justify-center w-6 h-6 rounded-full ring ring-Neutral-300 hover:bg-Neutral-50 ml-3 text-Neutral-300 hover:text-Neutral-500" onclick="scrollLeft()">
+                          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                          </svg>
+                        </button>
+                        <!-- Right button -->
+                        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 flex items-center justify-center w-6 h-6 rounded-full ring ring-Neutral-300 hover:bg-Neutral-50 mr-3 text-Neutral-300 hover:text-Neutral-500" onclick="scrollRight()">
+                          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                    </div>
+                     
+                    <!-- carousel code -->
+                    <script>
+                    // Variables
+                    const slides = document.querySelector('#carousel');
+                    const slideWidth = slides.querySelector('div').offsetWidth;
+                    let currentIndex = 0;
+                    let intervalId;
+                    
+                    // Function to scroll left
+                    function scrollLeft() {
+                        if (currentIndex > 0) {
+                        currentIndex--;
+                        slideToIndex();
+                        } else {
+                        currentIndex = slides.children.length - 1;
+                        slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                        }
+                    }
+                    
+                    // Function to scroll right
+                    function scrollRight() {
+                        if (currentIndex < slides.children.length - 1) {
+                        currentIndex++;
+                        slideToIndex();
+                        } else {
+                        currentIndex = 0;
+                        slides.style.transform = 'translateX(0)';
+                        }
+                    }
+                    
+                    // Function to slide to a specific index
+                    function slideToIndex() {
+                        slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                    }
+                    
+                    // Function to automatically scroll after 5 seconds
+                    function autoScroll() {
+                        intervalId = setInterval(() => {
+                        if (currentIndex < slides.children.length - 1) {
+                            currentIndex++;
+                            slideToIndex();
+                        } else {
+                            currentIndex = 0;
+                            slides.style.transform = 'translateX(0)';
+                        }
+                        }, 3000);
+                    }
+                    
+                    // Start auto-scrolling
+                    autoScroll();
+                    
+                    // Stop auto-scrolling when mouse hovers over the carousel
+                    slides.addEventListener('mouseenter', () => {
+                        clearInterval(intervalId);
+                    });
+                    
+                    // Resume auto-scrolling when mouse leaves the carousel
+                    slides.addEventListener('mouseleave', () => {
+                        autoScroll();
+                    });
+                    </script>
+                    <!-- carousel code ends -->
+                      
+                    <!-- carousel-parent-ends -->
+                    
+                    
+                    
+                    <!-- code container -->
+                    <div id="codeContainer2" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                        <!-- HEADER -->
+                        <div class=" top-0 sticky flex justify-between w-full">
+                            <!-- code type -->
+                            <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                                HTML/JS
+                            </div>
+
+                            <!-- Copy button -->
+                            <button onclick="copyCode('codeContainer2')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                                <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                                </svg>
+                                <span class="buttonText">Copy</span>
+                            </button>
+                        </div>
+                        
+                        <!-- CODE -->
+                        <div class=" h-full p-4">
+                            <pre><code>&lt;!--  carousel-parent --&gt;
+
+&lt;div class="relative h-[400px]"&gt;
+&lt;!-- Carousel container --&gt;
+&lt;div class="overflow-hidden rounded-lg"&gt;
+    &lt;div class="flex transition-transform ease-in-out duration-300" id="carousel"&gt;
+    &lt;!-- Slide 1 --&gt;
+    &lt;div class="w-full flex-shrink-0 relative"&gt;
+        &lt;img src="../assets/img-2.png" alt="Slide 1" class="w-full h-full object-contain"&gt;
+        &lt;div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white"&gt;
+        &lt;p class="paragraph-small-regular text-Neutral-800"&gt;Slide 1 Title&lt;/p&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-500"&gt;Slide 1 Content&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Slide 2 --&gt;
+    &lt;div class="w-full flex-shrink-0 relative"&gt;
+        &lt;img src="../assets/img-1.png" alt="Slide 2" class="w-full h-full object-contain"&gt;
+        &lt;div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white"&gt;
+        &lt;p class="paragraph-small-regular text-Neutral-800"&gt;Slide 2 Title&lt;/p&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-500"&gt;Slide 2 Content&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Slide 3 and so on... --&gt;
+    &lt;div class="w-full flex-shrink-0 relative"&gt;
+        &lt;img src="../assets/img-3.png" alt="Slide 2" class="w-full h-full object-contain"&gt;
+        &lt;div class="absolute left-0 right-0 bottom-[15px] flex gap-1 flex-col justify-center items-center p-4 w-2/4 rounded-lg border border-Neutral-200 mx-auto bg-white"&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-800"&gt;Slide 3 Title&lt;/p&gt;
+            &lt;p class="paragraph-Xsmall-regular text-Neutral-500"&gt;Slide 3 Content&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Left button --&gt;
+&lt;button class="absolute top-1/2 left-0 transform -translate-y-1/2 flex items-center justify-center w-6 h-6 rounded-full ring ring-Neutral-300 hover:bg-Neutral-50 ml-3 text-Neutral-300 hover:text-Neutral-500" onclick="scrollLeft()"&gt;
+    &lt;svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"&gt;
+    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;!-- Right button --&gt;
+&lt;button class="absolute top-1/2 right-0 transform -translate-y-1/2 flex items-center justify-center w-6 h-6 rounded-full ring ring-Neutral-300 hover:bg-Neutral-50 mr-3 text-Neutral-300 hover:text-Neutral-500" onclick="scrollRight()"&gt;
+    &lt;svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"&gt;
+    &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/&gt;
+    &lt;/svg&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- carousel code --&gt;
+&lt;script&gt;
+// Variables
+const slides = document.querySelector('#carousel');
+const slideWidth = slides.querySelector('div').offsetWidth;
+let currentIndex = 0;
+let intervalId;
+
+// Function to scroll left
+function scrollLeft() {
+if (currentIndex &gt; 0) {
+currentIndex--;
+slideToIndex();
+} else {
+currentIndex = slides.children.length - 1;
+slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+}
+
+// Function to scroll right
+function scrollRight() {
+if (currentIndex &lt; slides.children.length - 1) {
+currentIndex++;
+slideToIndex();
+} else {
+currentIndex = 0;
+slides.style.transform = 'translateX(0)';
+}
+}
+
+// Function to slide to a specific index
+function slideToIndex() {
+slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// Function to automatically scroll after 5 seconds
+function autoScroll() {
+intervalId = setInterval(() =&gt; {
+if (currentIndex &lt; slides.children.length - 1) {
+    currentIndex++;
+    slideToIndex();
+} else {
+    currentIndex = 0;
+    slides.style.transform = 'translateX(0)';
+}
+}, 3000);
+}
+
+// Start auto-scrolling
+autoScroll();
+
+// Stop auto-scrolling when mouse hovers over the carousel
+slides.addEventListener('mouseenter', () =&gt; {
+clearInterval(intervalId);
+});
+
+// Resume auto-scrolling when mouse leaves the carousel
+slides.addEventListener('mouseleave', () =&gt; {
+autoScroll();
+});
+&lt;/script&gt;
+&lt;!-- carousel code ends --&gt;
+
+&lt;!-- carousel-parent-ends --&gt;
+    </code>
+                            </pre>
+                        </div>
+                        <!-- code ends -->
+                    </div>
+                </section>
+                <!-- Carousel ends -->
+
+                
+
+            </section>
+
+             <!-- section ends -->
+
+
+
+
+        </section>
+
+
+      
+   
+
+    </main>
+
+
+
+  </div>
+  
+</div>
+
+
+
+<script src="../assets/Js/main.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+  defer
+></script>
+
+
+
+
+
+</body>
+</html>

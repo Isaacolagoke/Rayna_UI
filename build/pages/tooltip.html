@@ -749,14 +749,346 @@
                     <div class=" h-full p-4">
                         <pre>
 <code>
-&lt;!-- default, checkbox with seperator , trailing icon--&gt;
-&lt;th class="w-fit"&gt;
-&lt;div scope="col" class="w-[232px] flex justify-start gap-3 px-6 py-3 bg-white hover:bg-Neutral-50 border-Neutral-200 border-b"&gt;
+&lt;!--Light mode--&gt;
+&lt;div class="flex-wrap flex overflow-auto p-3 bg-white gap-8"&gt;
 
+&lt;!-- top-left, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[-7%]" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- top-center, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[-7%] left-[50%]" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- top-right, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[-7%] right-[16px]" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- left-top, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[15px] left-[-5%] -rotate-[90deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- left-center, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[50%] left-[-5%] -rotate-[90deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- left-bottom, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute bottom-[15px] left-[-5%] -rotate-[90deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- bottom-left, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute bottom-[-7%] left-[15px] -rotate-[180deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- bottom-center, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute bottom-[-12px] left-[50%] -rotate-[180deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- bottom-right, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute bottom-[-12px] right-[15px] -rotate-[180deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- right-top, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[15px] right-[-16px] -rotate-[270deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- right-center, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute top-[50%] right-[-16px] -rotate-[270deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- right-bottom, light --&gt;
+&lt;div class="relative rounded-lg bg-transparent border border-Neutral-100 p-4 w-[330px] gap-4 flex flex-col"&gt;
+    &lt;!-- Caret --&gt;
+    &lt;svg class="fill-current text-Neutral-100 absolute bottom-[15px] right-[-16px] -rotate-[270deg] " width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;path d="M1.41665 11.5C0.646973 11.5 0.156171 10.4617 0.779264 9.80644L9.36262 0.78002C9.71765 0.40666 10.2823 0.40666 10.6374 0.780021L19.2207 9.80644C19.8438 10.4617 19.353 11.5 18.5834 11.5H1.41665Z" fill="white" stroke="#F0F2F5"/&gt;
+    &lt;/svg&gt;
+        
+    &lt;div class="flex justify-between items-start"&gt;
+        &lt;!-- content --&gt;
+        &lt;div class="flex flex-col gap-1"&gt;
+            &lt;p class="paragraph-small-semibold text-Neutral-800"&gt;This is a tooltip&lt;/p&gt;
+            &lt;p class="paragraph-small-regular text-Neutral-500"&gt;Tooltips are used to describe or identify an element. In most scenarios, tooltips help the user understand meaning, function.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- close --&gt;
+        &lt;button class=""&gt;
+            &lt;svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                &lt;path d="M5.88 4.7A.83.83 0 0 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 1 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#000"/&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- buttons --&gt;
+    &lt;div class="flex justify-between"&gt;
+        &lt;button class="paragraph-small-semibold text-neutral-500"&gt;Secondary CTA&lt;/button&gt;
+        &lt;button class="paragraph-small-semibold text-Primary-500"&gt;Primary CTA&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/th&gt;
-
 </code>
                         </pre>
                     </div>
