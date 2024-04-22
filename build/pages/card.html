@@ -911,7 +911,251 @@ autoScroll();
                 </section>
                 <!-- Carousel ends -->
 
-                
+                <!-- Chat -->
+                <section class="h-auto p-4 rounded-lg border bg-white border-Neutral-100 container">
+                    <p class="text-Neutral-800 mb-1 paragraph-medium-semibold overflow-auto">Chat</p> 
+                    <p class="text-Neutral-500 mb-4 paragraph-small-regular">Messaging UI components are used for creating user interfaces that facilitate communication and messaging between users </p>                
+
+                    <!-- chat-component -->
+
+                    <div class="flex flex-col gap-4 rounded-xl p-4 border border-Neutral-200">
+                        <!-- incoming-single text -->
+                        <div class="flex gap-2">
+                            <!-- avatars -->
+                            <div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center">
+                                <img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full">
+                            </div>
+                            <!-- message + meta -->
+                            <div class="flex flex-col gap-1 w-fit">
+                                <!-- message -->
+                                <div class="px-3 py-2 bg-Neutral-50 rounded-r-lg rounded-bl-lg">
+                                    <p class="text-neutral-900 paragraph-small-regular">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+                                </div>
+                                <!-- meta -->
+                                <div class="flex gap-1 items-center px-3">
+                                    <p class="text-Neutral-700 paragraph-Xsmall-regular">James Daniel</p>
+                                    <div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"></div>
+                                    <p class="paragraph-Xsmall-regular text-Neutral-700">4:59 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- incoming-single text 2 -->
+                        <div class="flex gap-2">
+                            <!-- avatars -->
+                            <div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center">
+                                <img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full">
+                            </div>
+                            <!-- message + meta -->
+                            <div class="flex flex-col gap-1 w-fit">
+                                <!-- message -->
+                                <div class="px-3 py-2 bg-Neutral-50 rounded-r-lg rounded-bl-lg">
+                                    <p class="text-neutral-900 paragraph-small-regular">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+                                </div>
+                                <!-- message -->
+                                <div class="px-3 py-2 bg-Neutral-50 rounded-lg">
+                                    <p class="text-neutral-900 paragraph-small-regular">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+                                </div>
+                                <!-- meta -->
+                                <div class="flex gap-1 items-center px-3">
+                                    <p class="text-Neutral-700 paragraph-Xsmall-regular">James Daniel</p>
+                                    <div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"></div>
+                                    <p class="paragraph-Xsmall-regular text-Neutral-700">4:59 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- incoming-document -->
+                        <div class="flex gap-2">
+                            <!-- avatars -->
+                            <div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center">
+                                <img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full">
+                            </div>
+                            <!-- message + meta -->
+                            <div class="flex flex-col gap-1 w-fit">
+                                <!-- message -->
+                                <div class="w-full h-[145px]">
+                                    <img class="h-full object-contain rounded-tr-lg" src="../assets/preview.png" alt="">
+                                </div>
+                                <!-- file -->
+                                <div class="flex justify-between items-center">
+                                    <div class="flex gap-4 items-center">
+                                        <img src="../assets/file-type-JPG.png" class="h-8" alt="SVG">
+
+                                        <div class="flex flex-col">
+                                            <p class="text-Neutral-700 paragraph-small-regular">Filename.pdf</p>
+                                            <!-- meta -->
+                                            <div class="flex gap-1 items-center">
+                                                <p class="text-Neutral-500 paragraph-Xsmall-regular">1 page</p>
+                                                <div class="rounded-full h-[4px] w-[4px] bg-Neutral-500"></div>
+                                                <p class="paragraph-Xsmall-regular text-Neutral-500">PDF</p>
+                                                <div class="rounded-full h-[4px] w-[4px] bg-Neutral-500"></div>
+                                                <p class="paragraph-Xsmall-regular text-Neutral-500">4 MB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- meta -->
+                                <div class="flex gap-1 items-center px-3">
+                                    <p class="text-Neutral-700 paragraph-Xsmall-regular">James Daniel</p>
+                                    <div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"></div>
+                                    <p class="paragraph-Xsmall-regular text-Neutral-700">4:59 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- outgoing-single text 2 -->
+                        <div class="flex gap-2 justify-end">
+                            <!-- message + meta -->
+                            <div class="flex flex-col gap-1 w-fit justify-items-end">
+                                <!-- message -->
+                                <div class="px-3 py-2 bg-Neutral-50 rounded-l-lg rounded-tr-lg w-fit place-self-end">
+                                    <p class="text-neutral-900 paragraph-small-regular text-right">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+                                </div>
+                                <!-- meta -->
+                                <div class="flex gap-1 items-center px-3 place-self-end">
+                                    <p class="text-Neutral-700 paragraph-Xsmall-regular">James Daniel</p>
+                                    <div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"></div>
+                                    <p class="paragraph-Xsmall-regular text-Neutral-700">4:59 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                      
+                    <!-- chat-component-ends -->
+                    
+                    
+                    
+                    <!-- code container -->
+                    <div id="codeContainer3" class="scrollbar-hidden rounded-lg border bg-Neutral-50 border-Neutral-100 mt-4 h-48 overflow-auto relative">
+                        <!-- HEADER -->
+                        <div class=" top-0 sticky flex justify-between w-full">
+                            <!-- code type -->
+                            <div class=" w-fit h-fit p-3 border rounded-lg top-0 left-0 mt-2 ml-4 text-sm bg-Neutral-100 shadow-sm">
+                                HTML
+                            </div>
+
+                            <!-- Copy button -->
+                            <button onclick="copyCode('codeContainer3')" class=" flex align-middle gap-[8px] copyButton text-Neutral-700 mt-2 mr-6 py-3 px-2 paragraph-small-semibold bg-white border rounded-lg shadow-none focus:outline-none h-fit">
+                                <svg class="copyIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6665 1.66675C9.82556 1.66675 8.33317 3.15913 8.33317 5.00008V6.66675H4.99984C3.15889 6.66675 1.6665 8.15913 1.6665 10.0001V15.0001C1.6665 16.841 3.15889 18.3334 4.99984 18.3334H8.33317C10.1741 18.3334 11.6665 16.841 11.6665 15.0001V13.3334H14.9998C16.8408 13.3334 18.3332 11.841 18.3332 10.0001V5.00008C18.3332 3.15913 16.8408 1.66675 14.9998 1.66675H11.6665ZM11.6665 11.6667H14.9998C15.9203 11.6667 16.6665 10.9206 16.6665 10.0001V5.00008C16.6665 4.07961 15.9203 3.33341 14.9998 3.33341H11.6665C10.746 3.33341 9.99984 4.07961 9.99984 5.00008V7.11269C10.9962 7.68904 11.6665 8.76628 11.6665 10.0001V11.6667ZM3.33317 10.0001C3.33317 9.07961 4.07936 8.33342 4.99984 8.33342H8.33317C9.25365 8.33342 9.99984 9.07961 9.99984 10.0001V15.0001C9.99984 15.9206 9.25365 16.6667 8.33317 16.6667H4.99984C4.07936 16.6667 3.33317 15.9206 3.33317 15.0001V10.0001Z" fill="#344054"/>
+                                </svg>
+                                <span class="buttonText">Copy</span>
+                            </button>
+                        </div>
+                        
+                        <!-- CODE -->
+                        <div class=" h-full p-4">
+<pre><code>&lt;!-- incoming-single text --&gt;
+&lt;div class="flex gap-2"&gt;
+&lt;!-- avatars --&gt;
+&lt;div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center"&gt;
+    &lt;img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full"&gt;
+&lt;/div&gt;
+&lt;!-- message + meta --&gt;
+&lt;div class="flex flex-col gap-1 w-fit"&gt;
+    &lt;!-- message --&gt;
+    &lt;div class="px-3 py-2 bg-Neutral-50 rounded-r-lg rounded-bl-lg"&gt;
+        &lt;p class="text-neutral-900 paragraph-small-regular"&gt;In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- meta --&gt;
+    &lt;div class="flex gap-1 items-center px-3"&gt;
+        &lt;p class="text-Neutral-700 paragraph-Xsmall-regular"&gt;James Daniel&lt;/p&gt;
+        &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"&gt;&lt;/div&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-700"&gt;4:59 PM&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- incoming-single text 2 --&gt;
+&lt;div class="flex gap-2"&gt;
+&lt;!-- avatars --&gt;
+&lt;div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center"&gt;
+    &lt;img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full"&gt;
+&lt;/div&gt;
+&lt;!-- message + meta --&gt;
+&lt;div class="flex flex-col gap-1 w-fit"&gt;
+    &lt;!-- message --&gt;
+    &lt;div class="px-3 py-2 bg-Neutral-50 rounded-r-lg rounded-bl-lg"&gt;
+        &lt;p class="text-neutral-900 paragraph-small-regular"&gt;In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- message --&gt;
+    &lt;div class="px-3 py-2 bg-Neutral-50 rounded-lg"&gt;
+        &lt;p class="text-neutral-900 paragraph-small-regular"&gt;In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- meta --&gt;
+    &lt;div class="flex gap-1 items-center px-3"&gt;
+        &lt;p class="text-Neutral-700 paragraph-Xsmall-regular"&gt;James Daniel&lt;/p&gt;
+        &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"&gt;&lt;/div&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-700"&gt;4:59 PM&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- incoming-document --&gt;
+&lt;div class="flex gap-2"&gt;
+&lt;!-- avatars --&gt;
+&lt;div class="h-[40px] w-[40px] rounded-full overflow-hidden bg-Neutral-200 flex items-center justify-center"&gt;
+    &lt;img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full"&gt;
+&lt;/div&gt;
+&lt;!-- message + meta --&gt;
+&lt;div class="flex flex-col gap-1 w-fit"&gt;
+    &lt;!-- message --&gt;
+    &lt;div class="w-full h-[145px]"&gt;
+        &lt;img class="h-full object-contain rounded-tr-lg" src="../assets/preview.png" alt=""&gt;
+    &lt;/div&gt;
+    &lt;!-- file --&gt;
+    &lt;div class="flex justify-between items-center"&gt;
+        &lt;div class="flex gap-4 items-center"&gt;
+            &lt;img src="../assets/file-type-JPG.png" class="h-8" alt="SVG"&gt;
+
+            &lt;div class="flex flex-col"&gt;
+                &lt;p class="text-Neutral-700 paragraph-small-regular"&gt;Filename.pdf&lt;/p&gt;
+                &lt;!-- meta --&gt;
+                &lt;div class="flex gap-1 items-center"&gt;
+                    &lt;p class="text-Neutral-500 paragraph-Xsmall-regular"&gt;1 page&lt;/p&gt;
+                    &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-500"&gt;&lt;/div&gt;
+                    &lt;p class="paragraph-Xsmall-regular text-Neutral-500"&gt;PDF&lt;/p&gt;
+                    &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-500"&gt;&lt;/div&gt;
+                    &lt;p class="paragraph-Xsmall-regular text-Neutral-500"&gt;4 MB&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- meta --&gt;
+    &lt;div class="flex gap-1 items-center px-3"&gt;
+        &lt;p class="text-Neutral-700 paragraph-Xsmall-regular"&gt;James Daniel&lt;/p&gt;
+        &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"&gt;&lt;/div&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-700"&gt;4:59 PM&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- outgoing-single text 2 --&gt;
+&lt;div class="flex gap-2 justify-end"&gt;
+&lt;!-- message + meta --&gt;
+&lt;div class="flex flex-col gap-1 w-fit justify-items-end"&gt;
+    &lt;!-- message --&gt;
+    &lt;div class="px-3 py-2 bg-Neutral-50 rounded-l-lg rounded-tr-lg w-fit place-self-end"&gt;
+        &lt;p class="text-neutral-900 paragraph-small-regular text-right"&gt;In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- meta --&gt;
+    &lt;div class="flex gap-1 items-center px-3 place-self-end"&gt;
+        &lt;p class="text-Neutral-700 paragraph-Xsmall-regular"&gt;James Daniel&lt;/p&gt;
+        &lt;div class="rounded-full h-[4px] w-[4px] bg-Neutral-700"&gt;&lt;/div&gt;
+        &lt;p class="paragraph-Xsmall-regular text-Neutral-700"&gt;4:59 PM&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code>
+                            </pre>
+                        </div>
+                        <!-- code ends -->
+                    </div>
+                </section>
+                <!-- Chat ends -->
+
+
 
             </section>
 
