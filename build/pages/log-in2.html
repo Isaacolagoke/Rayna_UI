@@ -9,77 +9,46 @@
 		<link href="../css/style.css" rel="stylesheet">
 		<title>Login</title>
 	</head>
-<body>
+<body class="bg-Neutral-75">
     
+<header class="w-screen border-b border-Primary-400 bg-white py-5">
+    <nav class="flex w-full h-full justify-center items-center">
+        <img class="h-[20px]" src="../assets/logo-blk.png" alt="">
+    </nav>
+</header>
 
-<section class="container bg-white">
-
-    <section class="flex flex-col lg:flex-row p-5 gap-8 h-fit w-screen lg:h-screen overflow-hidden">
-        <!-- Aside -->
-        <aside class="max-w-screen-md  bg-[#1B1818] relative bg-fixed bg-cover bg-center p-6 lg:p-[60px] flex flex-col rounded-[30px]" style="background-image:url('../assets/bg-drk-img.png'); background-position: center;">
-            <!-- overlay -->
-            <div class="top-0 rounded-[30px] right-0 absolute w-full h-full z-20 bg-cover mix-blend-overlay opacity-50" style="background-image:url('../assets/overlay-bg.png'); background-position: center;"></div>
-           
-            <!-- content -->
-            <div class="h-full w-full z-50 flex flex-col gap-6 lg:gap-1 justify-between">
-                <!-- logo -->
-                <img class="h-[28px] w-fit" src="../assets/logo-wt.png" alt="">
-
-                <!-- content and page heading -->
-                <div class="flex flex-col gap-8">
-                    <h2 class="text-white font-semibold text-4xl lg:text-6xl leading-[110%] tracking-[-0.02em]">Elevate your design workflow with Rayna</h2>
-
-                    <p class="paragraph-large-regular text-Brown-100">Our comprehensive design system offers you an unparalleled range of components, sparking creativity and boosting efficiency.</p>
-                </div>
-
-                <!-- footer -->
-                <div class="flex flex-col gap-4 rounded-[20px] bg-Brown-900 p-6 self-end">
-                    <p class="text-Brown-75 paragraph-medium-regular">Rayna has transformed the way our team approaches design. 
-                        The sheer range of components and the seamless integration of the design system into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our projects without compromising on quality.</p>
-
-                    <div class="flex gap-3 items-center">
-                        <!-- avatar -->
-                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border border-white bg-[#FFE7CC] relative flex items-center justify-center">
-                            <img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full">
-                        </div>
-
-                        <!-- text -->
-                        <div class="felx flex-col gap-[5px]">
-                            <p class="text-white paragraph-small-medium">Ariana Grande</p>
-                            <p class="text-Brown-400 paragraph-Xsmall-regular">Visual Designer, Google</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
+<section class="container">
         <!-- form -->
-        <div class="md:p-4 p-3 order-first lg:order-last flex items-center lg:justify-center w-full justify-start">
+        <div class=" md:p-4 p-3 order-first h-screen w-screen flex items-center justify-center">
 
-            <div class="flex flex-col gap-8 justify-start w-[454px]">
+            <div class="flex flex-col gap-8 justify-start w-[456px] bg-white rounded-[10px] border border-Neutral-300 lg:px-7 lg:py-8 px-4 py-5">
                 <!-- header -->
-                <div class="flex flex-col gap-2 text-left">
-                    <h2 class="h2-semibold text-[#1B1818]">Welcome back!</h2>
-                    <p class="paragraph-small-regular text-Brown-700">Don’t have an account? <a href="#" class="paragraph-small-semibold text-Primary-500">Sign Up</a></p>
+                <div class="flex flex-col gap-2 text-center">
+                    <h2 class="h4-semibold text-Neutral-900">Log In</h2>
+                    <p class="paragraph-medium-regular text-Neutral-500">Enter your credentials to access your account</p>
                 </div>
                 <!-- form inputs-->
-                <div class="flex flex-col gap-2 ">
+                <div class="flex flex-col gap-8 ">
                     <!-- email - default-->
                     <div class="flex flex-col gap-2">
-                        <label for="" class="paragraph-small-medium text-Neutral-900">Password</label>
+                        <label for="" class="paragraph-small-medium uppercase text-Neutral-900">EMAIL ADDRESS</label>
                         <div class="items-center flex w-fill justify-between gap-2 bg-white border-Neutral-300 
                         border rounded-lg p-4">
                             <!-- left content -->
                             <div class="flex gap-2 items-center w-full">
                                 <!-- Input field -->
-                                <input type="text" class="w-full placeholder:paragraph-small-regular placeholder:text-Neutral-400 bg-transparent outline-none text-Neutral-900" placeholder="Email Address" >
+                                <input type="text" class="w-full placeholder:paragraph-small-regular placeholder:text-Neutral-400 bg-transparent outline-none text-Neutral-900" placeholder="Enter Email">
                             </div>
+                            <!-- right content fill-current-->
+                            <svg class="h-5 w-[21px] text-Neutral-500 fill-current" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.33 17.5c1.84 0 3.34-1.5 3.34-3.33V5.83c0-1.84-1.5-3.33-3.34-3.33H4.67a3.33 3.33 0 0 0-3.34 3.33v8.34c0 1.84 1.5 3.33 3.34 3.33h11.66ZM3 14.17c0 .92.75 1.66 1.67 1.66h11.66c.92 0 1.67-.74 1.67-1.66V7.9l-6.26 2.5c-.8.32-1.68.32-2.48 0L3 7.9v6.27Zm8.12-5.32L18 6.1v-.27c0-.92-.75-1.66-1.67-1.66H4.67C3.75 4.17 3 4.9 3 5.83v.27l6.88 2.75c.4.16.84.16 1.24 0Z"/>
+                            </svg>
                         </div>
                     </div>
 
                     <!-- password field -->
                     <div class="flex flex-col gap-2">
-                        <label for="" class="paragraph-small-medium text-Neutral-900">Password</label>
+                        <label for="" class="paragraph-small-medium uppercase text-Neutral-900">Password</label>
                         <div class="items-center flex w-fill justify-between gap-2 bg-white border-Neutral-300 
                             border rounded-lg p-4">
                             <!-- left content -->
@@ -105,40 +74,39 @@
                         </div>
                     </div>
                 </div>
+                <!-- select -->
+                <div class="flex justify-start flex-wrap gap-2 lg:justify-between lg:items-center">
+                   
+                    <!--  -->
+                    <label for="checkbox_1" class="select-none grid grid-flow-col gap-2 items-center text-Neutral-900 paragraph-small-medium ">
+                        <div class="grid items-center justify-center">
+                            <input type="checkbox" id="checkbox_1" class="peer row-start-1 col-start-1 appearance-none w-6 h-6 border ring-transparent border-slate-300 rounded checked:bg-Primary-400 checked:border-Primary-400 ">
+                            <svg viewBox="0 0 14 14" fill="none" class="invisible peer-checked:visible row-start-1 col-start-1 stroke-white text-Primary-400">
+                            <path d="M3 8L6 11L11 3.5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        Remember me for 30 days
+                    </label>
+                    <!--  -->
+                    <!-- forgot password -->
+                    <p class="paragraph-small-medium text-Primary-600"><a href="#" class="w-full h-full">Forgot Password?</a></p>
+                </div>
                 <!-- button -->
                 <div class="flex flex-col w-fill">
-                    <button class="rounded-lg px-6 py-4 text-white paragraph-medium-semibold bg-Primary-500">Login</button>
+                    <button class="rounded-lg px-6 py-4 text-white paragraph-medium-semibold bg-Primary-500">Log into Account</button>
                 </div>
                 <!-- Reset Password -->
                 <div class="flex gap-1 w-full justify-center">
-                    <p class="paragraph-small-regular text-Brown-700">Forgot Password? <a href="#" class="paragraph-small-semibold text-Primary-500">Recover</a></p>
+                    <p class="paragraph-Xsmall-medium text-Brown-700">Are you new here? <a href="#" class="paragraph-small-medium text-Primary-600">Create Account</a></p>
                 </div>
-                <!-- dividers with title only -->
-                <div class="flex gap-2 justify-center items-center">
-                    <hr class="bg-Neutral-100 w-full h-px">
-                    <p class="paragraph-small-regular text-Neutral-500">Or</p>
-                    <hr class="bg-Neutral-100 w-full h-px">
-                </div>
-                <!-- Social buttons -->
-                <div class="flex gap-3">
-                    <!-- google -->
-                    <button class="flex items-center justify-center gap-4 rounded-md p-4 text-Neutral-700 border-[1.5px] w-full border-Neutral-300 paragraph-medium-semibold bg-white"> <img class="w-5" src="../assets/Button/google.png" alt=""> Google</button>
 
-                    <!-- google -->
-                    <button class="flex items-center justify-center gap-4 rounded-md p-4 text-Neutral-700 border-[1.5px] w-full border-Neutral-300 paragraph-medium-semibold bg-white"> <img class="w-5" src="../assets/Button/twitter.png" alt=""> Twitter</button>
-                </div>
             </div>
 
         </div>
-    </section>
-
-    
-
 </section>
 
 
-
-
+    
 
 <script src="../assets/Js/main.js"></script>
 

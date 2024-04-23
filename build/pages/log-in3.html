@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/build/assets/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Login</title>
+	</head>
+<body class="container">
+    
+
+<section class=" w-screen h-screen  bg-[#1B1818] relative bg-fixed bg-cover bg-center p-2 justify-center items-center flex flex-col" style="background-image:url('../assets//bg-soft-light.png'); background-position: center;">
+    <!-- overlay -->
+    <div class="top-l bg-black right-0 absolute w-full h-full z-20 bg-cover mix-blend-soft-light opacity-65" ></div>
+    
+    <!-- form -->
+    <div class="flex-col gap-8 z-50 md:p-4 p-3 order-first flex items-center justify-center">
+        <!-- logo -->
+        <img class="h-[28px] w-fit" src="../assets/logo-wt.png" alt="">
+
+        <div class="flex flex-col gap-8 justify-start lg:w-[514px] w-full bg-white rounded-[10px] border border-Neutral-300 lg:px-7 lg:py-8 px-4 py-5">
+            <!-- header -->
+            <div class="flex flex-col gap-2 text-center">
+                <h2 class="h5-bold text-Neutral-900">Sign in with your work email</h2>
+                <p class="paragraph-small-regular text-Brown-700">Use your work email to sign in to your team workspace</p>
+            </div>
+            <!-- Social buttons -->
+            <!-- google -->
+            <button class="flex items-center justify-center gap-4 rounded-md p-4 text-Neutral-700 border-[1.5px] w-full border-Neutral-300 paragraph-medium-semibold bg-white"> <img class="w-5" src="../assets/Button/google.png" alt="">Continue with Google
+            </button>
+            <!-- dividers with title only -->
+            <div class="flex gap-2 justify-center items-center">
+                <hr class="bg-Neutral-100 w-full h-px">
+                <p class="paragraph-small-regular text-Neutral-500 uppercase">Or</p>
+                <hr class="bg-Neutral-100 w-full h-px">
+            </div>
+            <!-- form inputs-->
+            <div class="flex flex-col gap-8 ">
+                <!-- email - default-->
+                <div class="flex flex-col gap-2">
+                    <label for="" class="paragraph-small-medium uppercase text-Neutral-900">EMAIL ADDRESS</label>
+                    <div class="items-center flex w-fill justify-between gap-2 bg-white border-Neutral-300 
+                    border rounded-lg p-4">
+                        <!-- left content -->
+                        <div class="flex gap-2 items-center w-full">
+                            <!-- Input field -->
+                            <input type="text" class="w-full placeholder:paragraph-small-regular placeholder:text-Neutral-400 bg-transparent outline-none text-Neutral-900" placeholder="Enter Email">
+                        </div>
+                        <!-- right content fill-current-->
+                        <svg class="h-5 w-[21px] text-Neutral-500 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.33 17.5c1.84 0 3.34-1.5 3.34-3.33V5.83c0-1.84-1.5-3.33-3.34-3.33H4.67a3.33 3.33 0 0 0-3.34 3.33v8.34c0 1.84 1.5 3.33 3.34 3.33h11.66ZM3 14.17c0 .92.75 1.66 1.67 1.66h11.66c.92 0 1.67-.74 1.67-1.66V7.9l-6.26 2.5c-.8.32-1.68.32-2.48 0L3 7.9v6.27Zm8.12-5.32L18 6.1v-.27c0-.92-.75-1.66-1.67-1.66H4.67C3.75 4.17 3 4.9 3 5.83v.27l6.88 2.75c.4.16.84.16 1.24 0Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- button -->
+            <div class="flex flex-col w-fill">
+                <button class="rounded-lg px-6 py-4 text-white paragraph-medium-semibold bg-Primary-500">Sign in</button>
+            </div>
+
+        </div>
+
+        <!-- Reset Password -->
+        <div class="flex gap-1 w-fit bg-[#282424] px-7 py-5 rounded-[30px] justify-center">
+            <p class="paragraph-small-regular text-Brown-50">Don’t have an account?<a href="#" class="paragraph-small-semibold text-Primary-300 ml-1">Sign up</a></p>
+        </div>
+    </div>
+</section>
+
+ 
+
+
+
+
+
+<script src="../assets/Js/main.js"></script>
+
+<script
+src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+defer
+></script>
+<!-- password toggle -->
+<script>
+    function togglePassword() {
+        var x = document.getElementById("passwordInput");
+        var icon = document.getElementById("passwordToggleIcon");
+        var revealIcon = document.getElementById("revealIcon");
+        var hideIcon = document.getElementById("hideIcon");
+
+        if (x.type === "password") {
+            x.type = "text";
+            revealIcon.style.display = "block";
+            hideIcon.style.display = "none";
+        } else {
+            x.type = "password";
+            revealIcon.style.display = "none";
+            hideIcon.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>

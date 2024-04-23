@@ -2095,6 +2095,14 @@ html {
   width: 454px;
 }
 
+.w-\[456px\]{
+  width: 456px;
+}
+
+.w-\[514px\]{
+  width: 514px;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -3195,6 +3203,16 @@ html {
   background-color: rgb(62 56 56 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#282424\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 36 36 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#6F6C6C\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(111 108 108 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }
@@ -3422,6 +3440,16 @@ html {
   padding-bottom: 4px;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .pb-14{
   padding-bottom: 3.5rem;
 }
@@ -3536,6 +3564,10 @@ html {
 
 .font-extrabold{
   font-weight: 800;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .leading-3{
@@ -3809,6 +3841,11 @@ html {
   color: rgb(100 93 93 / var(--tw-text-opacity));
 }
 
+.text-Brown-50{
+  --tw-text-opacity: 1;
+  color: rgb(251 241 241 / var(--tw-text-opacity));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -3821,8 +3858,36 @@ html {
   opacity: 0.5;
 }
 
+.opacity-10{
+  opacity: 0.1;
+}
+
+.opacity-85{
+  opacity: 0.85;
+}
+
+.opacity-90{
+  opacity: 0.9;
+}
+
+.opacity-40{
+  opacity: 0.4;
+}
+
+.opacity-60{
+  opacity: 0.6;
+}
+
+.opacity-65{
+  opacity: 0.65;
+}
+
 .mix-blend-overlay{
   mix-blend-mode: overlay;
+}
+
+.mix-blend-soft-light{
+  mix-blend-mode: soft-light;
 }
 
 .shadow{
@@ -4321,6 +4386,11 @@ html {
   color: rgb(52 64 84 / var(--tw-text-opacity));
 }
 
+.hover\:text-Primary-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(245 102 48 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover{
   text-decoration-line: underline;
 }
@@ -4541,6 +4611,10 @@ html {
     width: 700px;
   }
 
+  .lg\:w-\[514px\]{
+    width: 514px;
+  }
+
   .lg\:max-w-screen-lg{
     max-width: 1136px;
   }
@@ -4561,8 +4635,16 @@ html {
     flex-direction: row;
   }
 
+  .lg\:items-center{
+    align-items: center;
+  }
+
   .lg\:justify-center{
     justify-content: center;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
   }
 
   .lg\:gap-16{
@@ -4613,6 +4695,16 @@ html {
   .lg\:py-\[6px\]{
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+
+  .lg\:px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .lg\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .lg\:text-5xl{
