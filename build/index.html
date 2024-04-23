@@ -370,7 +370,7 @@
     <main class="p-9 ">
       
       <!-- Header -->
-      <div class="w-full mx-auto flex justify-start flex-col ">
+      <div class="w-full mx-auto flex justify-start flex-col gap-6">
 
         <!-- logo -->
         <div class="flex flex-col gap-4">
@@ -385,7 +385,7 @@
 
           <hr class="bg-Neutral-100">
           <div class="flex flex-col w-3/4">
-            <p class="paragraph-large-semibold">Getting Started</p>  
+            <p class="paragraph-large-semibold text-Neutral-800">Getting Started</p>  
             <p>Rayna offers styles and commonly used components for your websites and webapps. <br> All Rayna elements and styles are built using Tailwind CSS utility classes.</p> 
             <ul class="list-disc list-inside">
               <li>Setup Tailwind CSS. <a href="https://tailwindcss.com/docs/installation" class="text-Neutral-500 underline hover:text-Primary-300">Learn more about setting up Tailwind.</a>
@@ -397,21 +397,47 @@
           </div>
 
         </div>
-
-        <!-- component -->
-          <div class="grid gap-4 grid-cols-2 mt-6 w-1/2">
-
-            <div class="w-full p-4 rounded-lg border border-Neutral-200">
-              <P class="paragraph-large-semibold text-Neutral-800">Components</P>
-              <p class="paragraph-regular-regular text-Neutral-600">Explore Rayna quickstart components like Buttons, chips, Inputs</p>
+        <hr class="bg-Neutral-100">
+        <!-- All pages component -->
+        <div class="flex flex-col gap-4 mt-4">
+            <div class="flex flex-col">
+              <P class="paragraph-large-semibold text-Neutral-800">All Pages</P>
+              <P class="paragraph-regular-regular text-Neutral-500">Get started with ready to use pages and components</P>
             </div>
 
-            <div class="w-full p-4 rounded-lg border border-Neutral-200">
-              <P class="paragraph-large-semibold text-Neutral-800">Page Sections and Elements</P>
-              <p class="paragraph-regular-regular text-Neutral-600">Checkout out responsive elements built with Rayna UI and Tailwind utility classes.</p>
+            <!-- component -->
+            <div class="grid gap-4 lg:grid-cols-6 md:grid-cols-3 grid-cols-2">
+              
+              <!-- Landing Pages -->
+              <div class="flex flex-col">
+                <P class="paragraph-large-semibold text-Neutral-800">Landing Pages</P>
+                <ul class="flex flex-col gap-2">
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Landing Page 1</a>
+                  </li>
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Landing Page 2</a>
+                  </li>
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Landing Page 3</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Form pages -->
+              <div class="flex flex-col">
+                <P class="paragraph-large-semibold text-Neutral-800">Form Pages</P>
+                <ul class="flex flex-col gap-2">
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Login 1</a>
+                  </li>
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Login 2</a>
+                  </li>
+                  <li class="cursor-pointer paragraph-medium-regular text-Neutral-500 hover:text-Neutral-700 hover:underline"><a class="w-full h-full" href="./pages/log-in6.html">Login 3</a>
+                  </li>
+                </ul>
+              </div>
+    
+    
             </div>
+        </div>
 
-          </div>
 
 
 

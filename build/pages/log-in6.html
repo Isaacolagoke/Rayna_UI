@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/build/assets/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Rayna Colors</title>
+	</head>
+<body>
+    
+
+<section class="container bg-white">
+
+    <section class="flex flex-col lg:flex-row p-5 gap-8 h-fit w-screen lg:h-screen overflow-hidden">
+        <!-- Aside -->
+        <aside class="max-w-screen-md  bg-[#1B1818] relative bg-fixed bg-cover bg-center p-6 lg:p-[60px] flex flex-col rounded-[30px]" style="background-image:url('../assets/bg-drk-img.png'); background-position: center;">
+            <!-- overlay -->
+            <div class="top-0 rounded-[30px] right-0 absolute w-full h-full z-20 bg-cover mix-blend-overlay opacity-50" style="background-image:url('../assets/overlay-bg.png'); background-position: center;"></div>
+           
+            <!-- content -->
+            <div class="h-full w-full z-50 flex flex-col gap-6 lg:gap-1 justify-between">
+                <!-- logo -->
+                <img class="h-[28px] w-fit" src="../assets/logo-wt.png" alt="">
+
+                <!-- content and page heading -->
+                <div class="flex flex-col gap-8">
+                    <h2 class="text-white font-semibold text-4xl lg:text-6xl leading-[110%] tracking-[-0.02em]">Elevate your design workflow with Rayna</h2>
+
+                    <p class="paragraph-large-regular text-Brown-100">Our comprehensive design system offers you an unparalleled range of components, sparking creativity and boosting efficiency.</p>
+                </div>
+
+                <!-- footer -->
+                <div class="flex flex-col gap-4 rounded-[20px] bg-Brown-900 p-6 self-end">
+                    <p class="text-Brown-75 paragraph-medium-regular">Rayna has transformed the way our team approaches design. 
+                        The sheer range of components and the seamless integration of the design system into our workflow have been game-changers. It's like having a toolkit filled with magic that accelerates our projects without compromising on quality.</p>
+
+                    <div class="flex gap-3 items-center">
+                        <!-- avatar -->
+                        <div class="h-[40px] w-[40px] rounded-full overflow-hidden border border-white bg-[#FFE7CC] relative flex items-center justify-center">
+                            <img src="../assets/Avt-1.png" alt="Avatar img" class="object-cover w-full h-full">
+                        </div>
+
+                        <!-- text -->
+                        <div class="felx flex-col gap-[5px]">
+                            <p class="text-white paragraph-small-medium">Ariana Grande</p>
+                            <p class="text-Brown-400 paragraph-Xsmall-regular">Visual Designer, Google</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- form -->
+        <div class="md:p-4 p-3 order-first lg:order-last flex items-center lg:justify-center w-full justify-start">
+
+            <div class="flex flex-col gap-8 justify-start w-[454px]">
+                <!-- header -->
+                <div class="flex flex-col gap-2 text-left">
+                    <h2 class="h2-semibold text-[#1B1818]">Welcome back!</h2>
+                    <p class="paragraph-small-regular text-Brown-700">Don’t have an account? <a href="#" class="paragraph-small-semibold text-Primary-500">Sign Up</a></p>
+                </div>
+                <!-- form inputs-->
+                <div class="flex flex-col gap-2 ">
+                    <!-- email - default-->
+                    <div class="flex flex-col gap-2">
+                        <label for="" class="paragraph-small-medium text-Neutral-900">Password</label>
+                        <div class="items-center flex w-fill justify-between gap-2 bg-white border-Neutral-300 
+                        border rounded-lg p-4">
+                            <!-- left content -->
+                            <div class="flex gap-2 items-center w-full">
+                                <!-- Input field -->
+                                <input type="text" class="w-full placeholder:paragraph-small-regular placeholder:text-Neutral-400 bg-transparent outline-none text-Neutral-900" placeholder="Email Address" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- password field -->
+                    <div class="flex flex-col gap-2">
+                        <label for="" class="paragraph-small-medium text-Neutral-900">Password</label>
+                        <div class="items-center flex w-fill justify-between gap-2 bg-white border-Neutral-300 
+                            border rounded-lg p-4">
+                            <!-- left content -->
+                            <div class="flex gap-2 items-center w-full">
+                                <!-- Input field -->
+                                <input type="password" class="w-full placeholder:paragraph-small-regular placeholder:text-Neutral-400 bg-transparent outline-none text-Neutral-900" placeholder="Password" id="passwordInput">
+                    
+                                <!-- Password toggle icon -->
+                                <button onclick="togglePassword()" class="focus:outline-none">
+                                    <svg id="passwordToggleIcon" class="h-5 w-5 text-Neutral-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <!-- Icon paths for password reveal/hide -->
+                                        <!-- Initially, show the "eye" icon for reveal -->
+                                        <path id="hideIcon" d="M3.58 11.65a.83.83 0 1 1-1.43.86c-.34-.56-.57-1.04-.7-1.35-.2-.45-.17-.95.07-1.37.36-.64 1.27-2.12 2.67-3.46C5.59 5 7.55 3.75 10 3.75c2.45 0 4.42 1.25 5.81 2.58 1.4 1.34 2.31 2.82 2.67 3.46.24.42.26.92.07 1.37-.13.31-.36.8-.7 1.35a.83.83 0 1 1-1.43-.86c.27-.45.46-.84.58-1.1a13.6 13.6 0 0 0-2.34-3.01c-1.23-1.17-2.8-2.12-4.66-2.12-1.86 0-3.43.95-4.66 2.12A13.6 13.6 0 0 0 3 10.55c.12.26.3.65.58 1.1Z" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.67A4.17 4.17 0 1 0 10 15a4.17 4.17 0 0 0 0-8.33Zm-2.5 4.16a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0Z" />
+                                        
+                                        <!-- Initially, hide the "eye-off" icon for hide -->
+                                        <path id="revealIcon" style="display: none;" d="M17.26 2.74c.32.33.32.86 0 1.18L3.92 17.26a.83.83 0 1 1-1.18-1.18L16.08 2.74a.83.83 0 0 1 1.18 0ZM13.17 4.48c-.94-.45-2-.73-3.17-.73-2.45 0-4.42 1.25-5.81 2.58A15.27 15.27 0 0 0 1.52 9.8c-.24.42-.26.92-.07 1.37.13.31.36.8.7 1.35a.83.83 0 1 0 1.43-.86 9.92 9.92 0 0 1-.58-1.1 13.6 13.6 0 0 1 2.34-3.01C6.57 6.37 8.14 5.42 10 5.42c.67 0 1.3.12 1.9.33l1.27-1.27ZM14.74 7.61A13.66 13.66 0 0 1 17 10.55c-.12.26-.3.65-.58 1.1a.83.83 0 1 0 1.43.86c.34-.56.57-1.04.7-1.35.2-.45.17-.95-.07-1.37a15.33 15.33 0 0 0-2.56-3.35L14.74 7.6Z"/>
+                                        <path d="M10 6.67c.3 0 .6.03.88.09L9.17 8.48A2.5 2.5 0 0 0 7.64 10l-1.71 1.72A4.18 4.18 0 0 1 10 6.67ZM10 13.33c-.3 0-.57-.05-.83-.14l-1.25 1.25a4.17 4.17 0 0 0 5.7-5.7L12.35 10A2.5 2.5 0 0 1 10 13.33Z"/>
+                                          
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <div class="flex flex-col w-fill">
+                    <button class="rounded-lg px-6 py-4 text-white paragraph-medium-semibold bg-Primary-500">Login</button>
+                </div>
+                <!-- Reset Password -->
+                <div class="flex gap-1 w-full justify-center">
+                    <p class="paragraph-small-regular text-Brown-700">Forgot Password? <a href="#" class="paragraph-small-semibold text-Primary-500">Recover</a></p>
+                </div>
+                <!-- dividers with title only -->
+                <div class="flex gap-2 justify-center items-center">
+                    <hr class="bg-Neutral-100 w-full h-px">
+                    <p class="paragraph-small-regular text-Neutral-500">Or</p>
+                    <hr class="bg-Neutral-100 w-full h-px">
+                </div>
+                <!-- Social buttons -->
+                <div class="flex gap-3">
+                    <!-- google -->
+                    <button class="flex items-center justify-center gap-4 rounded-md p-4 text-Neutral-700 border-[1.5px] w-full border-Neutral-300 paragraph-medium-semibold bg-white"> <img class="w-5" src="../assets/Button/google.png" alt=""> Google</button>
+
+                    <!-- google -->
+                    <button class="flex items-center justify-center gap-4 rounded-md p-4 text-Neutral-700 border-[1.5px] w-full border-Neutral-300 paragraph-medium-semibold bg-white"> <img class="w-5" src="../assets/Button/twitter.png" alt=""> Twitter</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+</section>
+
+
+
+
+
+<script src="../assets/Js/main.js"></script>
+
+<script
+src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+defer
+></script>
+<!-- password toggle -->
+<script>
+    function togglePassword() {
+        var x = document.getElementById("passwordInput");
+        var icon = document.getElementById("passwordToggleIcon");
+        var revealIcon = document.getElementById("revealIcon");
+        var hideIcon = document.getElementById("hideIcon");
+
+        if (x.type === "password") {
+            x.type = "text";
+            revealIcon.style.display = "block";
+            hideIcon.style.display = "none";
+        } else {
+            x.type = "password";
+            revealIcon.style.display = "none";
+            hideIcon.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
