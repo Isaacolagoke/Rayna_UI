@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .subs {
+                font-size: 0.75em; /* Adjust the font size of the subscript */
+                vertical-align: baseline; /* Align subscript with the baseline */
+                position: relative;
+                bottom: -0.02em; /* Adjust this value to fine-tune the baseline alignment */
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <link href="../css/style.css" rel="stylesheet">
+        <title>InvestCo Landing Page</title>
+    </head>
+<body class="bg-[#101520] font-['Manrope'] px-6 lg:px-8">
+
+    <header class="relative">
+         <!-- bg -->
+        <svg aria-hidden="true" class="absolute inset-x-0 -top-60 -z-10 h-[1000px] w-full fill-[#101520] stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom,white_95%,transparent_50%)]">
+            <rect width="100%" height="100%" fill="url(#:R1lda:)" stroke-width="0"></rect>
+            <svg width="1441" height="1252" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-81" y="0" width="1604" height="1604">
+                  <circle cx="721" cy="802" r="802" fill="url(#a)"/>
+                </mask>
+                <g mask="url(#b)">
+                  <path stroke="#fff" stroke-opacity=".09" stroke-width=".6" d="M1 351.7h1440M1 464.2h1440M1 576.7h1440M1 689.2h1440M1 801.7h1440M1 914.2h1440M1 1026.7h1440M1 1139.2h1440M1 1251.7h1440M.7 1252V-188M111.47 1252V-188M222.24 1252V-188M333.01 1252V-188M443.78 1252V-188M554.55 1252V-188M665.32 1252V-188M776.09 1252V-188M886.85 1252V-188M997.62 1252V-188M1108.39 1252V-188M1219.16 1252V-188M1329.93 1252V-188M1440.7 1252V-188"/>
+                  <path d="M111.5 452.5v24" stroke="url(#c)"/>
+                  <path d="M123.5 464.5h-24" stroke="url(#d)"/>
+                  <path opacity=".47" fill="#fff" fill-opacity=".07" stroke="#37393A" d="M333.5 465.5h109v110h-109zM887.5 353.5h110v110h-110zM1219.5 577.5h110v111h-110z"/>
+                  <path d="M1219 453v24" stroke="url(#e)"/>
+                  <path d="M1231 465h-24" stroke="url(#f)"/>
+                </g>
+                <g opacity=".75">
+                  <path d="M1329 1117v24" stroke="url(#g)"/>
+                  <path d="M1341 1129h-24" stroke="url(#h)"/>
+                </g>
+                <path d="M111.5 452.5v24" stroke="url(#i)"/>
+                <path d="M123.5 464.5h-24" stroke="url(#j)"/>
+                <defs>
+                  <linearGradient id="c" x1="111.5" y1="476.5" x2="111.5" y2="452.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C34124" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#F99A85"/>
+                    <stop offset="1" stop-color="#C34124" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="d" x1="99.5" y1="464.5" x2="123.5" y2="464.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C34124" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#F99A85"/>
+                    <stop offset="1" stop-color="#C34124" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="e" x1="1219" y1="477" x2="1219" y2="453" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fff" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fff"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="f" x1="1207" y1="465" x2="1231" y2="465" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fff" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fff"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="g" x1="1329" y1="1141" x2="1329" y2="1117" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fff" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fff"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="h" x1="1317" y1="1129" x2="1341" y2="1129" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fff" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#fff"/>
+                    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="i" x1="111.5" y1="476.5" x2="111.5" y2="452.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DDFB24" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#DDFB24"/>
+                    <stop offset="1" stop-color="#DDFB24" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="j" x1="99.5" y1="464.5" x2="123.5" y2="464.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DDFB24" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#DDFB24"/>
+                    <stop offset="1" stop-color="#DDFB24" stop-opacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 957.5 -957.5 0 721 646.5)">
+                    <stop stop-color="#D9D9D9"/>
+                    <stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>    
+        </svg>
+
+        <!-- navbar -->
+        <section class="navBar max-w-7xl mx-auto relative">
+
+            <nav class="transition-all ease-linear duration-100 max-w-screen-xl flex justify-between  py-10 items-center mx-auto relative ">
+                <div class="flex gap-[62px] items-center">
+                    <!-- logo -->
+                    <img src="../assets/investco-logo.png" alt="logo_img" class="h-[44px]">
+                
+                    <!-- large screen menu list -->
+                    <ul class="list-none lg:flex gap-4 hidden">
+                        <li><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Features</a></li>
+                        <li><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Reviews</a></li>
+                        <li><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Pricing</a></li>
+                        <li><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">FAQs</a></li>
+                    </ul>
+
+                </div>
+            
+                <button class="text-[#0D111A] max-lg:hidden leading-[35px] uppercase tracking-wider font-medium text-sm bg-[#eeeeee] rounded-full px-7 py-1 border border-[#eeeeee] hover:border-[#DDFB24]">start for free</button>
+            
+                <!--
+                Icon when menu is open.
+                
+                Menu open: "block", Menu closed: "hidden"
+                -->
+                <button id="CloseMenu" class="absolute right-0 top-0 mt-8 mr-4 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.88 4.7A.83.83 0 1 0 4.7 5.88L8.82 10 4.7 14.12a.83.83 0 0 0 1.18 1.18L10 11.18l4.13 4.12a.83.83 0 0 0 1.17-1.18L11.18 10l4.12-4.12a.83.83 0 0 0-1.17-1.18L10 8.82 5.88 4.7Z" fill="#101928"/>
+                    </svg>
+                </button>
+            
+                <!--
+                Icon when menu is closed.
+                
+                Menu open: "hidden", Menu closed: "block"
+                -->
+                <button id="OpenMenu" class="absolute right-0 top-0 mt-8 mr-4 lg:hidden border rounded bg-Neutral-100 border-Neutral-200 p-1">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)">
+                        <path d="M3.33 15h13.34c.45 0 .83-.38.83-.83a.84.84 0 0 0-.83-.84H3.33a.84.84 0 0 0-.83.84c0 .46.38.83.83.83Zm0-4.17h13.34c.45 0 .83-.37.83-.83a.84.84 0 0 0-.83-.83H3.33a.84.84 0 0 0-.83.83c0 .46.38.83.83.83Zm-.83-5c0 .46.38.84.83.84h13.34a.84.84 0 0 0 0-1.67H3.33a.84.84 0 0 0-.83.83Z" fill="#323232"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                        <path fill="#fff" d="M0 0h20v20H0z"/>
+                        </clipPath>
+                    </defs>
+                    </svg>
+                </button>
+            
+            </nav>
+            
+            <!-- mobile-menu -->
+            <div id="mobileMenu" class="absolute z-40 mt-0 w-full p-[6px] hidden lg:hidden transition-all ease-linear duration-100">
+                <ul class="list-none flex-col gap-6 border rounded-lg border-[#1F242F] bg-[#0F131D] p-4">
+                    <li><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Features</a></li>
+                    <li class="mt-4"><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Reviews</a></li>
+                    <li class="mt-4"><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">Pricing</a></li>
+                    <li class="mt-4"><a href="" class="w-full h-full font-normal text-base leading-[28px] text-[#F2F2F2]">FAQs</a></li>
+                </ul>
+            </div>
+            
+
+        </section>
+
+        <!-- hero -->
+        <section class="max-w-7xl mx-auto mt-16 sm:mt-20 md:mt-32 flex flex-col gap-8 justify-center items-center text-center">
+            <!-- content -->
+            <div class="flex flex-col gap-3">
+                <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+                    Access your <span class="text-[#DDFB24] underline">financial data,</span> when you need it, with minimal hassle.
+                </h1>
+
+                <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">Providing instant access to your data anytime, anywhere. With a user-friendly interface and seamless functionality, managing your data has never been easier.</p>
+            </div>
+
+            <button class="bg-[#DDFB24] text-[#090909] font-medium text-lg rounded-full w-fit px-8 py-4">Start Now For Free</button>
+            <!-- offers -->
+            <div class="flex gap-8 flex-wrap">
+                <!-- 1 -->
+                <div class="flex gap-2 items-center">
+                    <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    <p class="text-base text-[#f2f2f2] font-normal">Up to 300GB storage on free plan</p>
+                </div>
+                <!-- 2 -->
+                <div class="flex gap-2 items-center">
+                    <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    <p class="text-base text-[#f2f2f2] font-normal">Unlimited data points</p>
+                </div>
+                <!-- 3 -->
+                <div class="flex gap-2 items-center">
+                    <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    <p class="text-base text-[#f2f2f2] font-normal">Set up in just 1 day</p>
+                </div>
+                <!-- ends -->
+            </div>
+        </section>
+
+    </header>
+
+    <!-- dashboard screenshot -->
+    <section class="h-max max-w-7xl mx-auto mt-16 sm:mt-24 md:mt-32 bg-white bg-opacity-10 rounded-[40px] p-4 lg:p-8">
+        <img class="h-full w-full object-cover rounded-3xl" src="../assets/Main.png" alt="Dashboard-screenshot">
+    </section>
+  
+    <!-- explore -->
+    <section class="max-w-7xl mx-auto mt-16 sm:mt-24 md:mt-32 flex flex-col gap-8 items-center text-center">
+
+        <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+            Explore the powerful tools and benefits designed to simplify managing your finances.
+        </h1>
+
+        <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">Providing instant access to your data anytime, anywhere. With a user-friendly interface and seamless functionality, managing your data has never been easier.</p>
+
+        <!-- button -->
+        <div class="rounded-full p-2 border border-opacity-10 border-white">
+
+            <button class="bg-white bg-opacity-10 text-white font-medium text-lg rounded-full w-fit px-8 py-4">Start Now For Free</button>
+        
+        </div>
+
+        <!-- explore-options -->
+
+        <div class="bg-[url('../assets/bg-items.svg')] bg-contain grid grid-cols-1 lg:grid-cols-3 rounded-[32px] lg:divide-x divide-y divide-[#1F242F] lg:h-fit border border-[#1F242F]">
+            <!--  -->
+            <div class="flex flex-col overflow-hidden justify-between">
+                <div class="p-4 w-full h-3/4 flex items-center justify-center">
+                    <img class="h-full" src="../assets/bg-items-1.png" alt="">
+                </div>
+                <!-- footer -->
+                <div class="px-6 py-4 flex flex-col gap-1 h-fit">
+                    <h5 class="font-semibold text-2xl text-[#EEEEEE]">Secure Data Management</h5>
+                    <p class="text-base text-[#AAAAAA] font-normal">Rest easy knowing your financial information is encrypted and securely stored.</p>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex flex-col overflow-hidden justify-between">
+                <div class="p-4 w-full h-3/4 flex items-center justify-center">
+                    <img class="h-full" src="../assets/bg-items-2.png" alt="">
+                </div>
+                <!-- footer -->
+                <div class="px-6 py-4 flex flex-col gap-1 h-fit">
+                    <h5 class="font-semibold text-2xl text-[#EEEEEE]">Personalised Insights</h5>
+                    <p class="text-base text-[#AAAAAA] font-normal">Gain insights into your spending habits and investment portfolio with our advanced analytics.</p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="flex flex-col overflow-hidden justify-between">
+                <div class="p-4 w-full h-3/4 flex items-center justify-center">
+                    <img class="h-full" src="../assets/bg-items-3.png" alt="">
+                </div>
+                <!-- footer -->
+                <div class="px-6 py-4 flex flex-col gap-1 h-fit">
+                    <h5 class="font-semibold text-2xl text-[#EEEEEE]">Seamless Integration</h5>
+                    <p class="text-base text-[#AAAAAA] font-normal">Connect all your accounts in one place for a comprehensive overview of your financial health.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- getting started -->
+    <section class="max-w-7xl mx-auto mt-16 sm:mt-24 md:mt-32 flex flex-col gap-8 items-center text-center">
+
+        <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+            Easy it is to get started. <br> Navigate investCo in simple steps.
+        </h1>
+
+        <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">Providing instant access to your data anytime, anywhere. With a user-friendly interface and seamless functionality, managing your data has never been easier.</p>
+
+        <!-- getting started sections -->
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 1 -->
+            <div class="lg:h-204 flex flex-col overflow-hidden justify-between rounded-[32px] bg-[#0F131D] border border-[#1F242F]">
+                <div class="p-4 flex items-center justify-center">
+                    <img class="h-204 w-auto" src="../assets/gs-1.png" alt="">
+                </div>
+                <!-- footer -->
+                <div class="lg:px-8 px-4 py-4 flex flex-col gap-1 h-fit">
+                    <h5 class="font-semibold text-2xl text-[#EEEEEE]">Connect Accounts</h5>
+                    <p class="text-base text-[#AAAAAA] font-normal">Link your bank, investment, and retirement accounts for a complete financial picture</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="lg:h-204 flex flex-col overflow-hidden justify-between rounded-[32px] bg-[#0F131D] border border-[#1F242F]">
+                <div class="p-4 flex items-center justify-center">
+                    <img class="h-204 w-auto" src="../assets/gs-2.png" alt="">
+                </div>
+                <!-- footer -->
+                <div class="lg:px-8 px-4 py-4 flex flex-col gap-1 h-fit">
+                    <h5 class="font-semibold text-2xl text-[#EEEEEE]">Connect Accounts</h5>
+                    <p class="text-base text-[#AAAAAA] font-normal">Link your bank, investment, and retirement accounts for a complete financial picture</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- getting started -->
+    <section class="flex justify-center items-center mt-16 sm:mt-24 md:mt-32 bg-[url('../assets/getting-started.svg')] bg-no-repeat bg-cover h-[457px]">
+
+        <!-- content -->
+        <div class="flex flex-col justify-center text-center max-w-7xl mx-auto gap-6">
+
+            <div class="flex flex-col gap-2">
+                <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+                    Get Started
+                </h1>
+                <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">Ready to experience the difference? Start your journey with InvestCo. today</p>
+            </div>
+            <!-- buttons -->
+            <div class="flex gap-8 mx-auto flex-wrap">
+                <button class="bg-[#DDFB24] text-[#090909] font-medium text-lg rounded-full w-fit px-8 py-4">Free 15-day Trial</button>
+
+                <button class="bg-white text-[#090909] font-medium text-lg rounded-full w-fit px-8 py-4">Get a Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- pricing -->
+
+    <section class="max-w-7xl mx-auto mt-16 sm:mt-24 md:mt-32 flex flex-col gap-8 items-center text-center">
+
+        <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+            Transparent pricing
+        </h1>
+
+        <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">Explore our flexible pricing options tailored to meet your financial needs, with transparent plans designed to fit any budget.</p>
+    
+        <!-- pricing options -->
+
+        <div class="p-8 border border-[#1F242F] rounded-[32px]">
+            <div class="flex justify-center mb-8">
+              <button id="monthly-tab" class="px-8 py-4 bg-[#161D29] text-white rounded-l-full">Monthly</button>
+              <button id="yearly-tab" class="px-8 py-4 bg-[#DDFB24] text-[#090909] rounded-r-full">Yearly</button>
+            </div>
+          
+            <div id="pricing-plans">
+              <!-- Yearly Plans (Initially shown) -->
+              <div id="yearly-plans">
+                <div class="flex justify-center">
+                  <div class="w-fit flex flex-wrap gap-9 p-2">
+                    
+                    <!-- basic -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Basic Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $4.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+
+                    <!-- standard -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Standard Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $9.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Premium Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $19.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Monthly Plans (Initially hidden) -->
+              <div id="monthly-plans" class="hidden">
+                <div class="flex justify-center">
+                  <div class="w-fit flex flex-wrap gap-9 p-2">
+                    
+                    <!-- basic -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Basic Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $9.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+
+                    <!-- standard -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Standard Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $19.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="flex flex-col gap-4 text-left">
+                        <p class="text-[#AAAAAA] uppercase tracking-wide font-normal text-base">Premium Plan</p>
+                          
+                          <p class="text-[#EEEEEE] font-semibold text-[32px] align-baseline">
+                            $29.99<sub class="font-features subs">/month</sub>
+                        </p>
+
+                        <!-- offers -->
+                        <div class="flex flex-col gap-2">
+                            <!-- 1 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Secure data management</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Personalised insights</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Seamless integration</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex gap-2 items-center">
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.67 5 7.5 14.17 3.33 10" stroke="#DDFB24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="text-base text-[#f2f2f2] font-normal">Priority customer support</p>
+                            </div>
+                            <!-- ends -->
+                        </div>
+                        <!-- offers end -->
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- pricing options ends -->
+          
+    </section>
+
+    <!-- Reviews -->
+
+    <section class="max-w-7xl mx-auto mt-16 sm:mt-24 md:mt-32 flex flex-col gap-8 items-center text-center">
+
+        <h1 class=" text-3xl sm:text-5xl font-semibold tracking-tight !leading-[60px] [text-wrap:balance] text-white">
+            Teams trusts investCo
+        </h1>
+
+        <p class="text-[#AAAAAA] font-normal leading-8 text-xl [text-wrap:balance]">How InvestmentCo has transformed their financial management...</p>
+    
+    </section>
+
+
+<script>
+        gsap.from("#header .navBar", 1, {
+        delay: .3,
+        opacity: 0,
+        ease: Expo.easeInOut
+    })
+
+     gsap.from("#header .content-1", 1, {
+            delay: .5,
+            opacity: 0,
+            y: 50,
+            ease: Expo.easeInOut
+        })
+
+        gsap.from("#header .content-2", 1, {
+            delay: .8,
+            opacity: 0,
+            y: 50,
+            ease: Expo.easeInOut
+        })
+
+        gsap.from("#approach .left", 1, {
+            delay: 1,
+            opacity: 0,
+            x: -50,
+            ease: Expo.easeInOut,
+            toggleActions: "play none none reverse" // Animation plays when in view, and reverses when out of view
+        })
+
+        gsap.from("#approach .right", 1, {
+            delay: 1,
+            opacity: 0,
+            x: 50,
+            ease: Expo.easeInOut,
+            toggleActions: "play none none reverse" // Animation plays when in view, and reverses when out of view
+        })
+
+        
+
+        
+
+    // resize header
+    const openMenuButton = document.getElementById("OpenMenu");
+    const closeMenuButton = document.getElementById("CloseMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    
+    // Function to toggle the mobile menu
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle("hidden");
+    }
+    
+    // Function to toggle the visibility of the open and close menu buttons
+    function toggleMenuButtons() {
+        openMenuButton.classList.toggle("hidden");
+        closeMenuButton.classList.toggle("hidden");
+    }
+    
+    // Function to open the mobile menu
+    function openMobileMenu() {
+        mobileMenu.classList.remove("hidden");
+        openMenuButton.classList.add("hidden");
+        closeMenuButton.classList.remove("hidden");
+    }
+    
+    // Function to close the mobile menu
+    function closeMobileMenu() {
+        mobileMenu.classList.add("hidden");
+        openMenuButton.classList.remove("hidden");
+        closeMenuButton.classList.add("hidden");
+    }
+    
+    // Event listener for the open menu button
+    openMenuButton.addEventListener("click", openMobileMenu);
+    
+    // Event listener for the close menu button
+    closeMenuButton.addEventListener("click", closeMobileMenu);   
+
+    // pricing tabs
+    document.addEventListener("DOMContentLoaded", function() {
+  const monthlyTab = document.getElementById("monthly-tab");
+  const yearlyTab = document.getElementById("yearly-tab");
+  const monthlyPlans = document.getElementById("monthly-plans");
+  const yearlyPlans = document.getElementById("yearly-plans");
+
+
+
+  // Hide the monthly plans by default
+  monthlyPlans.classList.add("hidden");
+
+  monthlyTab.addEventListener("click", function() {
+    monthlyTab.classList.remove("bg-[#161D29]", "text-white");
+    monthlyTab.classList.add("bg-[#DDFB24]", "text-[#090909");
+    yearlyTab.classList.remove("bg-[#DDFB24]", "text-[#090909]");
+    yearlyTab.classList.add("bg-[#161D29]", "text-white");
+    monthlyPlans.classList.remove("hidden");
+    yearlyPlans.classList.add("hidden");
+  });
+
+  yearlyTab.addEventListener("click", function() {
+    yearlyTab.classList.remove("bg-[#161D29]", "text-white");
+    yearlyTab.classList.add("bg-[#DDFB24]", "text-[#090909");
+    monthlyTab.classList.remove("bg-[#DDFB24]", "text-[#090909]");
+    monthlyTab.classList.add("bg-[#161D29]", "text-white");
+    yearlyPlans.classList.remove("hidden");
+    monthlyPlans.classList.add("hidden");
+  });
+});
+
+    // pricing tabs ends
+</script>
+<script src="../assets/Js/main.js"></script>
+
+<script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    defer
+></script>
+</body>
+</html>
